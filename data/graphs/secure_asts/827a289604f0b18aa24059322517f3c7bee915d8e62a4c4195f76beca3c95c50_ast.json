@@ -1,0 +1,3541 @@
+JSON AST (compact format):
+
+
+======= data/raw/secure/827a289604f0b18aa24059322517f3c7bee915d8e62a4c4195f76beca3c95c50.sol =======
+{
+	"absolutePath" : "data/raw/secure/827a289604f0b18aa24059322517f3c7bee915d8e62a4c4195f76beca3c95c50.sol",
+	"exportedSymbols" : 
+	{
+		"AbstractZENOSCrowdsale" : 
+		[
+			8
+		],
+		"ZENOSEarlyPurchase" : 
+		[
+			262
+		]
+	},
+	"id" : 263,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".7"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:23:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : null,
+			"fullyImplemented" : true,
+			"id" : 8,
+			"linearizedBaseContracts" : 
+			[
+				8
+			],
+			"name" : "AbstractZENOSCrowdsale",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : 
+					{
+						"id" : 6,
+						"nodeType" : "Block",
+						"src" : "141:2:0",
+						"statements" : []
+					},
+					"documentation" : null,
+					"id" : 7,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "crowdsaleStartingBlock",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 2,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "97:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 5,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 4,
+								"name" : "startingBlock",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 7,
+								"src" : "118:21:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 3,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "118:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "117:23:0"
+					},
+					"scope" : 8,
+					"src" : "66:77:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 263,
+			"src" : "27:119:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : "@title EarlyPurchase contract - Keep track of purchased amount by Early Purchasers\r\n Project by ZENOS Team (http://www.thezenos.com/)\r\n This smart contract developed by Starbase - Token funding & payment Platform for innovative projects <support[at]starbase.co>\r",
+			"fullyImplemented" : true,
+			"id" : 262,
+			"linearizedBaseContracts" : 
+			[
+				262
+			],
+			"name" : "ZENOSEarlyPurchase",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"constant" : true,
+					"id" : 11,
+					"name" : "PURCHASE_AMOUNT_UNIT",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 262,
+					"src" : "497:51:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_string_memory",
+						"typeString" : "string"
+					},
+					"typeName" : 
+					{
+						"id" : 9,
+						"name" : "string",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "497:6:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_string_storage_ptr",
+							"typeString" : "string"
+						}
+					},
+					"value" : 
+					{
+						"argumentTypes" : null,
+						"hexValue" : "455448",
+						"id" : 10,
+						"isConstant" : false,
+						"isLValue" : false,
+						"isPure" : true,
+						"kind" : "string",
+						"lValueRequested" : false,
+						"nodeType" : "Literal",
+						"src" : "543:5:0",
+						"subdenomination" : null,
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_stringliteral_aaaebeba3810b1e6b70781f14b2d72c1cb89c0b2b320c43bb67ff79f562f5ff4",
+							"typeString" : "literal_string \"ETH\""
+						},
+						"value" : "ETH"
+					},
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 13,
+					"name" : "owner",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 262,
+					"src" : "567:20:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_address",
+						"typeString" : "address"
+					},
+					"typeName" : 
+					{
+						"id" : 12,
+						"name" : "address",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "567:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_address",
+							"typeString" : "address"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 16,
+					"name" : "earlyPurchases",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 262,
+					"src" : "594:37:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage",
+						"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase[]"
+					},
+					"typeName" : 
+					{
+						"baseType" : 
+						{
+							"contractScope" : null,
+							"id" : 14,
+							"name" : "EarlyPurchase",
+							"nodeType" : "UserDefinedTypeName",
+							"referencedDeclaration" : 25,
+							"src" : "594:13:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_struct$_EarlyPurchase_$25_storage_ptr",
+								"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase"
+							}
+						},
+						"id" : 15,
+						"length" : null,
+						"nodeType" : "ArrayTypeName",
+						"src" : "594:15:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage_ptr",
+							"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase[]"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 18,
+					"name" : "earlyPurchaseClosedAt",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 262,
+					"src" : "638:33:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_uint256",
+						"typeString" : "uint256"
+					},
+					"typeName" : 
+					{
+						"id" : 17,
+						"name" : "uint",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "638:4:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_uint256",
+							"typeString" : "uint256"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"canonicalName" : "ZENOSEarlyPurchase.EarlyPurchase",
+					"id" : 25,
+					"members" : 
+					[
+						{
+							"constant" : false,
+							"id" : 20,
+							"name" : "purchaser",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 25,
+							"src" : "744:17:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_address",
+								"typeString" : "address"
+							},
+							"typeName" : 
+							{
+								"id" : 19,
+								"name" : "address",
+								"nodeType" : "ElementaryTypeName",
+								"src" : "744:7:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						},
+						{
+							"constant" : false,
+							"id" : 22,
+							"name" : "amount",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 25,
+							"src" : "772:11:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_uint256",
+								"typeString" : "uint256"
+							},
+							"typeName" : 
+							{
+								"id" : 21,
+								"name" : "uint",
+								"nodeType" : "ElementaryTypeName",
+								"src" : "772:4:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						},
+						{
+							"constant" : false,
+							"id" : 24,
+							"name" : "purchasedAt",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 25,
+							"src" : "837:16:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_uint256",
+								"typeString" : "uint256"
+							},
+							"typeName" : 
+							{
+								"id" : 23,
+								"name" : "uint",
+								"nodeType" : "ElementaryTypeName",
+								"src" : "837:4:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						}
+					],
+					"name" : "EarlyPurchase",
+					"nodeType" : "StructDefinition",
+					"scope" : 262,
+					"src" : "712:164:0",
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 27,
+					"name" : "zenOSCrowdsale",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 262,
+					"src" : "929:44:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+						"typeString" : "contract AbstractZENOSCrowdsale"
+					},
+					"typeName" : 
+					{
+						"contractScope" : null,
+						"id" : 26,
+						"name" : "AbstractZENOSCrowdsale",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 8,
+						"src" : "929:22:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+							"typeString" : "contract AbstractZENOSCrowdsale"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 37,
+						"nodeType" : "Block",
+						"src" : "1041:87:0",
+						"statements" : 
+						[
+							{
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"commonType" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									},
+									"id" : 32,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftExpression" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 29,
+											"name" : "msg",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 277,
+											"src" : "1056:3:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_magic_message",
+												"typeString" : "msg"
+											}
+										},
+										"id" : 30,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "sender",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1056:10:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "BinaryOperation",
+									"operator" : "!=",
+									"rightExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 31,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 13,
+										"src" : "1070:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "1056:19:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"falseBody" : null,
+								"id" : 35,
+								"nodeType" : "IfStatement",
+								"src" : "1052:57:0",
+								"trueBody" : 
+								{
+									"id" : 34,
+									"nodeType" : "Block",
+									"src" : "1077:32:0",
+									"statements" : 
+									[
+										{
+											"id" : 33,
+											"nodeType" : "Throw",
+											"src" : "1092:5:0"
+										}
+									]
+								}
+							},
+							{
+								"id" : 36,
+								"nodeType" : "PlaceholderStatement",
+								"src" : "1119:1:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 38,
+					"name" : "onlyOwner",
+					"nodeType" : "ModifierDefinition",
+					"parameters" : 
+					{
+						"id" : 28,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1038:2:0"
+					},
+					"src" : "1020:108:0",
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 55,
+						"nodeType" : "Block",
+						"src" : "1167:165:0",
+						"statements" : 
+						[
+							{
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"commonType" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									},
+									"id" : 50,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftExpression" : 
+									{
+										"argumentTypes" : null,
+										"commonType" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										},
+										"id" : 44,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"leftExpression" : 
+										{
+											"argumentTypes" : null,
+											"arguments" : 
+											[
+												{
+													"argumentTypes" : null,
+													"id" : 41,
+													"name" : "zenOSCrowdsale",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 27,
+													"src" : "1190:14:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+														"typeString" : "contract AbstractZENOSCrowdsale"
+													}
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : 
+												[
+													{
+														"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+														"typeString" : "contract AbstractZENOSCrowdsale"
+													}
+												],
+												"id" : 40,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"lValueRequested" : false,
+												"nodeType" : "ElementaryTypeNameExpression",
+												"src" : "1182:7:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_type$_t_address_$",
+													"typeString" : "type(address)"
+												},
+												"typeName" : "address"
+											},
+											"id" : 42,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "typeConversion",
+											"lValueRequested" : false,
+											"names" : [],
+											"nodeType" : "FunctionCall",
+											"src" : "1182:23:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"nodeType" : "BinaryOperation",
+										"operator" : "!=",
+										"rightExpression" : 
+										{
+											"argumentTypes" : null,
+											"hexValue" : "30",
+											"id" : 43,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"kind" : "number",
+											"lValueRequested" : false,
+											"nodeType" : "Literal",
+											"src" : "1209:1:0",
+											"subdenomination" : null,
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_rational_0_by_1",
+												"typeString" : "int_const 0"
+											},
+											"value" : "0"
+										},
+										"src" : "1182:28:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bool",
+											"typeString" : "bool"
+										}
+									},
+									"nodeType" : "BinaryOperation",
+									"operator" : "&&",
+									"rightExpression" : 
+									{
+										"argumentTypes" : null,
+										"commonType" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										},
+										"id" : 49,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"leftExpression" : 
+										{
+											"argumentTypes" : null,
+											"arguments" : [],
+											"expression" : 
+											{
+												"argumentTypes" : [],
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 45,
+													"name" : "zenOSCrowdsale",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 27,
+													"src" : "1227:14:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+														"typeString" : "contract AbstractZENOSCrowdsale"
+													}
+												},
+												"id" : 46,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "crowdsaleStartingBlock",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : 7,
+												"src" : "1227:37:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_external_view$__$returns$_t_uint256_$",
+													"typeString" : "function () view external returns (uint256)"
+												}
+											},
+											"id" : 47,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "functionCall",
+											"lValueRequested" : false,
+											"names" : [],
+											"nodeType" : "FunctionCall",
+											"src" : "1227:39:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"nodeType" : "BinaryOperation",
+										"operator" : ">",
+										"rightExpression" : 
+										{
+											"argumentTypes" : null,
+											"hexValue" : "30",
+											"id" : 48,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"kind" : "number",
+											"lValueRequested" : false,
+											"nodeType" : "Literal",
+											"src" : "1269:1:0",
+											"subdenomination" : null,
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_rational_0_by_1",
+												"typeString" : "int_const 0"
+											},
+											"value" : "0"
+										},
+										"src" : "1227:43:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bool",
+											"typeString" : "bool"
+										}
+									},
+									"src" : "1182:88:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"falseBody" : null,
+								"id" : 53,
+								"nodeType" : "IfStatement",
+								"src" : "1178:135:0",
+								"trueBody" : 
+								{
+									"id" : 52,
+									"nodeType" : "Block",
+									"src" : "1281:32:0",
+									"statements" : 
+									[
+										{
+											"id" : 51,
+											"nodeType" : "Throw",
+											"src" : "1296:5:0"
+										}
+									]
+								}
+							},
+							{
+								"id" : 54,
+								"nodeType" : "PlaceholderStatement",
+								"src" : "1323:1:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 56,
+					"name" : "onlyBeforeCrowdsale",
+					"nodeType" : "ModifierDefinition",
+					"parameters" : 
+					{
+						"id" : 39,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1164:2:0"
+					},
+					"src" : "1136:196:0",
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 65,
+						"nodeType" : "Block",
+						"src" : "1373:93:0",
+						"statements" : 
+						[
+							{
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"commonType" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									},
+									"id" : 60,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 58,
+										"name" : "earlyPurchaseClosedAt",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 18,
+										"src" : "1388:21:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"nodeType" : "BinaryOperation",
+									"operator" : ">",
+									"rightExpression" : 
+									{
+										"argumentTypes" : null,
+										"hexValue" : "30",
+										"id" : 59,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"kind" : "number",
+										"lValueRequested" : false,
+										"nodeType" : "Literal",
+										"src" : "1412:1:0",
+										"subdenomination" : null,
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_rational_0_by_1",
+											"typeString" : "int_const 0"
+										},
+										"value" : "0"
+									},
+									"src" : "1388:25:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"falseBody" : null,
+								"id" : 63,
+								"nodeType" : "IfStatement",
+								"src" : "1384:63:0",
+								"trueBody" : 
+								{
+									"id" : 62,
+									"nodeType" : "Block",
+									"src" : "1415:32:0",
+									"statements" : 
+									[
+										{
+											"id" : 61,
+											"nodeType" : "Throw",
+											"src" : "1430:5:0"
+										}
+									]
+								}
+							},
+							{
+								"id" : 64,
+								"nodeType" : "PlaceholderStatement",
+								"src" : "1457:1:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 66,
+					"name" : "onlyEarlyPurchaseTerm",
+					"nodeType" : "ModifierDefinition",
+					"parameters" : 
+					{
+						"id" : 57,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1370:2:0"
+					},
+					"src" : "1340:126:0",
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 74,
+						"nodeType" : "Block",
+						"src" : "1548:37:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 72,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 69,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 13,
+										"src" : "1559:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 70,
+											"name" : "msg",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 277,
+											"src" : "1567:3:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_magic_message",
+												"typeString" : "msg"
+											}
+										},
+										"id" : 71,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "sender",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1567:10:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "1559:18:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 73,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1559:18:0"
+							}
+						]
+					},
+					"documentation" : "@dev Contract constructor function\r",
+					"id" : 75,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "ZENOSEarlyPurchase",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 67,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1545:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 68,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1548:0:0"
+					},
+					"scope" : 262,
+					"src" : "1518:67:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 109,
+						"nodeType" : "Block",
+						"src" : "1868:204:0",
+						"statements" : 
+						[
+							{
+								"body" : 
+								{
+									"id" : 107,
+									"nodeType" : "Block",
+									"src" : "1924:141:0",
+									"statements" : 
+									[
+										{
+											"condition" : 
+											{
+												"argumentTypes" : null,
+												"commonType" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												},
+												"id" : 97,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"leftExpression" : 
+												{
+													"argumentTypes" : null,
+													"expression" : 
+													{
+														"argumentTypes" : null,
+														"baseExpression" : 
+														{
+															"argumentTypes" : null,
+															"id" : 92,
+															"name" : "earlyPurchases",
+															"nodeType" : "Identifier",
+															"overloadedDeclarations" : [],
+															"referencedDeclaration" : 16,
+															"src" : "1943:14:0",
+															"typeDescriptions" : 
+															{
+																"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage",
+																"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref[] storage ref"
+															}
+														},
+														"id" : 94,
+														"indexExpression" : 
+														{
+															"argumentTypes" : null,
+															"id" : 93,
+															"name" : "i",
+															"nodeType" : "Identifier",
+															"overloadedDeclarations" : [],
+															"referencedDeclaration" : 83,
+															"src" : "1958:1:0",
+															"typeDescriptions" : 
+															{
+																"typeIdentifier" : "t_uint256",
+																"typeString" : "uint256"
+															}
+														},
+														"isConstant" : false,
+														"isLValue" : true,
+														"isPure" : false,
+														"lValueRequested" : false,
+														"nodeType" : "IndexAccess",
+														"src" : "1943:17:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_struct$_EarlyPurchase_$25_storage",
+															"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref"
+														}
+													},
+													"id" : 95,
+													"isConstant" : false,
+													"isLValue" : true,
+													"isPure" : false,
+													"lValueRequested" : false,
+													"memberName" : "purchaser",
+													"nodeType" : "MemberAccess",
+													"referencedDeclaration" : 20,
+													"src" : "1943:27:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"nodeType" : "BinaryOperation",
+												"operator" : "==",
+												"rightExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 96,
+													"name" : "purchaser",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 77,
+													"src" : "1974:9:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"src" : "1943:40:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_bool",
+													"typeString" : "bool"
+												}
+											},
+											"falseBody" : null,
+											"id" : 106,
+											"nodeType" : "IfStatement",
+											"src" : "1939:115:0",
+											"trueBody" : 
+											{
+												"id" : 105,
+												"nodeType" : "Block",
+												"src" : "1985:69:0",
+												"statements" : 
+												[
+													{
+														"expression" : 
+														{
+															"argumentTypes" : null,
+															"id" : 103,
+															"isConstant" : false,
+															"isLValue" : false,
+															"isPure" : false,
+															"lValueRequested" : false,
+															"leftHandSide" : 
+															{
+																"argumentTypes" : null,
+																"id" : 98,
+																"name" : "amount",
+																"nodeType" : "Identifier",
+																"overloadedDeclarations" : [],
+																"referencedDeclaration" : 80,
+																"src" : "2004:6:0",
+																"typeDescriptions" : 
+																{
+																	"typeIdentifier" : "t_uint256",
+																	"typeString" : "uint256"
+																}
+															},
+															"nodeType" : "Assignment",
+															"operator" : "+=",
+															"rightHandSide" : 
+															{
+																"argumentTypes" : null,
+																"expression" : 
+																{
+																	"argumentTypes" : null,
+																	"baseExpression" : 
+																	{
+																		"argumentTypes" : null,
+																		"id" : 99,
+																		"name" : "earlyPurchases",
+																		"nodeType" : "Identifier",
+																		"overloadedDeclarations" : [],
+																		"referencedDeclaration" : 16,
+																		"src" : "2014:14:0",
+																		"typeDescriptions" : 
+																		{
+																			"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage",
+																			"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref[] storage ref"
+																		}
+																	},
+																	"id" : 101,
+																	"indexExpression" : 
+																	{
+																		"argumentTypes" : null,
+																		"id" : 100,
+																		"name" : "i",
+																		"nodeType" : "Identifier",
+																		"overloadedDeclarations" : [],
+																		"referencedDeclaration" : 83,
+																		"src" : "2029:1:0",
+																		"typeDescriptions" : 
+																		{
+																			"typeIdentifier" : "t_uint256",
+																			"typeString" : "uint256"
+																		}
+																	},
+																	"isConstant" : false,
+																	"isLValue" : true,
+																	"isPure" : false,
+																	"lValueRequested" : false,
+																	"nodeType" : "IndexAccess",
+																	"src" : "2014:17:0",
+																	"typeDescriptions" : 
+																	{
+																		"typeIdentifier" : "t_struct$_EarlyPurchase_$25_storage",
+																		"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref"
+																	}
+																},
+																"id" : 102,
+																"isConstant" : false,
+																"isLValue" : true,
+																"isPure" : false,
+																"lValueRequested" : false,
+																"memberName" : "amount",
+																"nodeType" : "MemberAccess",
+																"referencedDeclaration" : 22,
+																"src" : "2014:24:0",
+																"typeDescriptions" : 
+																{
+																	"typeIdentifier" : "t_uint256",
+																	"typeString" : "uint256"
+																}
+															},
+															"src" : "2004:34:0",
+															"typeDescriptions" : 
+															{
+																"typeIdentifier" : "t_uint256",
+																"typeString" : "uint256"
+															}
+														},
+														"id" : 104,
+														"nodeType" : "ExpressionStatement",
+														"src" : "2004:34:0"
+													}
+												]
+											}
+										}
+									]
+								},
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"commonType" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									},
+									"id" : 88,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 85,
+										"name" : "i",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 83,
+										"src" : "1892:1:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"nodeType" : "BinaryOperation",
+									"operator" : "<",
+									"rightExpression" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 86,
+											"name" : "earlyPurchases",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 16,
+											"src" : "1896:14:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage",
+												"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref[] storage ref"
+											}
+										},
+										"id" : 87,
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "length",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1896:21:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"src" : "1892:25:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"id" : 108,
+								"initializationExpression" : 
+								{
+									"assignments" : [],
+									"declarations" : 
+									[
+										{
+											"constant" : false,
+											"id" : 83,
+											"name" : "i",
+											"nodeType" : "VariableDeclaration",
+											"scope" : 110,
+											"src" : "1884:6:0",
+											"stateVariable" : false,
+											"storageLocation" : "default",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											},
+											"typeName" : 
+											{
+												"id" : 82,
+												"name" : "uint",
+												"nodeType" : "ElementaryTypeName",
+												"src" : "1884:4:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											},
+											"value" : null,
+											"visibility" : "internal"
+										}
+									],
+									"id" : 84,
+									"initialValue" : null,
+									"nodeType" : "VariableDeclarationStatement",
+									"src" : "1884:6:0"
+								},
+								"loopExpression" : 
+								{
+									"expression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 90,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"nodeType" : "UnaryOperation",
+										"operator" : "++",
+										"prefix" : false,
+										"src" : "1919:3:0",
+										"subExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 89,
+											"name" : "i",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 83,
+											"src" : "1919:1:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"id" : 91,
+									"nodeType" : "ExpressionStatement",
+									"src" : "1919:3:0"
+								},
+								"nodeType" : "ForStatement",
+								"src" : "1879:186:0"
+							}
+						]
+					},
+					"documentation" : "@dev Returns early purchased amount by purchaser's address\r\n @param purchaser Purchaser address\r",
+					"id" : 110,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "purchasedAmountBy",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 78,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 77,
+								"name" : "purchaser",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 110,
+								"src" : "1777:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 76,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1777:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1776:19:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 81,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 80,
+								"name" : "amount",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 110,
+								"src" : "1850:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 79,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1850:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1849:13:0"
+					},
+					"scope" : 262,
+					"src" : "1750:322:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 134,
+						"nodeType" : "Block",
+						"src" : "2249:129:0",
+						"statements" : 
+						[
+							{
+								"body" : 
+								{
+									"id" : 132,
+									"nodeType" : "Block",
+									"src" : "2305:66:0",
+									"statements" : 
+									[
+										{
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 130,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"leftHandSide" : 
+												{
+													"argumentTypes" : null,
+													"id" : 125,
+													"name" : "totalAmount",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 113,
+													"src" : "2320:11:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												},
+												"nodeType" : "Assignment",
+												"operator" : "+=",
+												"rightHandSide" : 
+												{
+													"argumentTypes" : null,
+													"expression" : 
+													{
+														"argumentTypes" : null,
+														"baseExpression" : 
+														{
+															"argumentTypes" : null,
+															"id" : 126,
+															"name" : "earlyPurchases",
+															"nodeType" : "Identifier",
+															"overloadedDeclarations" : [],
+															"referencedDeclaration" : 16,
+															"src" : "2335:14:0",
+															"typeDescriptions" : 
+															{
+																"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage",
+																"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref[] storage ref"
+															}
+														},
+														"id" : 128,
+														"indexExpression" : 
+														{
+															"argumentTypes" : null,
+															"id" : 127,
+															"name" : "i",
+															"nodeType" : "Identifier",
+															"overloadedDeclarations" : [],
+															"referencedDeclaration" : 116,
+															"src" : "2350:1:0",
+															"typeDescriptions" : 
+															{
+																"typeIdentifier" : "t_uint256",
+																"typeString" : "uint256"
+															}
+														},
+														"isConstant" : false,
+														"isLValue" : true,
+														"isPure" : false,
+														"lValueRequested" : false,
+														"nodeType" : "IndexAccess",
+														"src" : "2335:17:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_struct$_EarlyPurchase_$25_storage",
+															"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref"
+														}
+													},
+													"id" : 129,
+													"isConstant" : false,
+													"isLValue" : true,
+													"isPure" : false,
+													"lValueRequested" : false,
+													"memberName" : "amount",
+													"nodeType" : "MemberAccess",
+													"referencedDeclaration" : 22,
+													"src" : "2335:24:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												},
+												"src" : "2320:39:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											},
+											"id" : 131,
+											"nodeType" : "ExpressionStatement",
+											"src" : "2320:39:0"
+										}
+									]
+								},
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"commonType" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									},
+									"id" : 121,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 118,
+										"name" : "i",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 116,
+										"src" : "2273:1:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"nodeType" : "BinaryOperation",
+									"operator" : "<",
+									"rightExpression" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 119,
+											"name" : "earlyPurchases",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 16,
+											"src" : "2277:14:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage",
+												"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref[] storage ref"
+											}
+										},
+										"id" : 120,
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "length",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "2277:21:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"src" : "2273:25:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"id" : 133,
+								"initializationExpression" : 
+								{
+									"assignments" : [],
+									"declarations" : 
+									[
+										{
+											"constant" : false,
+											"id" : 116,
+											"name" : "i",
+											"nodeType" : "VariableDeclaration",
+											"scope" : 135,
+											"src" : "2265:6:0",
+											"stateVariable" : false,
+											"storageLocation" : "default",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											},
+											"typeName" : 
+											{
+												"id" : 115,
+												"name" : "uint",
+												"nodeType" : "ElementaryTypeName",
+												"src" : "2265:4:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											},
+											"value" : null,
+											"visibility" : "internal"
+										}
+									],
+									"id" : 117,
+									"initialValue" : null,
+									"nodeType" : "VariableDeclarationStatement",
+									"src" : "2265:6:0"
+								},
+								"loopExpression" : 
+								{
+									"expression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 123,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"nodeType" : "UnaryOperation",
+										"operator" : "++",
+										"prefix" : false,
+										"src" : "2300:3:0",
+										"subExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 122,
+											"name" : "i",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 116,
+											"src" : "2300:1:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"id" : 124,
+									"nodeType" : "ExpressionStatement",
+									"src" : "2300:3:0"
+								},
+								"nodeType" : "ForStatement",
+								"src" : "2260:111:0"
+							}
+						]
+					},
+					"documentation" : "@dev Returns total amount of raised funds by Early Purchasers\r",
+					"id" : 135,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "totalAmountOfEarlyPurchases",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 111,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2187:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 114,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 113,
+								"name" : "totalAmount",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 135,
+								"src" : "2226:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 112,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2226:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2225:18:0"
+					},
+					"scope" : 262,
+					"src" : "2151:227:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 143,
+						"nodeType" : "Block",
+						"src" : "2533:47:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"expression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 140,
+										"name" : "earlyPurchases",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 16,
+										"src" : "2551:14:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage",
+											"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref[] storage ref"
+										}
+									},
+									"id" : 141,
+									"isConstant" : false,
+									"isLValue" : true,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"memberName" : "length",
+									"nodeType" : "MemberAccess",
+									"referencedDeclaration" : null,
+									"src" : "2551:21:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"functionReturnParameters" : 139,
+								"id" : 142,
+								"nodeType" : "Return",
+								"src" : "2544:28:0"
+							}
+						]
+					},
+					"documentation" : "@dev Returns number of early purchases\r",
+					"id" : 144,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "numberOfEarlyPurchases",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 136,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2465:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 139,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 138,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 144,
+								"src" : "2522:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 137,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2522:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2521:6:0"
+					},
+					"scope" : 262,
+					"src" : "2434:146:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 181,
+						"nodeType" : "Block",
+						"src" : "2956:196:0",
+						"statements" : 
+						[
+							{
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"commonType" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									},
+									"id" : 165,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftExpression" : 
+									{
+										"argumentTypes" : null,
+										"commonType" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										},
+										"id" : 161,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"leftExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 159,
+											"name" : "purchasedAt",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 150,
+											"src" : "2973:11:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"nodeType" : "BinaryOperation",
+										"operator" : "==",
+										"rightExpression" : 
+										{
+											"argumentTypes" : null,
+											"hexValue" : "30",
+											"id" : 160,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"kind" : "number",
+											"lValueRequested" : false,
+											"nodeType" : "Literal",
+											"src" : "2988:1:0",
+											"subdenomination" : null,
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_rational_0_by_1",
+												"typeString" : "int_const 0"
+											},
+											"value" : "0"
+										},
+										"src" : "2973:16:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bool",
+											"typeString" : "bool"
+										}
+									},
+									"nodeType" : "BinaryOperation",
+									"operator" : "||",
+									"rightExpression" : 
+									{
+										"argumentTypes" : null,
+										"commonType" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										},
+										"id" : 164,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"leftExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 162,
+											"name" : "purchasedAt",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 150,
+											"src" : "2993:11:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"nodeType" : "BinaryOperation",
+										"operator" : ">",
+										"rightExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 163,
+											"name" : "now",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 279,
+											"src" : "3007:3:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"src" : "2993:17:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bool",
+											"typeString" : "bool"
+										}
+									},
+									"src" : "2973:37:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"falseBody" : null,
+								"id" : 168,
+								"nodeType" : "IfStatement",
+								"src" : "2969:75:0",
+								"trueBody" : 
+								{
+									"id" : 167,
+									"nodeType" : "Block",
+									"src" : "3012:32:0",
+									"statements" : 
+									[
+										{
+											"id" : 166,
+											"nodeType" : "Throw",
+											"src" : "3027:5:0"
+										}
+									]
+								}
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"arguments" : 
+											[
+												{
+													"argumentTypes" : null,
+													"id" : 173,
+													"name" : "purchaser",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 146,
+													"src" : "3090:9:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 174,
+													"name" : "amount",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 148,
+													"src" : "3101:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 175,
+													"name" : "purchasedAt",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 150,
+													"src" : "3109:11:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : 
+												[
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													},
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													},
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												],
+												"id" : 172,
+												"name" : "EarlyPurchase",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 25,
+												"src" : "3076:13:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_type$_t_struct$_EarlyPurchase_$25_storage_ptr_$",
+													"typeString" : "type(struct ZENOSEarlyPurchase.EarlyPurchase storage pointer)"
+												}
+											},
+											"id" : 176,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "structConstructorCall",
+											"lValueRequested" : false,
+											"names" : [],
+											"nodeType" : "FunctionCall",
+											"src" : "3076:45:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_struct$_EarlyPurchase_$25_memory",
+												"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase memory"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_struct$_EarlyPurchase_$25_memory",
+												"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase memory"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 169,
+											"name" : "earlyPurchases",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 16,
+											"src" : "3056:14:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_array$_t_struct$_EarlyPurchase_$25_storage_$dyn_storage",
+												"typeString" : "struct ZENOSEarlyPurchase.EarlyPurchase storage ref[] storage ref"
+											}
+										},
+										"id" : 171,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "push",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "3056:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_arraypush_nonpayable$_t_struct$_EarlyPurchase_$25_storage_$returns$_t_uint256_$",
+											"typeString" : "function (struct ZENOSEarlyPurchase.EarlyPurchase storage ref) returns (uint256)"
+										}
+									},
+									"id" : 177,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "3056:66:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 178,
+								"nodeType" : "ExpressionStatement",
+								"src" : "3056:66:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"hexValue" : "74727565",
+									"id" : 179,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : true,
+									"kind" : "bool",
+									"lValueRequested" : false,
+									"nodeType" : "Literal",
+									"src" : "3140:4:0",
+									"subdenomination" : null,
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									},
+									"value" : "true"
+								},
+								"functionReturnParameters" : 158,
+								"id" : 180,
+								"nodeType" : "Return",
+								"src" : "3133:11:0"
+							}
+						]
+					},
+					"documentation" : "@dev Append an early purchase log\r\n @param purchaser Purchaser address\r\n @param amount Purchase amount\r\n @param purchasedAt Timestamp of purchased date\r",
+					"id" : 182,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 153,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 152,
+								"name" : "onlyBeforeCrowdsale",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 56,
+								"src" : "2876:19:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "2876:19:0"
+						},
+						{
+							"arguments" : null,
+							"id" : 155,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 154,
+								"name" : "onlyEarlyPurchaseTerm",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 66,
+								"src" : "2905:21:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "2905:21:0"
+						}
+					],
+					"name" : "appendEarlyPurchase",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 151,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 146,
+								"name" : "purchaser",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 182,
+								"src" : "2799:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 145,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2799:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 148,
+								"name" : "amount",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 182,
+								"src" : "2818:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 147,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2818:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 150,
+								"name" : "purchasedAt",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 182,
+								"src" : "2831:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 149,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2831:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2798:50:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 158,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 157,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 182,
+								"src" : "2945:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 156,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2945:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2944:6:0"
+					},
+					"scope" : 262,
+					"src" : "2770:382:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 193,
+						"nodeType" : "Block",
+						"src" : "3296:46:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 191,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 189,
+										"name" : "earlyPurchaseClosedAt",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 18,
+										"src" : "3307:21:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 190,
+										"name" : "now",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 279,
+										"src" : "3331:3:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"src" : "3307:27:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 192,
+								"nodeType" : "ExpressionStatement",
+								"src" : "3307:27:0"
+							}
+						]
+					},
+					"documentation" : "@dev Close early purchase term\r",
+					"id" : 194,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 185,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 184,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 38,
+								"src" : "3257:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "3257:9:0"
+						}
+					],
+					"name" : "closeEarlyPurchase",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 183,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3227:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 188,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 187,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 194,
+								"src" : "3285:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 186,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3285:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3284:6:0"
+					},
+					"scope" : 262,
+					"src" : "3200:142:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 220,
+						"nodeType" : "Block",
+						"src" : "3586:190:0",
+						"statements" : 
+						[
+							{
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"commonType" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									},
+									"id" : 207,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftExpression" : 
+									{
+										"argumentTypes" : null,
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"id" : 204,
+												"name" : "zenOSCrowdsale",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 27,
+												"src" : "3609:14:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+													"typeString" : "contract AbstractZENOSCrowdsale"
+												}
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+													"typeString" : "contract AbstractZENOSCrowdsale"
+												}
+											],
+											"id" : 203,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"lValueRequested" : false,
+											"nodeType" : "ElementaryTypeNameExpression",
+											"src" : "3601:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_type$_t_address_$",
+												"typeString" : "type(address)"
+											},
+											"typeName" : "address"
+										},
+										"id" : 205,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"kind" : "typeConversion",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "3601:23:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "BinaryOperation",
+									"operator" : "==",
+									"rightExpression" : 
+									{
+										"argumentTypes" : null,
+										"hexValue" : "30",
+										"id" : 206,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"kind" : "number",
+										"lValueRequested" : false,
+										"nodeType" : "Literal",
+										"src" : "3628:1:0",
+										"subdenomination" : null,
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_rational_0_by_1",
+											"typeString" : "int_const 0"
+										},
+										"value" : "0"
+									},
+									"src" : "3601:28:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"falseBody" : null,
+								"id" : 217,
+								"nodeType" : "IfStatement",
+								"src" : "3597:149:0",
+								"trueBody" : 
+								{
+									"id" : 216,
+									"nodeType" : "Block",
+									"src" : "3631:115:0",
+									"statements" : 
+									[
+										{
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 212,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"leftHandSide" : 
+												{
+													"argumentTypes" : null,
+													"id" : 208,
+													"name" : "zenOSCrowdsale",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 27,
+													"src" : "3646:14:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+														"typeString" : "contract AbstractZENOSCrowdsale"
+													}
+												},
+												"nodeType" : "Assignment",
+												"operator" : "=",
+												"rightHandSide" : 
+												{
+													"argumentTypes" : null,
+													"arguments" : 
+													[
+														{
+															"argumentTypes" : null,
+															"id" : 210,
+															"name" : "zenOSCrowdsaleAddress",
+															"nodeType" : "Identifier",
+															"overloadedDeclarations" : [],
+															"referencedDeclaration" : 196,
+															"src" : "3686:21:0",
+															"typeDescriptions" : 
+															{
+																"typeIdentifier" : "t_address",
+																"typeString" : "address"
+															}
+														}
+													],
+													"expression" : 
+													{
+														"argumentTypes" : 
+														[
+															{
+																"typeIdentifier" : "t_address",
+																"typeString" : "address"
+															}
+														],
+														"id" : 209,
+														"name" : "AbstractZENOSCrowdsale",
+														"nodeType" : "Identifier",
+														"overloadedDeclarations" : [],
+														"referencedDeclaration" : 8,
+														"src" : "3663:22:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_type$_t_contract$_AbstractZENOSCrowdsale_$8_$",
+															"typeString" : "type(contract AbstractZENOSCrowdsale)"
+														}
+													},
+													"id" : 211,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : false,
+													"kind" : "typeConversion",
+													"lValueRequested" : false,
+													"names" : [],
+													"nodeType" : "FunctionCall",
+													"src" : "3663:45:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+														"typeString" : "contract AbstractZENOSCrowdsale"
+													}
+												},
+												"src" : "3646:62:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_contract$_AbstractZENOSCrowdsale_$8",
+													"typeString" : "contract AbstractZENOSCrowdsale"
+												}
+											},
+											"id" : 213,
+											"nodeType" : "ExpressionStatement",
+											"src" : "3646:62:0"
+										},
+										{
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"hexValue" : "74727565",
+												"id" : 214,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"kind" : "bool",
+												"lValueRequested" : false,
+												"nodeType" : "Literal",
+												"src" : "3730:4:0",
+												"subdenomination" : null,
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_bool",
+													"typeString" : "bool"
+												},
+												"value" : "true"
+											},
+											"functionReturnParameters" : 202,
+											"id" : 215,
+											"nodeType" : "Return",
+											"src" : "3723:11:0"
+										}
+									]
+								}
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"hexValue" : "66616c7365",
+									"id" : 218,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : true,
+									"kind" : "bool",
+									"lValueRequested" : false,
+									"nodeType" : "Literal",
+									"src" : "3763:5:0",
+									"subdenomination" : null,
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									},
+									"value" : "false"
+								},
+								"functionReturnParameters" : 202,
+								"id" : 219,
+								"nodeType" : "Return",
+								"src" : "3756:12:0"
+							}
+						]
+					},
+					"documentation" : "@dev Setup function sets external crowdsale contract's address\r\n @param zenOSCrowdsaleAddress Token address\r",
+					"id" : 221,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 199,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 198,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 38,
+								"src" : "3547:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "3547:9:0"
+						}
+					],
+					"name" : "setup",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 197,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 196,
+								"name" : "zenOSCrowdsaleAddress",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 221,
+								"src" : "3489:29:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 195,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3489:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3488:31:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 202,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 201,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 221,
+								"src" : "3575:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 200,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3575:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3574:6:0"
+					},
+					"scope" : 262,
+					"src" : "3474:302:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 235,
+						"nodeType" : "Block",
+						"src" : "3835:97:0",
+						"statements" : 
+						[
+							{
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"id" : 232,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"nodeType" : "UnaryOperation",
+									"operator" : "!",
+									"prefix" : true,
+									"src" : "3851:29:0",
+									"subExpression" : 
+									{
+										"argumentTypes" : null,
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"id" : 230,
+												"name" : "withdrawalAmount",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 223,
+												"src" : "3863:16:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 228,
+												"name" : "owner",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 13,
+												"src" : "3852:5:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"id" : 229,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "send",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "3852:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_function_send_nonpayable$_t_uint256_$returns$_t_bool_$",
+												"typeString" : "function (uint256) returns (bool)"
+											}
+										},
+										"id" : 231,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"kind" : "functionCall",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "3852:28:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bool",
+											"typeString" : "bool"
+										}
+									},
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"falseBody" : null,
+								"id" : 234,
+								"nodeType" : "IfStatement",
+								"src" : "3848:39:0",
+								"trueBody" : 
+								{
+									"id" : 233,
+									"nodeType" : "Throw",
+									"src" : "3882:5:0"
+								}
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 236,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 226,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 225,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 38,
+								"src" : "3825:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "3825:9:0"
+						}
+					],
+					"name" : "withdraw",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 224,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 223,
+								"name" : "withdrawalAmount",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 236,
+								"src" : "3802:21:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 222,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3802:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3801:23:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 227,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3835:0:0"
+					},
+					"scope" : 262,
+					"src" : "3784:148:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 247,
+						"nodeType" : "Block",
+						"src" : "3995:35:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 245,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 243,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 13,
+										"src" : "4006:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 244,
+										"name" : "newOwner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 238,
+										"src" : "4014:8:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "4006:16:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 246,
+								"nodeType" : "ExpressionStatement",
+								"src" : "4006:16:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 248,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 241,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 240,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 38,
+								"src" : "3985:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "3985:9:0"
+						}
+					],
+					"name" : "transferOwnership",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 239,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 238,
+								"name" : "newOwner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 248,
+								"src" : "3967:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 237,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3967:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3966:18:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 242,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3995:0:0"
+					},
+					"scope" : 262,
+					"src" : "3940:90:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 260,
+						"nodeType" : "Block",
+						"src" : "4139:78:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 252,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 277,
+												"src" : "4170:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 253,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "sender",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "4170:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 254,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 277,
+												"src" : "4182:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 255,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "value",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "4182:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 256,
+												"name" : "block",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 267,
+												"src" : "4193:5:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_block",
+													"typeString" : "block"
+												}
+											},
+											"id" : 257,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "timestamp",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "4193:15:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											},
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										],
+										"id" : 251,
+										"name" : "appendEarlyPurchase",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 182,
+										"src" : "4150:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_uint256_$returns$_t_bool_$",
+											"typeString" : "function (address,uint256,uint256) returns (bool)"
+										}
+									},
+									"id" : 258,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "4150:59:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"id" : 259,
+								"nodeType" : "ExpressionStatement",
+								"src" : "4150:59:0"
+							}
+						]
+					},
+					"documentation" : "@dev By sending Ether to the contract, early purchase will be recorded.\r",
+					"id" : 261,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 249,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "4128:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 250,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "4139:0:0"
+					},
+					"scope" : 262,
+					"src" : "4119:98:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 263,
+			"src" : "425:3795:0"
+		}
+	],
+	"src" : "0:4220:0"
+}

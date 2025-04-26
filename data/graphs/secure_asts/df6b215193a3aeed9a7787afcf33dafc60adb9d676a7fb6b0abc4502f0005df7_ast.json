@@ -1,0 +1,1172 @@
+JSON AST (compact format):
+
+
+======= data/raw/secure/df6b215193a3aeed9a7787afcf33dafc60adb9d676a7fb6b0abc4502f0005df7.sol =======
+{
+	"absolutePath" : "data/raw/secure/df6b215193a3aeed9a7787afcf33dafc60adb9d676a7fb6b0abc4502f0005df7.sol",
+	"exportedSymbols" : 
+	{
+		"BasicMathLib" : 
+		[
+			57
+		]
+	},
+	"id" : 58,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".18"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:24:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "library",
+			"documentation" : "@title Basic Math Library\r\n@author Modular, Inc\r\n\n * version 1.2.1\r\nCopyright (c) 2017 Modular, Inc\r\nThe MIT License (MIT)\r\nhttps://github.com/Modular-Network/ethereum-libraries/blob/master/LICENSE\r\n\n * The Basic Math Library is inspired by the Safe Math library written by\r\nOpenZeppelin at https://github.com/OpenZeppelin/zeppelin-solidity/ .\r\nModular provides smart contract services and security reviews for contract\r\ndeployments in addition to working on open source projects in the Ethereum\r\ncommunity. Our purpose is to test, document, and deploy reusable code onto the\r\nblockchain and improve both security and usability. We also educate non-profits,\r\nschools, and other community members about the application of blockchain\r\ntechnology.\r\nFor further information: modular.network, openzeppelin.org\r\n\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\r\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\r\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\r\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\r\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\r\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\r\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r",
+			"fullyImplemented" : true,
+			"id" : 57,
+			"linearizedBaseContracts" : 
+			[
+				57
+			],
+			"name" : "BasicMathLib",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : 
+					{
+						"id" : 13,
+						"nodeType" : "Block",
+						"src" : "1782:159:0",
+						"statements" : 
+						[
+							{
+								"externalReferences" : 
+								[
+									{
+										"res" : 
+										{
+											"declaration" : 10,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1806:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 5,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1846:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 3,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1817:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 5,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1819:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"err" : 
+										{
+											"declaration" : 8,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1894:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 10,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1857:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 5,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1861:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 3,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1865:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 10,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1912:3:0",
+											"valueSize" : 1
+										}
+									}
+								],
+								"id" : 12,
+								"nodeType" : "InlineAssembly",
+								"operations" : "{\n    res := mul(a, b)\n    switch or(iszero(b), eq(div(res, b), a))\n    case 0 {\n        err := 1\n        res := 0\n    }\n}",
+								"src" : "1789:152:0"
+							}
+						]
+					},
+					"documentation" : "@dev Multiplies two numbers and checks for overflow before returning.\r\n Does not throw.\r\n @param a First number\r\n @param b Second number\r\n @return err False normally, or true if there is overflow\r\n @return res The product of a and b, or 0 if there is overflow\r",
+					"id" : 14,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "times",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 6,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 3,
+								"name" : "a",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 14,
+								"src" : "1717:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 2,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1717:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 5,
+								"name" : "b",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 14,
+								"src" : "1728:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 4,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1728:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1716:22:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 11,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 8,
+								"name" : "err",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 14,
+								"src" : "1760:8:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 7,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1760:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 10,
+								"name" : "res",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 14,
+								"src" : "1769:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 9,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1769:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1759:22:0"
+					},
+					"scope" : 57,
+					"src" : "1702:239:0",
+					"stateMutability" : "pure",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 29,
+						"nodeType" : "Block",
+						"src" : "2298:282:0",
+						"statements" : 
+						[
+							{
+								"assignments" : [],
+								"declarations" : 
+								[
+									{
+										"constant" : false,
+										"id" : 26,
+										"name" : "res",
+										"nodeType" : "VariableDeclaration",
+										"scope" : 30,
+										"src" : "2305:11:0",
+										"stateVariable" : false,
+										"storageLocation" : "default",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										},
+										"typeName" : 
+										{
+											"id" : 25,
+											"name" : "uint256",
+											"nodeType" : "ElementaryTypeName",
+											"src" : "2305:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"value" : null,
+										"visibility" : "internal"
+									}
+								],
+								"id" : 27,
+								"initialValue" : null,
+								"nodeType" : "VariableDeclarationStatement",
+								"src" : "2305:11:0"
+							},
+							{
+								"externalReferences" : 
+								[
+									{
+										"b" : 
+										{
+											"declaration" : 18,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2354:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 26,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2382:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 16,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2393:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 18,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2395:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"i" : 
+										{
+											"declaration" : 23,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2474:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"err" : 
+										{
+											"declaration" : 21,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2535:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"i" : 
+										{
+											"declaration" : 23,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2553:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 26,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2460:3:0",
+											"valueSize" : 1
+										}
+									}
+								],
+								"id" : 28,
+								"nodeType" : "InlineAssembly",
+								"operations" : "{\n    switch iszero(b)\n    case 0 {\n        res := div(a, b)\n        let loc := mload(0x40)\n        mstore(add(loc, 0x20), res)\n        i := mload(add(loc, 0x20))\n    }\n    default {\n        err := 1\n        i := 0\n    }\n}",
+								"src" : "2323:257:0"
+							}
+						]
+					},
+					"documentation" : "@dev Divides two numbers but checks for 0 in the divisor first.\r\n Does not throw.\r\n @param a First number\r\n @param b Second number\r\n @return err False normally, or true if `b` is 0\r\n @return res The quotient of a and b, or 0 if `b` is 0\r",
+					"id" : 30,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "dividedBy",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 19,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 16,
+								"name" : "a",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 30,
+								"src" : "2235:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 15,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2235:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 18,
+								"name" : "b",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 30,
+								"src" : "2246:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 17,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2246:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2234:22:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 24,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 21,
+								"name" : "err",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 30,
+								"src" : "2278:8:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 20,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2278:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 23,
+								"name" : "i",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 30,
+								"src" : "2287:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 22,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2287:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2277:20:0"
+					},
+					"scope" : 57,
+					"src" : "2216:364:0",
+					"stateMutability" : "pure",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 42,
+						"nodeType" : "Block",
+						"src" : "2948:174:0",
+						"statements" : 
+						[
+							{
+								"externalReferences" : 
+								[
+									{
+										"res" : 
+										{
+											"declaration" : 39,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2972:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 32,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2983:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 34,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "2985:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 39,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3013:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 34,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3017:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 32,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3021:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"err" : 
+										{
+											"declaration" : 37,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3075:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 39,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3031:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 34,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3035:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 39,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3041:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 34,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3045:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 39,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3093:3:0",
+											"valueSize" : 1
+										}
+									}
+								],
+								"id" : 41,
+								"nodeType" : "InlineAssembly",
+								"operations" : "{\n    res := add(a, b)\n    switch and(eq(sub(res, b), a), or(gt(res, b), eq(res, b)))\n    case 0 {\n        err := 1\n        res := 0\n    }\n}",
+								"src" : "2955:167:0"
+							}
+						]
+					},
+					"documentation" : "@dev Adds two numbers and checks for overflow before returning.\r\n Does not throw.\r\n @param a First number\r\n @param b Second number\r\n @return err False normally, or true if there is overflow\r\n @return res The sum of a and b, or 0 if there is overflow\r",
+					"id" : 43,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "plus",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 35,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 32,
+								"name" : "a",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 43,
+								"src" : "2882:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 31,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2882:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 34,
+								"name" : "b",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 43,
+								"src" : "2893:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 33,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2893:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2881:22:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 40,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 37,
+								"name" : "err",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 43,
+								"src" : "2925:8:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 36,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2925:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 39,
+								"name" : "res",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 43,
+								"src" : "2935:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 38,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2935:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2924:23:0"
+					},
+					"scope" : 57,
+					"src" : "2868:254:0",
+					"stateMutability" : "pure",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 55,
+						"nodeType" : "Block",
+						"src" : "3561:182:0",
+						"statements" : 
+						[
+							{
+								"externalReferences" : 
+								[
+									{
+										"res" : 
+										{
+											"declaration" : 52,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3585:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 45,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3596:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 47,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3598:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 52,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3629:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"b" : 
+										{
+											"declaration" : 47,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3633:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 45,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3637:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"err" : 
+										{
+											"declaration" : 50,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3696:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 52,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3647:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 45,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3651:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 52,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3658:3:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"a" : 
+										{
+											"declaration" : 45,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3662:1:0",
+											"valueSize" : 1
+										}
+									},
+									{
+										"res" : 
+										{
+											"declaration" : 52,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "3714:3:0",
+											"valueSize" : 1
+										}
+									}
+								],
+								"id" : 54,
+								"nodeType" : "InlineAssembly",
+								"operations" : "{\n    res := sub(a, b)\n    switch eq(and(eq(add(res, b), a), or(lt(res, a), eq(res, a))), 1)\n    case 0 {\n        err := 1\n        res := 0\n    }\n}",
+								"src" : "3568:175:0"
+							}
+						]
+					},
+					"documentation" : "@dev Subtracts two numbers and checks for underflow before returning.\r\n Does not throw but rather logs an Err event if there is underflow.\r\n @param a First number\r\n @param b Second number\r\n @return err False normally, or true if there is underflow\r\n @return res The difference between a and b, or 0 if there is underflow\r",
+					"id" : 56,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "minus",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 48,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 45,
+								"name" : "a",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 56,
+								"src" : "3496:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 44,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3496:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 47,
+								"name" : "b",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 56,
+								"src" : "3507:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 46,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3507:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3495:22:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 53,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 50,
+								"name" : "err",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 56,
+								"src" : "3539:8:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 49,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3539:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 52,
+								"name" : "res",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 56,
+								"src" : "3548:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 51,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3548:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3538:22:0"
+					},
+					"scope" : 57,
+					"src" : "3481:262:0",
+					"stateMutability" : "pure",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 58,
+			"src" : "1384:2362:0"
+		}
+	],
+	"src" : "0:3746:0"
+}

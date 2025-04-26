@@ -1,0 +1,229 @@
+JSON AST (compact format):
+
+
+======= data/raw/secure/83cadefe1a1d929d5dd4f6917a3422c1f578edf9f99e4a4b39adb394eb800e6b.sol =======
+{
+	"absolutePath" : "data/raw/secure/83cadefe1a1d929d5dd4f6917a3422c1f578edf9f99e4a4b39adb394eb800e6b.sol",
+	"exportedSymbols" : 
+	{
+		"Datatrust" : 
+		[
+			16
+		]
+	},
+	"id" : 17,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".23"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:24:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : "@title Datatrust Anchoring system\r\n@author Blockchain Partner\r\n@author https://blockchainpartner.fr\r",
+			"fullyImplemented" : true,
+			"id" : 16,
+			"linearizedBaseContracts" : 
+			[
+				16
+			],
+			"name" : "Datatrust",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 5,
+					"name" : "NewAnchor",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 4,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 3,
+								"indexed" : false,
+								"name" : "merkleRoot",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 5,
+								"src" : "239:18:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bytes32",
+									"typeString" : "bytes32"
+								},
+								"typeName" : 
+								{
+									"id" : 2,
+									"name" : "bytes32",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "239:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bytes32",
+										"typeString" : "bytes32"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "238:20:0"
+					},
+					"src" : "223:36:0"
+				},
+				{
+					"body" : 
+					{
+						"id" : 14,
+						"nodeType" : "Block",
+						"src" : "496:46:0",
+						"statements" : 
+						[
+							{
+								"eventCall" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 11,
+											"name" : "_merkleRoot",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 7,
+											"src" : "522:11:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bytes32",
+												"typeString" : "bytes32"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bytes32",
+												"typeString" : "bytes32"
+											}
+										],
+										"id" : 10,
+										"name" : "NewAnchor",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 5,
+										"src" : "512:9:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_bytes32_$returns$__$",
+											"typeString" : "function (bytes32)"
+										}
+									},
+									"id" : 12,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "512:22:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 13,
+								"nodeType" : "EmitStatement",
+								"src" : "507:27:0"
+							}
+						]
+					},
+					"documentation" : "@dev Save a new anchor for a given Merkle tree root hash\r\n@dev Use events as a form of storage\r\n@param _merkleRoot bytes32 hash to anchor\r",
+					"id" : 15,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "saveNewAnchor",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 8,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 7,
+								"name" : "_merkleRoot",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 15,
+								"src" : "468:19:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bytes32",
+									"typeString" : "bytes32"
+								},
+								"typeName" : 
+								{
+									"id" : 6,
+									"name" : "bytes32",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "468:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bytes32",
+										"typeString" : "bytes32"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "467:21:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 9,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "496:0:0"
+					},
+					"scope" : 16,
+					"src" : "445:97:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 17,
+			"src" : "148:397:0"
+		}
+	],
+	"src" : "0:545:0"
+}

@@ -1,0 +1,2996 @@
+JSON AST (compact format):
+
+
+======= data/raw/secure/26269b34cb0d30c18b16ab2fa47eee2d871b62bd06c10dd1337e6db2def3963a.sol =======
+{
+	"absolutePath" : "data/raw/secure/26269b34cb0d30c18b16ab2fa47eee2d871b62bd06c10dd1337e6db2def3963a.sol",
+	"exportedSymbols" : 
+	{
+		"History" : 
+		[
+			220
+		]
+	},
+	"id" : 221,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".0"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:23:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : "@title Contains the history of all relevant historic events in the vehicle lifecycle.\r",
+			"fullyImplemented" : true,
+			"id" : 220,
+			"linearizedBaseContracts" : 
+			[
+				220
+			],
+			"name" : "History",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"constant" : false,
+					"id" : 3,
+					"name" : "owner",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 220,
+					"src" : "279:13:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_address",
+						"typeString" : "address"
+					},
+					"typeName" : 
+					{
+						"id" : 2,
+						"name" : "address",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "279:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_address",
+							"typeString" : "address"
+						}
+					},
+					"value" : null,
+					"visibility" : "internal"
+				},
+				{
+					"canonicalName" : "History.EventType",
+					"id" : 7,
+					"members" : 
+					[
+						{
+							"id" : 4,
+							"name" : "NewOwner",
+							"nodeType" : "EnumValue",
+							"src" : "373:8:0"
+						},
+						{
+							"id" : 5,
+							"name" : "Maintenance",
+							"nodeType" : "EnumValue",
+							"src" : "383:11:0"
+						},
+						{
+							"id" : 6,
+							"name" : "DamageRepair",
+							"nodeType" : "EnumValue",
+							"src" : "396:12:0"
+						}
+					],
+					"name" : "EventType",
+					"nodeType" : "EnumDefinition",
+					"src" : "356:54:0"
+				},
+				{
+					"constant" : false,
+					"id" : 11,
+					"name" : "authorizedLoggers",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 220,
+					"src" : "565:49:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_mapping$_t_address_$_t_bool_$",
+						"typeString" : "mapping(address => bool)"
+					},
+					"typeName" : 
+					{
+						"id" : 10,
+						"keyType" : 
+						{
+							"id" : 8,
+							"name" : "address",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "573:7:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_address",
+								"typeString" : "address"
+							}
+						},
+						"nodeType" : "Mapping",
+						"src" : "565:24:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_mapping$_t_address_$_t_bool_$",
+							"typeString" : "mapping(address => bool)"
+						},
+						"valueType" : 
+						{
+							"id" : 9,
+							"name" : "bool",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "584:4:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_bool",
+								"typeString" : "bool"
+							}
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 21,
+					"name" : "EventLogged",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 20,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 13,
+								"indexed" : false,
+								"name" : "vin",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 21,
+								"src" : "715:10:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 12,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "715:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 15,
+								"indexed" : false,
+								"name" : "eventType",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 21,
+								"src" : "727:19:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_enum$_EventType_$7",
+									"typeString" : "enum History.EventType"
+								},
+								"typeName" : 
+								{
+									"contractScope" : null,
+									"id" : 14,
+									"name" : "EventType",
+									"nodeType" : "UserDefinedTypeName",
+									"referencedDeclaration" : 7,
+									"src" : "727:9:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_EventType_$7",
+										"typeString" : "enum History.EventType"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 17,
+								"indexed" : false,
+								"name" : "mileage",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 21,
+								"src" : "748:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 16,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "748:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 19,
+								"indexed" : false,
+								"name" : "verifier",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 21,
+								"src" : "765:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 18,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "765:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "714:68:0"
+					},
+					"src" : "697:86:0"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 25,
+					"name" : "LoggerAuthorized",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 24,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 23,
+								"indexed" : false,
+								"name" : "loggerAddress",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 25,
+								"src" : "894:21:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 22,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "894:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "893:23:0"
+					},
+					"src" : "871:46:0"
+				},
+				{
+					"canonicalName" : "History.LedgerEvent",
+					"id" : 38,
+					"members" : 
+					[
+						{
+							"constant" : false,
+							"id" : 27,
+							"name" : "creationTime",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 38,
+							"src" : "965:20:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_uint256",
+								"typeString" : "uint256"
+							},
+							"typeName" : 
+							{
+								"id" : 26,
+								"name" : "uint256",
+								"nodeType" : "ElementaryTypeName",
+								"src" : "965:7:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						},
+						{
+							"constant" : false,
+							"id" : 29,
+							"name" : "mileage",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 38,
+							"src" : "996:15:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_uint256",
+								"typeString" : "uint256"
+							},
+							"typeName" : 
+							{
+								"id" : 28,
+								"name" : "uint256",
+								"nodeType" : "ElementaryTypeName",
+								"src" : "996:7:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						},
+						{
+							"constant" : false,
+							"id" : 31,
+							"name" : "repairOrderNumber",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 38,
+							"src" : "1023:25:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_uint256",
+								"typeString" : "uint256"
+							},
+							"typeName" : 
+							{
+								"id" : 30,
+								"name" : "uint256",
+								"nodeType" : "ElementaryTypeName",
+								"src" : "1023:7:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						},
+						{
+							"constant" : false,
+							"id" : 33,
+							"name" : "verifier",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 38,
+							"src" : "1059:16:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_address",
+								"typeString" : "address"
+							},
+							"typeName" : 
+							{
+								"id" : 32,
+								"name" : "address",
+								"nodeType" : "ElementaryTypeName",
+								"src" : "1059:7:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						},
+						{
+							"constant" : false,
+							"id" : 35,
+							"name" : "eventType",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 38,
+							"src" : "1087:19:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_enum$_EventType_$7",
+								"typeString" : "enum History.EventType"
+							},
+							"typeName" : 
+							{
+								"contractScope" : null,
+								"id" : 34,
+								"name" : "EventType",
+								"nodeType" : "UserDefinedTypeName",
+								"referencedDeclaration" : 7,
+								"src" : "1087:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_enum$_EventType_$7",
+									"typeString" : "enum History.EventType"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						},
+						{
+							"constant" : false,
+							"id" : 37,
+							"name" : "description",
+							"nodeType" : "VariableDeclaration",
+							"scope" : 38,
+							"src" : "1117:18:0",
+							"stateVariable" : false,
+							"storageLocation" : "default",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_string_storage_ptr",
+								"typeString" : "string"
+							},
+							"typeName" : 
+							{
+								"id" : 36,
+								"name" : "string",
+								"nodeType" : "ElementaryTypeName",
+								"src" : "1117:6:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_storage_ptr",
+									"typeString" : "string"
+								}
+							},
+							"value" : null,
+							"visibility" : "internal"
+						}
+					],
+					"name" : "LedgerEvent",
+					"nodeType" : "StructDefinition",
+					"scope" : 220,
+					"src" : "925:221:0",
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 43,
+					"name" : "events",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 220,
+					"src" : "1154:41:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_mapping$_t_bytes32_$_t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage_$",
+						"typeString" : "mapping(bytes32 => struct History.LedgerEvent[])"
+					},
+					"typeName" : 
+					{
+						"id" : 42,
+						"keyType" : 
+						{
+							"id" : 39,
+							"name" : "bytes32",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "1163:7:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_bytes32",
+								"typeString" : "bytes32"
+							}
+						},
+						"nodeType" : "Mapping",
+						"src" : "1154:34:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_mapping$_t_bytes32_$_t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage_$",
+							"typeString" : "mapping(bytes32 => struct History.LedgerEvent[])"
+						},
+						"valueType" : 
+						{
+							"baseType" : 
+							{
+								"contractScope" : null,
+								"id" : 40,
+								"name" : "LedgerEvent",
+								"nodeType" : "UserDefinedTypeName",
+								"referencedDeclaration" : 38,
+								"src" : "1174:11:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_struct$_LedgerEvent_$38_storage_ptr",
+									"typeString" : "struct History.LedgerEvent"
+								}
+							},
+							"id" : 41,
+							"length" : null,
+							"nodeType" : "ArrayTypeName",
+							"src" : "1174:13:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage_ptr",
+								"typeString" : "struct History.LedgerEvent[]"
+							}
+						}
+					},
+					"value" : null,
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 51,
+						"nodeType" : "Block",
+						"src" : "1264:48:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 49,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 46,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 3,
+										"src" : "1285:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 47,
+											"name" : "msg",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 235,
+											"src" : "1293:3:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_magic_message",
+												"typeString" : "msg"
+											}
+										},
+										"id" : 48,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "sender",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1293:10:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "1285:18:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 50,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1285:18:0"
+							}
+						]
+					},
+					"documentation" : "Set the owner.\r",
+					"id" : 52,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "History",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 44,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1261:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 45,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1264:0:0"
+					},
+					"scope" : 220,
+					"src" : "1245:67:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 62,
+						"nodeType" : "Block",
+						"src" : "1416:87:0",
+						"statements" : 
+						[
+							{
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"id" : 58,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"nodeType" : "UnaryOperation",
+									"operator" : "!",
+									"prefix" : true,
+									"src" : "1433:30:0",
+									"subExpression" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 54,
+											"name" : "authorizedLoggers",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 11,
+											"src" : "1434:17:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_address_$_t_bool_$",
+												"typeString" : "mapping(address => bool)"
+											}
+										},
+										"id" : 57,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 55,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 235,
+												"src" : "1452:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 56,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "sender",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "1452:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"nodeType" : "IndexAccess",
+										"src" : "1434:29:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bool",
+											"typeString" : "bool"
+										}
+									},
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"falseBody" : null,
+								"id" : 60,
+								"nodeType" : "IfStatement",
+								"src" : "1429:54:0",
+								"trueBody" : 
+								{
+									"id" : 59,
+									"nodeType" : "Throw",
+									"src" : "1478:5:0"
+								}
+							},
+							{
+								"id" : 61,
+								"nodeType" : "PlaceholderStatement",
+								"src" : "1494:1:0"
+							}
+						]
+					},
+					"documentation" : "Only allows addresses can call this function.\r",
+					"id" : 63,
+					"name" : "onlyAuthorized",
+					"nodeType" : "ModifierDefinition",
+					"parameters" : 
+					{
+						"id" : 53,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1416:0:0"
+					},
+					"src" : "1392:111:0",
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 72,
+						"nodeType" : "Block",
+						"src" : "1592:76:0",
+						"statements" : 
+						[
+							{
+								"condition" : 
+								{
+									"argumentTypes" : null,
+									"commonType" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									},
+									"id" : 68,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftExpression" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 65,
+											"name" : "msg",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 235,
+											"src" : "1609:3:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_magic_message",
+												"typeString" : "msg"
+											}
+										},
+										"id" : 66,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "sender",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1609:10:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "BinaryOperation",
+									"operator" : "!=",
+									"rightExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 67,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 3,
+										"src" : "1623:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "1609:19:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"falseBody" : null,
+								"id" : 70,
+								"nodeType" : "IfStatement",
+								"src" : "1605:43:0",
+								"trueBody" : 
+								{
+									"id" : 69,
+									"nodeType" : "Throw",
+									"src" : "1643:5:0"
+								}
+							},
+							{
+								"id" : 71,
+								"nodeType" : "PlaceholderStatement",
+								"src" : "1659:1:0"
+							}
+						]
+					},
+					"documentation" : "Only owner can call this function.\r",
+					"id" : 73,
+					"name" : "onlyOwner",
+					"nodeType" : "ModifierDefinition",
+					"parameters" : 
+					{
+						"id" : 64,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1592:0:0"
+					},
+					"src" : "1573:95:0",
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 90,
+						"nodeType" : "Block",
+						"src" : "1820:94:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 84,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 80,
+											"name" : "authorizedLoggers",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 11,
+											"src" : "1833:17:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_address_$_t_bool_$",
+												"typeString" : "mapping(address => bool)"
+											}
+										},
+										"id" : 82,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 81,
+											"name" : "newLogger",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 75,
+											"src" : "1851:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "1833:28:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bool",
+											"typeString" : "bool"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"hexValue" : "74727565",
+										"id" : 83,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"kind" : "bool",
+										"lValueRequested" : false,
+										"nodeType" : "Literal",
+										"src" : "1864:4:0",
+										"subdenomination" : null,
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bool",
+											"typeString" : "bool"
+										},
+										"value" : "true"
+									},
+									"src" : "1833:35:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"id" : 85,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1833:35:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 87,
+											"name" : "newLogger",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 75,
+											"src" : "1896:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 86,
+										"name" : "LoggerAuthorized",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 25,
+										"src" : "1879:16:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_address_$returns$__$",
+											"typeString" : "function (address)"
+										}
+									},
+									"id" : 88,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1879:27:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 89,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1879:27:0"
+							}
+						]
+					},
+					"documentation" : "Authorize the specified address to add evemnts to the historic log.\r",
+					"id" : 91,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 78,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 77,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 73,
+								"src" : "1810:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "1810:9:0"
+						}
+					],
+					"name" : "authorize",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 76,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 75,
+								"name" : "newLogger",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 91,
+								"src" : "1791:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 74,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1791:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1790:19:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 79,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1820:0:0"
+					},
+					"scope" : 220,
+					"src" : "1772:142:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 102,
+						"nodeType" : "Block",
+						"src" : "2062:54:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"baseExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 98,
+										"name" : "authorizedLoggers",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 11,
+										"src" : "2083:17:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_mapping$_t_address_$_t_bool_$",
+											"typeString" : "mapping(address => bool)"
+										}
+									},
+									"id" : 100,
+									"indexExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 99,
+										"name" : "logger",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 93,
+										"src" : "2101:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"isConstant" : false,
+									"isLValue" : true,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"nodeType" : "IndexAccess",
+									"src" : "2083:25:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"functionReturnParameters" : 97,
+								"id" : 101,
+								"nodeType" : "Return",
+								"src" : "2076:32:0"
+							}
+						]
+					},
+					"documentation" : "Checks if the specified address is authorized to log events.\r",
+					"id" : 103,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "isAuthorized",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 94,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 93,
+								"name" : "logger",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 103,
+								"src" : "2031:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 92,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2031:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2030:16:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 97,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 96,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 103,
+								"src" : "2056:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 95,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2056:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2055:6:0"
+					},
+					"scope" : 220,
+					"src" : "2009:107:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 143,
+						"nodeType" : "Block",
+						"src" : "2470:369:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"arguments" : 
+											[
+												{
+													"argumentTypes" : null,
+													"id" : 125,
+													"name" : "now",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 237,
+													"src" : "2548:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 126,
+													"name" : "_mileage",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 105,
+													"src" : "2575:8:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 127,
+													"name" : "_repairOrderNumber",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 107,
+													"src" : "2617:18:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"expression" : 
+													{
+														"argumentTypes" : null,
+														"id" : 128,
+														"name" : "msg",
+														"nodeType" : "Identifier",
+														"overloadedDeclarations" : [],
+														"referencedDeclaration" : 235,
+														"src" : "2660:3:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_magic_message",
+															"typeString" : "msg"
+														}
+													},
+													"id" : 129,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : false,
+													"lValueRequested" : false,
+													"memberName" : "sender",
+													"nodeType" : "MemberAccess",
+													"referencedDeclaration" : null,
+													"src" : "2660:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 130,
+													"name" : "_eventType",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 109,
+													"src" : "2696:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_enum$_EventType_$7",
+														"typeString" : "enum History.EventType"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 131,
+													"name" : "_description",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 111,
+													"src" : "2734:12:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_string_memory_ptr",
+														"typeString" : "string memory"
+													}
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 124,
+												"name" : "LedgerEvent",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 38,
+												"src" : "2507:11:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_type$_t_struct$_LedgerEvent_$38_storage_ptr_$",
+													"typeString" : "type(struct History.LedgerEvent storage pointer)"
+												}
+											},
+											"id" : 132,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "structConstructorCall",
+											"lValueRequested" : false,
+											"names" : 
+											[
+												"creationTime",
+												"mileage",
+												"repairOrderNumber",
+												"verifier",
+												"eventType",
+												"description"
+											],
+											"nodeType" : "FunctionCall",
+											"src" : "2507:251:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_struct$_LedgerEvent_$38_memory",
+												"typeString" : "struct History.LedgerEvent memory"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_struct$_LedgerEvent_$38_memory",
+												"typeString" : "struct History.LedgerEvent memory"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"baseExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 118,
+												"name" : "events",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 43,
+												"src" : "2483:6:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_mapping$_t_bytes32_$_t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage_$",
+													"typeString" : "mapping(bytes32 => struct History.LedgerEvent storage ref[] storage ref)"
+												}
+											},
+											"id" : 122,
+											"indexExpression" : 
+											{
+												"argumentTypes" : null,
+												"arguments" : 
+												[
+													{
+														"argumentTypes" : null,
+														"id" : 120,
+														"name" : "_vin",
+														"nodeType" : "Identifier",
+														"overloadedDeclarations" : [],
+														"referencedDeclaration" : 113,
+														"src" : "2495:4:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_string_memory_ptr",
+															"typeString" : "string memory"
+														}
+													}
+												],
+												"expression" : 
+												{
+													"argumentTypes" : 
+													[
+														{
+															"typeIdentifier" : "t_string_memory_ptr",
+															"typeString" : "string memory"
+														}
+													],
+													"id" : 119,
+													"name" : "sha3",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 245,
+													"src" : "2490:4:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_function_sha3_pure$__$returns$_t_bytes32_$",
+														"typeString" : "function () pure returns (bytes32)"
+													}
+												},
+												"id" : 121,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"kind" : "functionCall",
+												"lValueRequested" : false,
+												"names" : [],
+												"nodeType" : "FunctionCall",
+												"src" : "2490:10:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_bytes32",
+													"typeString" : "bytes32"
+												}
+											},
+											"isConstant" : false,
+											"isLValue" : true,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"nodeType" : "IndexAccess",
+											"src" : "2483:18:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage",
+												"typeString" : "struct History.LedgerEvent storage ref[] storage ref"
+											}
+										},
+										"id" : 123,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "push",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "2483:23:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_arraypush_nonpayable$_t_struct$_LedgerEvent_$38_storage_$returns$_t_uint256_$",
+											"typeString" : "function (struct History.LedgerEvent storage ref) returns (uint256)"
+										}
+									},
+									"id" : 133,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2483:276:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 134,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2483:276:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 136,
+											"name" : "_vin",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 113,
+											"src" : "2792:4:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 137,
+											"name" : "_eventType",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 109,
+											"src" : "2798:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_enum$_EventType_$7",
+												"typeString" : "enum History.EventType"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 138,
+											"name" : "_mileage",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 105,
+											"src" : "2810:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 139,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 235,
+												"src" : "2820:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 140,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "sender",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "2820:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											},
+											{
+												"typeIdentifier" : "t_enum$_EventType_$7",
+												"typeString" : "enum History.EventType"
+											},
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											},
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 135,
+										"name" : "EventLogged",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 21,
+										"src" : "2780:11:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_string_memory_ptr_$_t_enum$_EventType_$7_$_t_uint256_$_t_address_$returns$__$",
+											"typeString" : "function (string memory,enum History.EventType,uint256,address)"
+										}
+									},
+									"id" : 141,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2780:51:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 142,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2780:51:0"
+							}
+						]
+					},
+					"documentation" : "Add a historically significant event (i.e. maintenance, damage \r\nrepair or new owner).\r",
+					"id" : 144,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 116,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 115,
+								"name" : "onlyAuthorized",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 63,
+								"src" : "2455:14:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "2455:14:0"
+						}
+					],
+					"name" : "addEvent",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 114,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 105,
+								"name" : "_mileage",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 144,
+								"src" : "2262:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 104,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2262:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 107,
+								"name" : "_repairOrderNumber",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 144,
+								"src" : "2303:26:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 106,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2303:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 109,
+								"name" : "_eventType",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 144,
+								"src" : "2353:20:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_enum$_EventType_$7",
+									"typeString" : "enum History.EventType"
+								},
+								"typeName" : 
+								{
+									"contractScope" : null,
+									"id" : 108,
+									"name" : "EventType",
+									"nodeType" : "UserDefinedTypeName",
+									"referencedDeclaration" : 7,
+									"src" : "2353:9:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_EventType_$7",
+										"typeString" : "enum History.EventType"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 111,
+								"name" : "_description",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 144,
+								"src" : "2398:19:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 110,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2398:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 113,
+								"name" : "_vin",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 144,
+								"src" : "2442:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 112,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2442:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2261:193:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 117,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2470:0:0"
+					},
+					"scope" : 220,
+					"src" : "2244:595:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 158,
+						"nodeType" : "Block",
+						"src" : "3020:53:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"expression" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 151,
+											"name" : "events",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 43,
+											"src" : "3040:6:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_bytes32_$_t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage_$",
+												"typeString" : "mapping(bytes32 => struct History.LedgerEvent storage ref[] storage ref)"
+											}
+										},
+										"id" : 155,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"arguments" : 
+											[
+												{
+													"argumentTypes" : null,
+													"id" : 153,
+													"name" : "_vin",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 146,
+													"src" : "3052:4:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_string_memory_ptr",
+														"typeString" : "string memory"
+													}
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : 
+												[
+													{
+														"typeIdentifier" : "t_string_memory_ptr",
+														"typeString" : "string memory"
+													}
+												],
+												"id" : 152,
+												"name" : "sha3",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 245,
+												"src" : "3047:4:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_sha3_pure$__$returns$_t_bytes32_$",
+													"typeString" : "function () pure returns (bytes32)"
+												}
+											},
+											"id" : 154,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "functionCall",
+											"lValueRequested" : false,
+											"names" : [],
+											"nodeType" : "FunctionCall",
+											"src" : "3047:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bytes32",
+												"typeString" : "bytes32"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"nodeType" : "IndexAccess",
+										"src" : "3040:18:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage",
+											"typeString" : "struct History.LedgerEvent storage ref[] storage ref"
+										}
+									},
+									"id" : 156,
+									"isConstant" : false,
+									"isLValue" : true,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"memberName" : "length",
+									"nodeType" : "MemberAccess",
+									"referencedDeclaration" : null,
+									"src" : "3040:25:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"functionReturnParameters" : 150,
+								"id" : 157,
+								"nodeType" : "Return",
+								"src" : "3033:32:0"
+							}
+						]
+					},
+					"documentation" : "Returns the number of events for a vin. (helper function for getEvent function)\r",
+					"id" : 159,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getEventsCount",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 147,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 146,
+								"name" : "_vin",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 159,
+								"src" : "2981:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 145,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2981:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2980:13:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 150,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 149,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 159,
+								"src" : "3011:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 148,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3011:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3010:9:0"
+					},
+					"scope" : 220,
+					"src" : "2957:116:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 204,
+						"nodeType" : "Block",
+						"src" : "3400:204:0",
+						"statements" : 
+						[
+							{
+								"assignments" : 
+								[
+									175
+								],
+								"declarations" : 
+								[
+									{
+										"constant" : false,
+										"id" : 175,
+										"name" : "e",
+										"nodeType" : "VariableDeclaration",
+										"scope" : 205,
+										"src" : "3413:20:0",
+										"stateVariable" : false,
+										"storageLocation" : "memory",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_struct$_LedgerEvent_$38_memory_ptr",
+											"typeString" : "struct History.LedgerEvent"
+										},
+										"typeName" : 
+										{
+											"contractScope" : null,
+											"id" : 174,
+											"name" : "LedgerEvent",
+											"nodeType" : "UserDefinedTypeName",
+											"referencedDeclaration" : 38,
+											"src" : "3413:11:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_struct$_LedgerEvent_$38_storage_ptr",
+												"typeString" : "struct History.LedgerEvent"
+											}
+										},
+										"value" : null,
+										"visibility" : "internal"
+									}
+								],
+								"id" : 183,
+								"initialValue" : 
+								{
+									"argumentTypes" : null,
+									"baseExpression" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 176,
+											"name" : "events",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 43,
+											"src" : "3436:6:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_bytes32_$_t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage_$",
+												"typeString" : "mapping(bytes32 => struct History.LedgerEvent storage ref[] storage ref)"
+											}
+										},
+										"id" : 180,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"arguments" : 
+											[
+												{
+													"argumentTypes" : null,
+													"id" : 178,
+													"name" : "_vin",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 161,
+													"src" : "3448:4:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_string_memory_ptr",
+														"typeString" : "string memory"
+													}
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : 
+												[
+													{
+														"typeIdentifier" : "t_string_memory_ptr",
+														"typeString" : "string memory"
+													}
+												],
+												"id" : 177,
+												"name" : "sha3",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 245,
+												"src" : "3443:4:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_sha3_pure$__$returns$_t_bytes32_$",
+													"typeString" : "function () pure returns (bytes32)"
+												}
+											},
+											"id" : 179,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "functionCall",
+											"lValueRequested" : false,
+											"names" : [],
+											"nodeType" : "FunctionCall",
+											"src" : "3443:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bytes32",
+												"typeString" : "bytes32"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"nodeType" : "IndexAccess",
+										"src" : "3436:18:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_array$_t_struct$_LedgerEvent_$38_storage_$dyn_storage",
+											"typeString" : "struct History.LedgerEvent storage ref[] storage ref"
+										}
+									},
+									"id" : 182,
+									"indexExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 181,
+										"name" : "_index",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 163,
+										"src" : "3455:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"isConstant" : false,
+									"isLValue" : true,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"nodeType" : "IndexAccess",
+									"src" : "3436:26:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_struct$_LedgerEvent_$38_storage",
+										"typeString" : "struct History.LedgerEvent storage ref"
+									}
+								},
+								"nodeType" : "VariableDeclarationStatement",
+								"src" : "3413:49:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 187,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 184,
+										"name" : "mileage",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 166,
+										"src" : "3473:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 185,
+											"name" : "e",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 175,
+											"src" : "3483:1:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_struct$_LedgerEvent_$38_memory_ptr",
+												"typeString" : "struct History.LedgerEvent memory"
+											}
+										},
+										"id" : 186,
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "mileage",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : 29,
+										"src" : "3483:9:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										}
+									},
+									"src" : "3473:19:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 188,
+								"nodeType" : "ExpressionStatement",
+								"src" : "3473:19:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 192,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 189,
+										"name" : "verifier",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 168,
+										"src" : "3503:8:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 190,
+											"name" : "e",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 175,
+											"src" : "3514:1:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_struct$_LedgerEvent_$38_memory_ptr",
+												"typeString" : "struct History.LedgerEvent memory"
+											}
+										},
+										"id" : 191,
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "verifier",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : 33,
+										"src" : "3514:10:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "3503:21:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 193,
+								"nodeType" : "ExpressionStatement",
+								"src" : "3503:21:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 197,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 194,
+										"name" : "eventType",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 170,
+										"src" : "3535:9:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_EventType_$7",
+											"typeString" : "enum History.EventType"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 195,
+											"name" : "e",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 175,
+											"src" : "3547:1:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_struct$_LedgerEvent_$38_memory_ptr",
+												"typeString" : "struct History.LedgerEvent memory"
+											}
+										},
+										"id" : 196,
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "eventType",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : 35,
+										"src" : "3547:11:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_EventType_$7",
+											"typeString" : "enum History.EventType"
+										}
+									},
+									"src" : "3535:23:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_EventType_$7",
+										"typeString" : "enum History.EventType"
+									}
+								},
+								"id" : 198,
+								"nodeType" : "ExpressionStatement",
+								"src" : "3535:23:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 202,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 199,
+										"name" : "description",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 172,
+										"src" : "3569:11:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_memory_ptr",
+											"typeString" : "string memory"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 200,
+											"name" : "e",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 175,
+											"src" : "3583:1:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_struct$_LedgerEvent_$38_memory_ptr",
+												"typeString" : "struct History.LedgerEvent memory"
+											}
+										},
+										"id" : 201,
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "description",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : 37,
+										"src" : "3583:13:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_memory",
+											"typeString" : "string memory"
+										}
+									},
+									"src" : "3569:27:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_memory_ptr",
+										"typeString" : "string memory"
+									}
+								},
+								"id" : 203,
+								"nodeType" : "ExpressionStatement",
+								"src" : "3569:27:0"
+							}
+						]
+					},
+					"documentation" : "Returns the details of a specific event. To be used together with the function\r\ngetEventsCount().\r",
+					"id" : 205,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getEvent",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 164,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 161,
+								"name" : "_vin",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 205,
+								"src" : "3234:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 160,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3234:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 163,
+								"name" : "_index",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 205,
+								"src" : "3247:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 162,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3247:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3233:29:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 173,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 166,
+								"name" : "mileage",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 205,
+								"src" : "3298:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 165,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3298:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 168,
+								"name" : "verifier",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 205,
+								"src" : "3315:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 167,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3315:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 170,
+								"name" : "eventType",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 205,
+								"src" : "3359:19:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_enum$_EventType_$7",
+									"typeString" : "enum History.EventType"
+								},
+								"typeName" : 
+								{
+									"contractScope" : null,
+									"id" : 169,
+									"name" : "EventType",
+									"nodeType" : "UserDefinedTypeName",
+									"referencedDeclaration" : 7,
+									"src" : "3359:9:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_EventType_$7",
+										"typeString" : "enum History.EventType"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 172,
+								"name" : "description",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 205,
+								"src" : "3380:18:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 171,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3380:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3297:102:0"
+					},
+					"scope" : 220,
+					"src" : "3216:388:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 214,
+						"nodeType" : "Block",
+						"src" : "3711:42:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 211,
+											"name" : "owner",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 3,
+											"src" : "3738:5:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 210,
+										"name" : "selfdestruct",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "3725:12:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_selfdestruct_nonpayable$_t_address_$returns$__$",
+											"typeString" : "function (address)"
+										}
+									},
+									"id" : 212,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "3725:19:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 213,
+								"nodeType" : "ExpressionStatement",
+								"src" : "3725:19:0"
+							}
+						]
+					},
+					"documentation" : "Lifecycle management (Solidity best-practice).\r",
+					"id" : 215,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 208,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 207,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 73,
+								"src" : "3701:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "3701:9:0"
+						}
+					],
+					"name" : "kill",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 206,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3698:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 209,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3711:0:0"
+					},
+					"scope" : 220,
+					"src" : "3685:68:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 218,
+						"nodeType" : "Block",
+						"src" : "3850:2:0",
+						"statements" : []
+					},
+					"documentation" : "Fallback function (Solidity best-practice).\r",
+					"id" : 219,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 216,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3839:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 217,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3850:0:0"
+					},
+					"scope" : 220,
+					"src" : "3831:21:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 221,
+			"src" : "127:3728:0"
+		}
+	],
+	"src" : "0:3855:0"
+}

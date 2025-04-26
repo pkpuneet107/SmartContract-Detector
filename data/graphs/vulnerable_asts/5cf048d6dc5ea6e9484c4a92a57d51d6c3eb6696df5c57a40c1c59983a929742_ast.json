@@ -1,0 +1,400 @@
+JSON AST (compact format):
+
+
+======= data/raw/vulnerable/5cf048d6dc5ea6e9484c4a92a57d51d6c3eb6696df5c57a40c1c59983a929742.sol =======
+{
+	"absolutePath" : "data/raw/vulnerable/5cf048d6dc5ea6e9484c4a92a57d51d6c3eb6696df5c57a40c1c59983a929742.sol",
+	"exportedSymbols" : 
+	{
+		"BlockHashSaver" : 
+		[
+			25
+		]
+	},
+	"id" : 26,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : null,
+			"fullyImplemented" : true,
+			"id" : 25,
+			"linearizedBaseContracts" : 
+			[
+				25
+			],
+			"name" : "BlockHashSaver",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"constant" : false,
+					"id" : 2,
+					"name" : "currentHash",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 25,
+					"src" : "31:26:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_bytes32",
+						"typeString" : "bytes32"
+					},
+					"typeName" : 
+					{
+						"id" : 1,
+						"name" : "bytes32",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "31:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_bytes32",
+							"typeString" : "bytes32"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 4,
+					"name" : "prevHash",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 25,
+					"src" : "64:23:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_bytes32",
+						"typeString" : "bytes32"
+					},
+					"typeName" : 
+					{
+						"id" : 3,
+						"name" : "bytes32",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "64:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_bytes32",
+							"typeString" : "bytes32"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 23,
+						"nodeType" : "Block",
+						"src" : "127:105:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 12,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 7,
+										"name" : "currentHash",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 2,
+										"src" : "138:11:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bytes32",
+											"typeString" : "bytes32"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 9,
+													"name" : "block",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 30,
+													"src" : "162:5:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_magic_block",
+														"typeString" : "block"
+													}
+												},
+												"id" : 10,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "number",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "162:12:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											],
+											"id" : 8,
+											"name" : "blockhash",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 31,
+											"src" : "152:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_function_blockhash_view$_t_uint256_$returns$_t_bytes32_$",
+												"typeString" : "function (uint256) view returns (bytes32)"
+											}
+										},
+										"id" : 11,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"kind" : "functionCall",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "152:23:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bytes32",
+											"typeString" : "bytes32"
+										}
+									},
+									"src" : "138:37:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bytes32",
+										"typeString" : "bytes32"
+									}
+								},
+								"id" : 13,
+								"nodeType" : "ExpressionStatement",
+								"src" : "138:37:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 21,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 14,
+										"name" : "prevHash",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 4,
+										"src" : "186:8:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bytes32",
+											"typeString" : "bytes32"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"commonType" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												},
+												"id" : 19,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"leftExpression" : 
+												{
+													"argumentTypes" : null,
+													"expression" : 
+													{
+														"argumentTypes" : null,
+														"id" : 16,
+														"name" : "block",
+														"nodeType" : "Identifier",
+														"overloadedDeclarations" : [],
+														"referencedDeclaration" : 30,
+														"src" : "207:5:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_magic_block",
+															"typeString" : "block"
+														}
+													},
+													"id" : 17,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : false,
+													"lValueRequested" : false,
+													"memberName" : "number",
+													"nodeType" : "MemberAccess",
+													"referencedDeclaration" : null,
+													"src" : "207:12:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												},
+												"nodeType" : "BinaryOperation",
+												"operator" : "-",
+												"rightExpression" : 
+												{
+													"argumentTypes" : null,
+													"hexValue" : "31",
+													"id" : 18,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : true,
+													"kind" : "number",
+													"lValueRequested" : false,
+													"nodeType" : "Literal",
+													"src" : "222:1:0",
+													"subdenomination" : null,
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_rational_1_by_1",
+														"typeString" : "int_const 1"
+													},
+													"value" : "1"
+												},
+												"src" : "207:16:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											],
+											"id" : 15,
+											"name" : "blockhash",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 31,
+											"src" : "197:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_function_blockhash_view$_t_uint256_$returns$_t_bytes32_$",
+												"typeString" : "function (uint256) view returns (bytes32)"
+											}
+										},
+										"id" : 20,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"kind" : "functionCall",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "197:27:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bytes32",
+											"typeString" : "bytes32"
+										}
+									},
+									"src" : "186:38:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bytes32",
+										"typeString" : "bytes32"
+									}
+								},
+								"id" : 22,
+								"nodeType" : "ExpressionStatement",
+								"src" : "186:38:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 24,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "saveHash",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 5,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "117:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 6,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "127:0:0"
+					},
+					"scope" : 25,
+					"src" : "100:132:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 26,
+			"src" : "0:235:0"
+		}
+	],
+	"src" : "0:235:0"
+}

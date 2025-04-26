@@ -1,0 +1,2375 @@
+JSON AST (compact format):
+
+
+======= data/raw/secure/6f6667cca40fde96a9f775d1aeb3ada58ea3b5c010f386a0f5a5b800f42a07ff.sol =======
+{
+	"absolutePath" : "data/raw/secure/6f6667cca40fde96a9f775d1aeb3ada58ea3b5c010f386a0f5a5b800f42a07ff.sol",
+	"exportedSymbols" : 
+	{
+		"CrowdsaleProxy" : 
+		[
+			178
+		],
+		"ICrowdsale" : 
+		[
+			84
+		],
+		"ICrowdsaleProxy" : 
+		[
+			100
+		]
+	},
+	"id" : 179,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".18"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:24:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "interface",
+			"documentation" : "ICrowdsale\r\n\n * Base crowdsale interface to manage the sale of \r\nan ERC20 token\r\n\n * #created 09/09/2017\r\n#author Frank Bonnet\r",
+			"fullyImplemented" : false,
+			"id" : 84,
+			"linearizedBaseContracts" : 
+			[
+				84
+			],
+			"name" : "ICrowdsale",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : null,
+					"documentation" : "Returns true if the contract is currently in the presale phase\r\n\n     * @return True if in presale phase\r",
+					"id" : 6,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "isInPresalePhase",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 2,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "374:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 5,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 4,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 6,
+								"src" : "398:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 3,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "398:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "397:6:0"
+					},
+					"scope" : 84,
+					"src" : "349:55:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Returns true if the contract is currently in the ended stage\r\n\n     * @return True if ended\r",
+					"id" : 11,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "isEnded",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 7,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "555:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 10,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 9,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 11,
+								"src" : "579:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 8,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "579:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "578:6:0"
+					},
+					"scope" : 84,
+					"src" : "539:46:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Returns true if `_beneficiary` has a balance allocated\r\n\n     * @param _beneficiary The account that the balance is allocated for\r\n@param _releaseDate The date after which the balance can be withdrawn\r\n@return True if there is a balance that belongs to `_beneficiary`\r",
+					"id" : 20,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "hasBalance",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 16,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 13,
+								"name" : "_beneficiary",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 20,
+								"src" : "930:20:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 12,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "930:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 15,
+								"name" : "_releaseDate",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 20,
+								"src" : "952:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 14,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "952:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "929:41:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 19,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 18,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 20,
+								"src" : "992:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 17,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "992:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "991:6:0"
+					},
+					"scope" : 84,
+					"src" : "910:88:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Get the allocated token balance of `_owner`\r\n\r\n@param _owner The address from which the allocated token balance will be retrieved\r\n@return The allocated token balance\r",
+					"id" : 27,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "balanceOf",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 23,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 22,
+								"name" : "_owner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 27,
+								"src" : "1242:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 21,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1242:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1241:16:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 26,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 25,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 27,
+								"src" : "1279:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 24,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1279:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1278:6:0"
+					},
+					"scope" : 84,
+					"src" : "1223:62:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Get the allocated eth balance of `_owner`\r\n\r\n@param _owner The address from which the allocated eth balance will be retrieved\r\n@return The allocated eth balance\r",
+					"id" : 34,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "ethBalanceOf",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 30,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 29,
+								"name" : "_owner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 34,
+								"src" : "1526:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 28,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1526:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1525:16:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 33,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 32,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 34,
+								"src" : "1563:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 31,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1563:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1562:6:0"
+					},
+					"scope" : 84,
+					"src" : "1504:65:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Get invested and refundable balance of `_owner` (only contributions during the ICO phase are registered)\r\n\r\n@param _owner The address from which the refundable balance will be retrieved\r\n@return The invested refundable balance\r",
+					"id" : 41,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "refundableEthBalanceOf",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 37,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 36,
+								"name" : "_owner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 41,
+								"src" : "1886:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 35,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1886:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1885:16:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 40,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 39,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 41,
+								"src" : "1923:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 38,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1923:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1922:6:0"
+					},
+					"scope" : 84,
+					"src" : "1854:75:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Returns the rate and bonus release date\r\n\n     * @param _phase The phase to use while determining the rate\r\n@param _volume The amount wei used to determine what volume multiplier to use\r\n@return The rate used in `_phase` multiplied by the corresponding volume multiplier\r",
+					"id" : 50,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getRate",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 46,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 43,
+								"name" : "_phase",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 50,
+								"src" : "2274:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 42,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2274:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 45,
+								"name" : "_volume",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 50,
+								"src" : "2287:12:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 44,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2287:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2273:27:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 49,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 48,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 50,
+								"src" : "2322:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 47,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2322:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2321:6:0"
+					},
+					"scope" : 84,
+					"src" : "2257:71:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Convert `_wei` to an amount in tokens using \r\nthe `_rate`\r\n\n     * @param _wei amount of wei to convert\r\n@param _rate rate to use for the conversion\r\n@return Amount in tokens\r",
+					"id" : 59,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "toTokens",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 55,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 52,
+								"name" : "_wei",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 59,
+								"src" : "2585:9:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 51,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2585:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 54,
+								"name" : "_rate",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 59,
+								"src" : "2596:10:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 53,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2596:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2584:23:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 58,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 57,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 59,
+								"src" : "2629:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 56,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2629:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2628:6:0"
+					},
+					"scope" : 84,
+					"src" : "2567:68:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Receive ether and issue tokens to the sender\r\n\r\nThis function requires that msg.sender is not a contract. This is required because it's \r\nnot possible for a contract to specify a gas amount when calling the (internal) send() \r\nfunction. Solidity imposes a maximum amount of gas (2300 gas at the time of writing)\r\n\r\nContracts can call the contribute() function instead\r",
+					"id" : 62,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 60,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3090:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 61,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3107:0:0"
+					},
+					"scope" : 84,
+					"src" : "3081:27:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Receive ether and issue tokens to the sender\r\n\n     * @return The accepted ether amount\r",
+					"id" : 67,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "contribute",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 63,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3258:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 66,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 65,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 67,
+								"src" : "3285:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 64,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3285:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3284:6:0"
+					},
+					"scope" : 84,
+					"src" : "3239:52:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Receive ether and issue tokens to `_beneficiary`\r\n\n     * @param _beneficiary The account that receives the tokens\r\n@return The accepted ether amount\r",
+					"id" : 74,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "contributeFor",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 70,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 69,
+								"name" : "_beneficiary",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 74,
+								"src" : "3514:20:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 68,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3514:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3513:22:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 73,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 72,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 74,
+								"src" : "3560:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 71,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3560:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3559:6:0"
+					},
+					"scope" : 84,
+					"src" : "3491:75:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Withdraw allocated tokens\r",
+					"id" : 77,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "withdrawTokens",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 75,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3651:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 76,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3660:0:0"
+					},
+					"scope" : 84,
+					"src" : "3628:33:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Withdraw allocated ether\r",
+					"id" : 80,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "withdrawEther",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 78,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3744:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 79,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3753:0:0"
+					},
+					"scope" : 84,
+					"src" : "3722:32:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Refund in the case of an unsuccessful crowdsale. The \r\ncrowdsale is considered unsuccessful if minAmount was \r\nnot raised before end of the crowdsale\r",
+					"id" : 83,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "refund",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 81,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3969:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 82,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3978:0:0"
+					},
+					"scope" : 84,
+					"src" : "3954:25:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 179,
+			"src" : "181:3801:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "interface",
+			"documentation" : "ICrowdsaleProxy\r\n\n * #created 23/11/2017\r\n#author Frank Bonnet\r",
+			"fullyImplemented" : false,
+			"id" : 100,
+			"linearizedBaseContracts" : 
+			[
+				100
+			],
+			"name" : "ICrowdsaleProxy",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : null,
+					"documentation" : "Receive ether and issue tokens to the sender\r\n\r\nThis function requires that msg.sender is not a contract. This is required because it's \r\nnot possible for a contract to specify a gas amount when calling the (internal) send() \r\nfunction. Solidity imposes a maximum amount of gas (2300 gas at the time of writing)\r\n\r\nContracts can call the contribute() function instead\r",
+					"id" : 87,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 85,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "4551:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 86,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "4568:0:0"
+					},
+					"scope" : 100,
+					"src" : "4542:27:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Receive ether and issue tokens to the sender\r\n\n     * @return The accepted ether amount\r",
+					"id" : 92,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "contribute",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 88,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "4719:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 91,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 90,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 92,
+								"src" : "4746:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 89,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4746:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4745:6:0"
+					},
+					"scope" : 100,
+					"src" : "4700:52:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : "Receive ether and issue tokens to `_beneficiary`\r\n\n     * @param _beneficiary The account that receives the tokens\r\n@return The accepted ether amount\r",
+					"id" : 99,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "contributeFor",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 95,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 94,
+								"name" : "_beneficiary",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 99,
+								"src" : "4975:20:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 93,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4975:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4974:22:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 98,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 97,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 99,
+								"src" : "5021:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 96,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "5021:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "5020:6:0"
+					},
+					"scope" : 100,
+					"src" : "4952:75:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 179,
+			"src" : "4071:959:0"
+		},
+		{
+			"baseContracts" : 
+			[
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 101,
+						"name" : "ICrowdsaleProxy",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 100,
+						"src" : "5145:15:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_ICrowdsaleProxy_$100",
+							"typeString" : "contract ICrowdsaleProxy"
+						}
+					},
+					"id" : 102,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "5145:15:0"
+				}
+			],
+			"contractDependencies" : 
+			[
+				100
+			],
+			"contractKind" : "contract",
+			"documentation" : "CrowdsaleProxy\r\n\n * #created 22/11/2017\r\n#author Frank Bonnet\r",
+			"fullyImplemented" : true,
+			"id" : 178,
+			"linearizedBaseContracts" : 
+			[
+				178,
+				100
+			],
+			"name" : "CrowdsaleProxy",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"constant" : false,
+					"id" : 104,
+					"name" : "owner",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 178,
+					"src" : "5170:20:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_address",
+						"typeString" : "address"
+					},
+					"typeName" : 
+					{
+						"id" : 103,
+						"name" : "address",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "5170:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_address",
+							"typeString" : "address"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 106,
+					"name" : "target",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 178,
+					"src" : "5197:24:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_contract$_ICrowdsale_$84",
+						"typeString" : "contract ICrowdsale"
+					},
+					"typeName" : 
+					{
+						"contractScope" : null,
+						"id" : 105,
+						"name" : "ICrowdsale",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 84,
+						"src" : "5197:10:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_ICrowdsale_$84",
+							"typeString" : "contract ICrowdsale"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 123,
+						"nodeType" : "Block",
+						"src" : "5428:72:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 117,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 113,
+										"name" : "target",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 106,
+										"src" : "5439:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_contract$_ICrowdsale_$84",
+											"typeString" : "contract ICrowdsale"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"id" : 115,
+												"name" : "_target",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 110,
+												"src" : "5459:7:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											],
+											"id" : 114,
+											"name" : "ICrowdsale",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 84,
+											"src" : "5448:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_type$_t_contract$_ICrowdsale_$84_$",
+												"typeString" : "type(contract ICrowdsale)"
+											}
+										},
+										"id" : 116,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"kind" : "typeConversion",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "5448:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_contract$_ICrowdsale_$84",
+											"typeString" : "contract ICrowdsale"
+										}
+									},
+									"src" : "5439:28:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_contract$_ICrowdsale_$84",
+										"typeString" : "contract ICrowdsale"
+									}
+								},
+								"id" : 118,
+								"nodeType" : "ExpressionStatement",
+								"src" : "5439:28:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 121,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 119,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 104,
+										"src" : "5478:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 120,
+										"name" : "_owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 108,
+										"src" : "5486:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "5478:14:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 122,
+								"nodeType" : "ExpressionStatement",
+								"src" : "5478:14:0"
+							}
+						]
+					},
+					"documentation" : "Deploy proxy\r\n\n     * @param _owner Owner of the proxy\r\n@param _target Target crowdsale\r",
+					"id" : 124,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "CrowdsaleProxy",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 111,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 108,
+								"name" : "_owner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 124,
+								"src" : "5388:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 107,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "5388:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 110,
+								"name" : "_target",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 124,
+								"src" : "5404:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 109,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "5404:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "5387:33:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 112,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "5428:0:0"
+					},
+					"scope" : 178,
+					"src" : "5364:136:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 139,
+						"nodeType" : "Block",
+						"src" : "5908:68:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 135,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 193,
+												"src" : "5957:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 136,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "sender",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "5957:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 132,
+													"name" : "msg",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 193,
+													"src" : "5946:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_magic_message",
+														"typeString" : "msg"
+													}
+												},
+												"id" : 133,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "value",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "5946:9:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 127,
+													"name" : "target",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 106,
+													"src" : "5919:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_ICrowdsale_$84",
+														"typeString" : "contract ICrowdsale"
+													}
+												},
+												"id" : 130,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "contributeFor",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : 74,
+												"src" : "5919:20:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_external_payable$_t_address_$returns$_t_uint256_$",
+													"typeString" : "function (address) payable external returns (uint256)"
+												}
+											},
+											"id" : 131,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "value",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "5919:26:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_function_setvalue_nonpayable$_t_uint256_$returns$_t_function_external_payable$_t_address_$returns$_t_uint256_$value_$",
+												"typeString" : "function (uint256) returns (function (address) payable external returns (uint256))"
+											}
+										},
+										"id" : 134,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"kind" : "functionCall",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "5919:37:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_external_payable$_t_address_$returns$_t_uint256_$value",
+											"typeString" : "function (address) payable external returns (uint256)"
+										}
+									},
+									"id" : 137,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "5919:49:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 138,
+								"nodeType" : "ExpressionStatement",
+								"src" : "5919:49:0"
+							}
+						]
+					},
+					"documentation" : "Receive contribution and forward to the crowdsale\r\n\r\nThis function requires that msg.sender is not a contract. This is required because it's \r\nnot possible for a contract to specify a gas amount when calling the (internal) send() \r\nfunction. Solidity imposes a maximum amount of gas (2300 gas at the time of writing)\r",
+					"id" : 140,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 125,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "5890:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 126,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "5908:0:0"
+					},
+					"scope" : 178,
+					"src" : "5881:95:0",
+					"stateMutability" : "payable",
+					"superFunction" : 87,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 157,
+						"nodeType" : "Block",
+						"src" : "6159:68:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 153,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 193,
+												"src" : "6208:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 154,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "sender",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "6208:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 150,
+													"name" : "msg",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 193,
+													"src" : "6197:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_magic_message",
+														"typeString" : "msg"
+													}
+												},
+												"id" : 151,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "value",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "6197:9:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 145,
+													"name" : "target",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 106,
+													"src" : "6170:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_ICrowdsale_$84",
+														"typeString" : "contract ICrowdsale"
+													}
+												},
+												"id" : 148,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "contributeFor",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : 74,
+												"src" : "6170:20:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_external_payable$_t_address_$returns$_t_uint256_$",
+													"typeString" : "function (address) payable external returns (uint256)"
+												}
+											},
+											"id" : 149,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "value",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "6170:26:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_function_setvalue_nonpayable$_t_uint256_$returns$_t_function_external_payable$_t_address_$returns$_t_uint256_$value_$",
+												"typeString" : "function (uint256) returns (function (address) payable external returns (uint256))"
+											}
+										},
+										"id" : 152,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"kind" : "functionCall",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "6170:37:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_external_payable$_t_address_$returns$_t_uint256_$value",
+											"typeString" : "function (address) payable external returns (uint256)"
+										}
+									},
+									"id" : 155,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "6170:49:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 156,
+								"nodeType" : "ExpressionStatement",
+								"src" : "6170:49:0"
+							}
+						]
+					},
+					"documentation" : "Receive ether and issue tokens to the sender\r\n\n     * @return The accepted ether amount\r",
+					"id" : 158,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "contribute",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 141,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "6126:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 144,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 143,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 158,
+								"src" : "6153:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 142,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "6153:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "6152:6:0"
+					},
+					"scope" : 178,
+					"src" : "6107:120:0",
+					"stateMutability" : "payable",
+					"superFunction" : 92,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 176,
+						"nodeType" : "Block",
+						"src" : "6502:70:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 173,
+											"name" : "_beneficiary",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 160,
+											"src" : "6551:12:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 170,
+													"name" : "msg",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 193,
+													"src" : "6540:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_magic_message",
+														"typeString" : "msg"
+													}
+												},
+												"id" : 171,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "value",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "6540:9:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 165,
+													"name" : "target",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 106,
+													"src" : "6513:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_ICrowdsale_$84",
+														"typeString" : "contract ICrowdsale"
+													}
+												},
+												"id" : 168,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "contributeFor",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : 74,
+												"src" : "6513:20:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_external_payable$_t_address_$returns$_t_uint256_$",
+													"typeString" : "function (address) payable external returns (uint256)"
+												}
+											},
+											"id" : 169,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "value",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "6513:26:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_function_setvalue_nonpayable$_t_uint256_$returns$_t_function_external_payable$_t_address_$returns$_t_uint256_$value_$",
+												"typeString" : "function (uint256) returns (function (address) payable external returns (uint256))"
+											}
+										},
+										"id" : 172,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"kind" : "functionCall",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "6513:37:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_external_payable$_t_address_$returns$_t_uint256_$value",
+											"typeString" : "function (address) payable external returns (uint256)"
+										}
+									},
+									"id" : 174,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "6513:51:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 175,
+								"nodeType" : "ExpressionStatement",
+								"src" : "6513:51:0"
+							}
+						]
+					},
+					"documentation" : "Receive ether and issue tokens to `_beneficiary`\r\n\n     * @param _beneficiary The account that receives the tokens\r\n@return The accepted ether amount\r",
+					"id" : 177,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "contributeFor",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 161,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 160,
+								"name" : "_beneficiary",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 177,
+								"src" : "6450:20:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 159,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "6450:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "6449:22:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 164,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 163,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 177,
+								"src" : "6496:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 162,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "6496:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "6495:6:0"
+					},
+					"scope" : 178,
+					"src" : "6427:145:0",
+					"stateMutability" : "payable",
+					"superFunction" : 99,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 179,
+			"src" : "5118:1457:0"
+		}
+	],
+	"src" : "0:6575:0"
+}

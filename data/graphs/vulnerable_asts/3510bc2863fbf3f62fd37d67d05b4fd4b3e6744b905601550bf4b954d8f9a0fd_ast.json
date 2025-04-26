@@ -1,0 +1,963 @@
+JSON AST (compact format):
+
+
+======= data/raw/vulnerable/3510bc2863fbf3f62fd37d67d05b4fd4b3e6744b905601550bf4b954d8f9a0fd.sol =======
+{
+	"absolutePath" : "data/raw/vulnerable/3510bc2863fbf3f62fd37d67d05b4fd4b3e6744b905601550bf4b954d8f9a0fd.sol",
+	"exportedSymbols" : 
+	{
+		"PolicyRegistry" : 
+		[
+			71
+		]
+	},
+	"id" : 72,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".24"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:24:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : " @title PolicyRegistry\r\n @author Enrique Piqueras - <epiquerass@gmail.com>\r\n @dev A contract to maintain a policy for each subcourt.\r",
+			"fullyImplemented" : true,
+			"id" : 71,
+			"linearizedBaseContracts" : 
+			[
+				71
+			],
+			"name" : "PolicyRegistry",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"anonymous" : false,
+					"documentation" : "@dev Emitted when a policy is updated.\r\n @param _subcourtID The ID of the policy's subcourt.\r\n @param _policy The URI of the policy JSON.\r",
+					"id" : 7,
+					"name" : "PolicyUpdate",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 6,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 3,
+								"indexed" : true,
+								"name" : "_subcourtID",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 7,
+								"src" : "421:24:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 2,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "421:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 5,
+								"indexed" : false,
+								"name" : "_policy",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 7,
+								"src" : "447:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 4,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "447:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "420:42:0"
+					},
+					"src" : "402:61:0"
+				},
+				{
+					"constant" : false,
+					"id" : 9,
+					"name" : "governor",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 71,
+					"src" : "492:23:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_address",
+						"typeString" : "address"
+					},
+					"typeName" : 
+					{
+						"id" : 8,
+						"name" : "address",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "492:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_address",
+							"typeString" : "address"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 13,
+					"name" : "policies",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 71,
+					"src" : "522:39:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_mapping$_t_uint256_$_t_string_storage_$",
+						"typeString" : "mapping(uint256 => string)"
+					},
+					"typeName" : 
+					{
+						"id" : 12,
+						"keyType" : 
+						{
+							"id" : 10,
+							"name" : "uint",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "530:4:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_uint256",
+								"typeString" : "uint256"
+							}
+						},
+						"nodeType" : "Mapping",
+						"src" : "522:23:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_mapping$_t_uint256_$_t_string_storage_$",
+							"typeString" : "mapping(uint256 => string)"
+						},
+						"valueType" : 
+						{
+							"id" : 11,
+							"name" : "string",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "538:6:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_string_storage_ptr",
+								"typeString" : "string"
+							}
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 24,
+						"nodeType" : "Block",
+						"src" : "678:76:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											"id" : 19,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 16,
+												"name" : "governor",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 9,
+												"src" : "687:8:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "==",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 17,
+													"name" : "msg",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 86,
+													"src" : "699:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_magic_message",
+														"typeString" : "msg"
+													}
+												},
+												"id" : 18,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "sender",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "699:10:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"src" : "687:22:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"hexValue" : "43616e206f6e6c792062652063616c6c65642062792074686520676f7665726e6f722e",
+											"id" : 20,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"kind" : "string",
+											"lValueRequested" : false,
+											"nodeType" : "Literal",
+											"src" : "711:37:0",
+											"subdenomination" : null,
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_stringliteral_0a67387a01b638629562ce413604ca06df839cc408aaf6c072640f1a5c4f2346",
+												"typeString" : "literal_string \"Can only be called by the governor.\""
+											},
+											"value" : "Can only be called by the governor."
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											},
+											{
+												"typeIdentifier" : "t_stringliteral_0a67387a01b638629562ce413604ca06df839cc408aaf6c072640f1a5c4f2346",
+												"typeString" : "literal_string \"Can only be called by the governor.\""
+											}
+										],
+										"id" : 15,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											89,
+											90
+										],
+										"referencedDeclaration" : 90,
+										"src" : "679:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+											"typeString" : "function (bool,string memory) pure"
+										}
+									},
+									"id" : 21,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "679:70:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 22,
+								"nodeType" : "ExpressionStatement",
+								"src" : "679:70:0"
+							},
+							{
+								"id" : 23,
+								"nodeType" : "PlaceholderStatement",
+								"src" : "751:1:0"
+							}
+						]
+					},
+					"documentation" : "@dev Requires that the sender is the governor. ",
+					"id" : 25,
+					"name" : "onlyByGovernor",
+					"nodeType" : "ModifierDefinition",
+					"parameters" : 
+					{
+						"id" : 14,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "675:2:0"
+					},
+					"src" : "652:102:0",
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 34,
+						"nodeType" : "Block",
+						"src" : "940:23:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 32,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 30,
+										"name" : "governor",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 9,
+										"src" : "941:8:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 31,
+										"name" : "_governor",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 27,
+										"src" : "952:9:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "941:20:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 33,
+								"nodeType" : "ExpressionStatement",
+								"src" : "941:20:0"
+							}
+						]
+					},
+					"documentation" : "@dev Constructs the `PolicyRegistry` contract.\r\n @param _governor The governor's address.\r",
+					"id" : 35,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 28,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 27,
+								"name" : "_governor",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 35,
+								"src" : "914:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 26,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "914:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "913:19:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 29,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "940:0:0"
+					},
+					"scope" : 71,
+					"src" : "902:61:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 46,
+						"nodeType" : "Block",
+						"src" : "1201:23:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 44,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 42,
+										"name" : "governor",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 9,
+										"src" : "1202:8:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 43,
+										"name" : "_governor",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 37,
+										"src" : "1213:9:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "1202:20:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 45,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1202:20:0"
+							}
+						]
+					},
+					"documentation" : "@dev Changes the `governor` storage variable.\r\n @param _governor The new value for the `governor` storage variable.\r",
+					"id" : 47,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 40,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 39,
+								"name" : "onlyByGovernor",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 25,
+								"src" : "1186:14:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "1186:14:0"
+						}
+					],
+					"name" : "changeGovernor",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 38,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 37,
+								"name" : "_governor",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 47,
+								"src" : "1158:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 36,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1158:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1157:19:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 41,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1201:0:0"
+					},
+					"scope" : 71,
+					"src" : "1134:90:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 69,
+						"nodeType" : "Block",
+						"src" : "1490:114:0",
+						"statements" : 
+						[
+							{
+								"eventCall" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 57,
+											"name" : "_subcourtID",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 49,
+											"src" : "1519:11:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"baseExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 58,
+												"name" : "policies",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 13,
+												"src" : "1532:8:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_mapping$_t_uint256_$_t_string_storage_$",
+													"typeString" : "mapping(uint256 => string storage ref)"
+												}
+											},
+											"id" : 60,
+											"indexExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 59,
+												"name" : "_subcourtID",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 49,
+												"src" : "1541:11:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											},
+											"isConstant" : false,
+											"isLValue" : true,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"nodeType" : "IndexAccess",
+											"src" : "1532:21:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_storage",
+												"typeString" : "string storage ref"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											},
+											{
+												"typeIdentifier" : "t_string_storage",
+												"typeString" : "string storage ref"
+											}
+										],
+										"id" : 56,
+										"name" : "PolicyUpdate",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 7,
+										"src" : "1506:12:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
+											"typeString" : "function (uint256,string memory)"
+										}
+									},
+									"id" : 61,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1506:48:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 62,
+								"nodeType" : "EmitStatement",
+								"src" : "1501:53:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 67,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 63,
+											"name" : "policies",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 13,
+											"src" : "1565:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_uint256_$_t_string_storage_$",
+												"typeString" : "mapping(uint256 => string storage ref)"
+											}
+										},
+										"id" : 65,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 64,
+											"name" : "_subcourtID",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 49,
+											"src" : "1574:11:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "1565:21:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_storage",
+											"typeString" : "string storage ref"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 66,
+										"name" : "_policy",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 51,
+										"src" : "1589:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_calldata_ptr",
+											"typeString" : "string calldata"
+										}
+									},
+									"src" : "1565:31:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage",
+										"typeString" : "string storage ref"
+									}
+								},
+								"id" : 68,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1565:31:0"
+							}
+						]
+					},
+					"documentation" : "@dev Sets the policy for the specified subcourt.\r\n @param _subcourtID The ID of the specified subcourt.\r\n @param _policy The URI of the policy JSON.\r",
+					"id" : 70,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 54,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 53,
+								"name" : "onlyByGovernor",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 25,
+								"src" : "1475:14:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "1475:14:0"
+						}
+					],
+					"name" : "setPolicy",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 52,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 49,
+								"name" : "_subcourtID",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 70,
+								"src" : "1432:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 48,
+									"name" : "uint",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1432:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 51,
+								"name" : "_policy",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 70,
+								"src" : "1450:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_calldata_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 50,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1450:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1431:34:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 55,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1490:0:0"
+					},
+					"scope" : 71,
+					"src" : "1413:191:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				}
+			],
+			"scope" : 72,
+			"src" : "181:1426:0"
+		}
+	],
+	"src" : "0:1607:0"
+}

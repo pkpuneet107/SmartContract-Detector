@@ -1,0 +1,630 @@
+JSON AST (compact format):
+
+
+======= data/raw/secure/2445693eef9a776130eaf38e10d81feab8f37437ef170bbe491f45d7f9249a23.sol =======
+{
+	"absolutePath" : "data/raw/secure/2445693eef9a776130eaf38e10d81feab8f37437ef170bbe491f45d7f9249a23.sol",
+	"exportedSymbols" : 
+	{
+		"DutchExchangeProxy" : 
+		[
+			44
+		],
+		"Proxied" : 
+		[
+			4
+		],
+		"Proxy" : 
+		[
+			32
+		]
+	},
+	"id" : 45,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".21"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:24:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : "@title Proxied - indicates that a contract will be proxied. Also defines storage requirements for Proxy.\r\n @author Alan Lu - <[email\u00a0protected]>\r",
+			"fullyImplemented" : true,
+			"id" : 4,
+			"linearizedBaseContracts" : 
+			[
+				4
+			],
+			"name" : "Proxied",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"constant" : false,
+					"id" : 3,
+					"name" : "masterCopy",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 4,
+					"src" : "264:25:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_address",
+						"typeString" : "address"
+					},
+					"typeName" : 
+					{
+						"id" : 2,
+						"name" : "address",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "264:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_address",
+							"typeString" : "address"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 45,
+			"src" : "240:53:0"
+		},
+		{
+			"baseContracts" : 
+			[
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 5,
+						"name" : "Proxied",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 4,
+						"src" : "483:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_Proxied_$4",
+							"typeString" : "contract Proxied"
+						}
+					},
+					"id" : 6,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "483:7:0"
+				}
+			],
+			"contractDependencies" : 
+			[
+				4
+			],
+			"contractKind" : "contract",
+			"documentation" : "@title Proxy - Generic proxy contract allows to execute all transactions applying the code of a master contract.\r\n @author Stefan George - <[email\u00a0protected]>\r",
+			"fullyImplemented" : true,
+			"id" : 32,
+			"linearizedBaseContracts" : 
+			[
+				32,
+				4
+			],
+			"name" : "Proxy",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : 
+					{
+						"id" : 21,
+						"nodeType" : "Block",
+						"src" : "677:79:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											"id" : 14,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 12,
+												"name" : "_masterCopy",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 8,
+												"src" : "696:11:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "!=",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"hexValue" : "30",
+												"id" : 13,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"kind" : "number",
+												"lValueRequested" : false,
+												"nodeType" : "Literal",
+												"src" : "711:1:0",
+												"subdenomination" : null,
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_rational_0_by_1",
+													"typeString" : "int_const 0"
+												},
+												"value" : "0"
+											},
+											"src" : "696:16:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 11,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											62,
+											63
+										],
+										"referencedDeclaration" : 62,
+										"src" : "688:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 15,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "688:25:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 16,
+								"nodeType" : "ExpressionStatement",
+								"src" : "688:25:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 19,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 17,
+										"name" : "masterCopy",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 3,
+										"src" : "724:10:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 18,
+										"name" : "_masterCopy",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 8,
+										"src" : "737:11:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "724:24:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 20,
+								"nodeType" : "ExpressionStatement",
+								"src" : "724:24:0"
+							}
+						]
+					},
+					"documentation" : "@dev Constructor function sets address of master copy contract.\r\n @param _masterCopy Master copy address.\r",
+					"id" : 22,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "Proxy",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 9,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 8,
+								"name" : "_masterCopy",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 22,
+								"src" : "635:19:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 7,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "635:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "634:21:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 10,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "677:0:0"
+					},
+					"scope" : 32,
+					"src" : "620:136:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 30,
+						"nodeType" : "Block",
+						"src" : "912:402:0",
+						"statements" : 
+						[
+							{
+								"assignments" : 
+								[
+									26
+								],
+								"declarations" : 
+								[
+									{
+										"constant" : false,
+										"id" : 26,
+										"name" : "_masterCopy",
+										"nodeType" : "VariableDeclaration",
+										"scope" : 31,
+										"src" : "923:19:0",
+										"stateVariable" : false,
+										"storageLocation" : "default",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										},
+										"typeName" : 
+										{
+											"id" : 25,
+											"name" : "address",
+											"nodeType" : "ElementaryTypeName",
+											"src" : "923:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"value" : null,
+										"visibility" : "internal"
+									}
+								],
+								"id" : 28,
+								"initialValue" : 
+								{
+									"argumentTypes" : null,
+									"id" : 27,
+									"name" : "masterCopy",
+									"nodeType" : "Identifier",
+									"overloadedDeclarations" : [],
+									"referencedDeclaration" : 3,
+									"src" : "945:10:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"nodeType" : "VariableDeclarationStatement",
+								"src" : "923:32:0"
+							},
+							{
+								"externalReferences" : 
+								[
+									{
+										"_masterCopy" : 
+										{
+											"declaration" : 26,
+											"isOffset" : false,
+											"isSlot" : false,
+											"src" : "1074:11:0",
+											"valueSize" : 1
+										}
+									}
+								],
+								"id" : 29,
+								"nodeType" : "InlineAssembly",
+								"operations" : "{\n    calldatacopy(0, 0, calldatasize())\n    let success := delegatecall(not(0), _masterCopy, 0, calldatasize(), 0, 0)\n    returndatacopy(0, 0, returndatasize())\n    switch success\n    case 0 {\n        revert(0, returndatasize())\n    }\n    default {\n        return(0, returndatasize())\n    }\n}",
+								"src" : "966:348:0"
+							}
+						]
+					},
+					"documentation" : "@dev Fallback function forwards all transactions and returns all received return data.\r",
+					"id" : 31,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 23,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "869:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 24,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "912:0:0"
+					},
+					"scope" : 32,
+					"src" : "860:454:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "external"
+				}
+			],
+			"scope" : 45,
+			"src" : "465:852:0"
+		},
+		{
+			"baseContracts" : 
+			[
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 33,
+						"name" : "Proxy",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 32,
+						"src" : "1397:5:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_Proxy_$32",
+							"typeString" : "contract Proxy"
+						}
+					},
+					"id" : 34,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "1397:5:0"
+				}
+			],
+			"contractDependencies" : 
+			[
+				4,
+				32
+			],
+			"contractKind" : "contract",
+			"documentation" : null,
+			"fullyImplemented" : true,
+			"id" : 44,
+			"linearizedBaseContracts" : 
+			[
+				44,
+				32,
+				4
+			],
+			"name" : "DutchExchangeProxy",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : 
+					{
+						"id" : 42,
+						"nodeType" : "Block",
+						"src" : "1477:6:0",
+						"statements" : []
+					},
+					"documentation" : null,
+					"id" : 43,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : 
+							[
+								{
+									"argumentTypes" : null,
+									"id" : 39,
+									"name" : "_masterCopy",
+									"nodeType" : "Identifier",
+									"overloadedDeclarations" : [],
+									"referencedDeclaration" : 36,
+									"src" : "1464:11:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								}
+							],
+							"id" : 40,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 38,
+								"name" : "Proxy",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 32,
+								"src" : "1457:5:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_type$_t_contract$_Proxy_$32_$",
+									"typeString" : "type(contract Proxy)"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "1457:19:0"
+						}
+					],
+					"name" : "DutchExchangeProxy",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 37,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 36,
+								"name" : "_masterCopy",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 43,
+								"src" : "1436:19:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 35,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1436:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1435:21:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 41,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1477:0:0"
+					},
+					"scope" : 44,
+					"src" : "1408:75:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 45,
+			"src" : "1366:120:0"
+		}
+	],
+	"src" : "0:1486:0"
+}

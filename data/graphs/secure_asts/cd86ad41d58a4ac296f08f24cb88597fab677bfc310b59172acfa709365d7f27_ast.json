@@ -1,0 +1,160 @@
+JSON AST (compact format):
+
+
+======= data/raw/secure/cd86ad41d58a4ac296f08f24cb88597fab677bfc310b59172acfa709365d7f27.sol =======
+{
+	"absolutePath" : "data/raw/secure/cd86ad41d58a4ac296f08f24cb88597fab677bfc310b59172acfa709365d7f27.sol",
+	"exportedSymbols" : 
+	{
+		"P4PState" : 
+		[
+			11
+		]
+	},
+	"id" : 12,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : null,
+			"fullyImplemented" : true,
+			"id" : 11,
+			"linearizedBaseContracts" : 
+			[
+				11
+			],
+			"name" : "P4PState",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : 
+					{
+						"id" : 9,
+						"nodeType" : "Block",
+						"src" : "613:2:0",
+						"statements" : []
+					},
+					"documentation" : "Stateless contract for persisting game states\r\n@param states IPFS hashes (stripped of the type-length-value, see https://multiformats.io/multihash/)\r\nof files containing raw game state data.\r\n@param boards bitmap of the final gameboard state. Encoding:\r\n0: unset, 1: black, 2: white. Which means 2 bit per field\r\nExample: 3 fields black, white, unset encode to 1, 2, 0 => 0b011100\r\nWe have 9x9 = 81 fields. Thus 162 bit or 21 bytes (ceil(81 / 4)) are needed.\r\nRemaining bits are set to 0.\r",
+					"id" : 10,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "addGames",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 7,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 3,
+								"name" : "states",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 10,
+								"src" : "577:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_array$_t_bytes32_$dyn_memory_ptr",
+									"typeString" : "bytes32[]"
+								},
+								"typeName" : 
+								{
+									"baseType" : 
+									{
+										"id" : 1,
+										"name" : "bytes32",
+										"nodeType" : "ElementaryTypeName",
+										"src" : "577:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bytes32",
+											"typeString" : "bytes32"
+										}
+									},
+									"id" : 2,
+									"length" : null,
+									"nodeType" : "ArrayTypeName",
+									"src" : "577:9:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_array$_t_bytes32_$dyn_storage_ptr",
+										"typeString" : "bytes32[]"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 6,
+								"name" : "boards",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 10,
+								"src" : "595:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_array$_t_bytes32_$dyn_memory_ptr",
+									"typeString" : "bytes32[]"
+								},
+								"typeName" : 
+								{
+									"baseType" : 
+									{
+										"id" : 4,
+										"name" : "bytes32",
+										"nodeType" : "ElementaryTypeName",
+										"src" : "595:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_bytes32",
+											"typeString" : "bytes32"
+										}
+									},
+									"id" : 5,
+									"length" : null,
+									"nodeType" : "ArrayTypeName",
+									"src" : "595:9:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_array$_t_bytes32_$dyn_storage_ptr",
+										"typeString" : "bytes32[]"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "576:36:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 8,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "613:0:0"
+					},
+					"scope" : 11,
+					"src" : "559:56:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				}
+			],
+			"scope" : 12,
+			"src" : "0:618:0"
+		}
+	],
+	"src" : "0:618:0"
+}

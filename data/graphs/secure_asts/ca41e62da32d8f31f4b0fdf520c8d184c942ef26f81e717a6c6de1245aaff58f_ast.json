@@ -1,0 +1,3384 @@
+JSON AST (compact format):
+
+
+======= data/raw/secure/ca41e62da32d8f31f4b0fdf520c8d184c942ef26f81e717a6c6de1245aaff58f.sol =======
+{
+	"absolutePath" : "data/raw/secure/ca41e62da32d8f31f4b0fdf520c8d184c942ef26f81e717a6c6de1245aaff58f.sol",
+	"exportedSymbols" : 
+	{
+		"AllPubs" : 
+		[
+			239
+		]
+	},
+	"id" : 240,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".18"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:24:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : "Manually audited pub registrar\r\n\n * State Diagram:\r\n\r\nUNCONTACTED -> APPLIED <-> REJECTED\r\n     |            |\r\n     v            v\r\n   BOARD       ACCEPTED\r",
+			"fullyImplemented" : true,
+			"id" : 239,
+			"linearizedBaseContracts" : 
+			[
+				239
+			],
+			"name" : "AllPubs",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"constant" : true,
+					"id" : 4,
+					"name" : "registrationBounty",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 239,
+					"src" : "332:54:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_uint256",
+						"typeString" : "uint256"
+					},
+					"typeName" : 
+					{
+						"id" : 2,
+						"name" : "uint256",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "332:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_uint256",
+							"typeString" : "uint256"
+						}
+					},
+					"value" : 
+					{
+						"argumentTypes" : null,
+						"hexValue" : "3530",
+						"id" : 3,
+						"isConstant" : false,
+						"isLValue" : false,
+						"isPure" : true,
+						"kind" : "number",
+						"lValueRequested" : false,
+						"nodeType" : "Literal",
+						"src" : "377:9:0",
+						"subdenomination" : "finney",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_rational_50000000000000000_by_1",
+							"typeString" : "int_const 50000000000000000"
+						},
+						"value" : "50"
+					},
+					"visibility" : "public"
+				},
+				{
+					"constant" : true,
+					"id" : 7,
+					"name" : "invalidationBounty",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 239,
+					"src" : "452:53:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_uint256",
+						"typeString" : "uint256"
+					},
+					"typeName" : 
+					{
+						"id" : 5,
+						"name" : "uint256",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "452:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_uint256",
+							"typeString" : "uint256"
+						}
+					},
+					"value" : 
+					{
+						"argumentTypes" : null,
+						"hexValue" : "35",
+						"id" : 6,
+						"isConstant" : false,
+						"isLValue" : false,
+						"isPure" : true,
+						"kind" : "number",
+						"lValueRequested" : false,
+						"nodeType" : "Literal",
+						"src" : "497:8:0",
+						"subdenomination" : "finney",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_rational_5000000000000000_by_1",
+							"typeString" : "int_const 5000000000000000"
+						},
+						"value" : "5"
+					},
+					"visibility" : "public"
+				},
+				{
+					"canonicalName" : "AllPubs.Membership",
+					"id" : 14,
+					"members" : 
+					[
+						{
+							"id" : 8,
+							"name" : "UNCONTACTED",
+							"nodeType" : "EnumValue",
+							"src" : "541:11:0"
+						},
+						{
+							"id" : 9,
+							"name" : "REJECTED",
+							"nodeType" : "EnumValue",
+							"src" : "574:8:0"
+						},
+						{
+							"id" : 10,
+							"name" : "APPLIED",
+							"nodeType" : "EnumValue",
+							"src" : "615:7:0"
+						},
+						{
+							"id" : 11,
+							"name" : "ACCEPTED",
+							"nodeType" : "EnumValue",
+							"src" : "648:8:0"
+						},
+						{
+							"id" : 12,
+							"name" : "BOARD",
+							"nodeType" : "EnumValue",
+							"src" : "689:5:0"
+						},
+						{
+							"id" : 13,
+							"name" : "SOURCE",
+							"nodeType" : "EnumValue",
+							"src" : "732:6:0"
+						}
+					],
+					"name" : "Membership",
+					"nodeType" : "EnumDefinition",
+					"src" : "514:250:0"
+				},
+				{
+					"constant" : false,
+					"id" : 18,
+					"name" : "membership",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 239,
+					"src" : "772:49:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+						"typeString" : "mapping(address => enum AllPubs.Membership)"
+					},
+					"typeName" : 
+					{
+						"id" : 17,
+						"keyType" : 
+						{
+							"id" : 15,
+							"name" : "address",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "781:7:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_address",
+								"typeString" : "address"
+							}
+						},
+						"nodeType" : "Mapping",
+						"src" : "772:31:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+							"typeString" : "mapping(address => enum AllPubs.Membership)"
+						},
+						"valueType" : 
+						{
+							"contractScope" : null,
+							"id" : 16,
+							"name" : "Membership",
+							"nodeType" : "UserDefinedTypeName",
+							"referencedDeclaration" : 14,
+							"src" : "792:10:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_enum$_Membership_$14",
+								"typeString" : "enum AllPubs.Membership"
+							}
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 22,
+					"name" : "abis",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 239,
+					"src" : "870:39:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_mapping$_t_address_$_t_string_storage_$",
+						"typeString" : "mapping(address => string)"
+					},
+					"typeName" : 
+					{
+						"id" : 21,
+						"keyType" : 
+						{
+							"id" : 19,
+							"name" : "address",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "879:7:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_address",
+								"typeString" : "address"
+							}
+						},
+						"nodeType" : "Mapping",
+						"src" : "870:27:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_mapping$_t_address_$_t_string_storage_$",
+							"typeString" : "mapping(address => string)"
+						},
+						"valueType" : 
+						{
+							"id" : 20,
+							"name" : "string",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "890:6:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_string_storage_ptr",
+								"typeString" : "string"
+							}
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"constant" : false,
+					"id" : 25,
+					"name" : "pubs",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 239,
+					"src" : "916:21:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_array$_t_address_$dyn_storage",
+						"typeString" : "address[]"
+					},
+					"typeName" : 
+					{
+						"baseType" : 
+						{
+							"id" : 23,
+							"name" : "address",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "916:7:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_address",
+								"typeString" : "address"
+							}
+						},
+						"id" : 24,
+						"length" : null,
+						"nodeType" : "ArrayTypeName",
+						"src" : "916:9:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_array$_t_address_$dyn_storage_ptr",
+							"typeString" : "address[]"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 36,
+						"nodeType" : "Block",
+						"src" : "977:61:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 34,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 28,
+											"name" : "membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 18,
+											"src" : "988:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+												"typeString" : "mapping(address => enum AllPubs.Membership)"
+											}
+										},
+										"id" : 31,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 29,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 254,
+												"src" : "999:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 30,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "sender",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "999:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "988:22:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 32,
+											"name" : "Membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 14,
+											"src" : "1013:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+												"typeString" : "type(enum AllPubs.Membership)"
+											}
+										},
+										"id" : 33,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"lValueRequested" : false,
+										"memberName" : "SOURCE",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1013:17:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"src" : "988:42:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_Membership_$14",
+										"typeString" : "enum AllPubs.Membership"
+									}
+								},
+								"id" : 35,
+								"nodeType" : "ExpressionStatement",
+								"src" : "988:42:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 37,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "AllPubs",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 26,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "962:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 27,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "977:0:0"
+					},
+					"scope" : 239,
+					"src" : "946:92:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 41,
+					"name" : "PubRegistered",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 40,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 39,
+								"indexed" : false,
+								"name" : "location",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 41,
+								"src" : "1066:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 38,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1066:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1065:18:0"
+					},
+					"src" : "1046:38:0"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 45,
+					"name" : "PubAccepted",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 44,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 43,
+								"indexed" : false,
+								"name" : "location",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 45,
+								"src" : "1110:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 42,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1110:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1109:18:0"
+					},
+					"src" : "1092:36:0"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 51,
+					"name" : "PubRejected",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 50,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 47,
+								"indexed" : false,
+								"name" : "location",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 51,
+								"src" : "1154:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 46,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1154:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 49,
+								"indexed" : false,
+								"name" : "reason",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 51,
+								"src" : "1172:13:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 48,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1172:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1153:33:0"
+					},
+					"src" : "1136:51:0"
+				},
+				{
+					"body" : 
+					{
+						"id" : 59,
+						"nodeType" : "Block",
+						"src" : "1255:37:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"expression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 56,
+										"name" : "pubs",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 25,
+										"src" : "1273:4:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_array$_t_address_$dyn_storage",
+											"typeString" : "address[] storage ref"
+										}
+									},
+									"id" : 57,
+									"isConstant" : false,
+									"isLValue" : true,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"memberName" : "length",
+									"nodeType" : "MemberAccess",
+									"referencedDeclaration" : null,
+									"src" : "1273:11:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"functionReturnParameters" : 55,
+								"id" : 58,
+								"nodeType" : "Return",
+								"src" : "1266:18:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 60,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "pubCount",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 52,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1212:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 55,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 54,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 60,
+								"src" : "1246:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 53,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1246:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1245:9:0"
+					},
+					"scope" : 239,
+					"src" : "1195:97:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 100,
+						"nodeType" : "Block",
+						"src" : "1372:234:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											},
+											"id" : 71,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 68,
+													"name" : "msg",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 254,
+													"src" : "1390:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_magic_message",
+														"typeString" : "msg"
+													}
+												},
+												"id" : 69,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "value",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "1390:9:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "==",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 70,
+												"name" : "registrationBounty",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 4,
+												"src" : "1403:18:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											},
+											"src" : "1390:31:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 67,
+										"name" : "assert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "1383:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_assert_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 72,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1383:39:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 73,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1383:39:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_enum$_Membership_$14",
+												"typeString" : "enum AllPubs.Membership"
+											},
+											"id" : 80,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 75,
+													"name" : "membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 18,
+													"src" : "1440:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+														"typeString" : "mapping(address => enum AllPubs.Membership)"
+													}
+												},
+												"id" : 77,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 76,
+													"name" : "_pubish",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 62,
+													"src" : "1451:7:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "1440:19:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "<=",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 78,
+													"name" : "Membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 14,
+													"src" : "1463:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+														"typeString" : "type(enum AllPubs.Membership)"
+													}
+												},
+												"id" : 79,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"lValueRequested" : false,
+												"memberName" : "REJECTED",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "1463:19:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"src" : "1440:42:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 74,
+										"name" : "assert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "1433:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_assert_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 81,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1433:50:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 82,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1433:50:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 88,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 83,
+											"name" : "membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 18,
+											"src" : "1494:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+												"typeString" : "mapping(address => enum AllPubs.Membership)"
+											}
+										},
+										"id" : 85,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 84,
+											"name" : "_pubish",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 62,
+											"src" : "1505:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "1494:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 86,
+											"name" : "Membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 14,
+											"src" : "1516:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+												"typeString" : "type(enum AllPubs.Membership)"
+											}
+										},
+										"id" : 87,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"lValueRequested" : false,
+										"memberName" : "APPLIED",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1516:18:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"src" : "1494:40:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_Membership_$14",
+										"typeString" : "enum AllPubs.Membership"
+									}
+								},
+								"id" : 89,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1494:40:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 94,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 90,
+											"name" : "abis",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 22,
+											"src" : "1545:4:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_address_$_t_string_storage_$",
+												"typeString" : "mapping(address => string storage ref)"
+											}
+										},
+										"id" : 92,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 91,
+											"name" : "_pubish",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 62,
+											"src" : "1550:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "1545:13:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_storage",
+											"typeString" : "string storage ref"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 93,
+										"name" : "_abi",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 64,
+										"src" : "1561:4:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_calldata_ptr",
+											"typeString" : "string calldata"
+										}
+									},
+									"src" : "1545:20:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage",
+										"typeString" : "string storage ref"
+									}
+								},
+								"id" : 95,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1545:20:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 97,
+											"name" : "_pubish",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 62,
+											"src" : "1590:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 96,
+										"name" : "PubRegistered",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 41,
+										"src" : "1576:13:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_address_$returns$__$",
+											"typeString" : "function (address)"
+										}
+									},
+									"id" : 98,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1576:22:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 99,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1576:22:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 101,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "register",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 65,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 62,
+								"name" : "_pubish",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 101,
+								"src" : "1320:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 61,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1320:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 64,
+								"name" : "_abi",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 101,
+								"src" : "1337:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_calldata_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 63,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1337:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1319:30:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 66,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1372:0:0"
+					},
+					"scope" : 239,
+					"src" : "1302:304:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 150,
+						"nodeType" : "Block",
+						"src" : "1661:291:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_enum$_Membership_$14",
+												"typeString" : "enum AllPubs.Membership"
+											},
+											"id" : 113,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 107,
+													"name" : "membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 18,
+													"src" : "1679:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+														"typeString" : "mapping(address => enum AllPubs.Membership)"
+													}
+												},
+												"id" : 110,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"expression" : 
+													{
+														"argumentTypes" : null,
+														"id" : 108,
+														"name" : "msg",
+														"nodeType" : "Identifier",
+														"overloadedDeclarations" : [],
+														"referencedDeclaration" : 254,
+														"src" : "1690:3:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_magic_message",
+															"typeString" : "msg"
+														}
+													},
+													"id" : 109,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : false,
+													"lValueRequested" : false,
+													"memberName" : "sender",
+													"nodeType" : "MemberAccess",
+													"referencedDeclaration" : null,
+													"src" : "1690:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "1679:22:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : ">=",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 111,
+													"name" : "Membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 14,
+													"src" : "1705:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+														"typeString" : "type(enum AllPubs.Membership)"
+													}
+												},
+												"id" : 112,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"lValueRequested" : false,
+												"memberName" : "BOARD",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "1705:16:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"src" : "1679:42:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 106,
+										"name" : "assert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "1672:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_assert_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 114,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1672:50:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 115,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1672:50:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_enum$_Membership_$14",
+												"typeString" : "enum AllPubs.Membership"
+											},
+											"id" : 122,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 117,
+													"name" : "membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 18,
+													"src" : "1740:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+														"typeString" : "mapping(address => enum AllPubs.Membership)"
+													}
+												},
+												"id" : 119,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 118,
+													"name" : "_pubish",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 103,
+													"src" : "1751:7:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "1740:19:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "==",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 120,
+													"name" : "Membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 14,
+													"src" : "1763:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+														"typeString" : "type(enum AllPubs.Membership)"
+													}
+												},
+												"id" : 121,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"lValueRequested" : false,
+												"memberName" : "APPLIED",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "1763:18:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"src" : "1740:41:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 116,
+										"name" : "assert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "1733:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_assert_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 123,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1733:49:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 124,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1733:49:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 130,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 125,
+											"name" : "membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 18,
+											"src" : "1793:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+												"typeString" : "mapping(address => enum AllPubs.Membership)"
+											}
+										},
+										"id" : 127,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 126,
+											"name" : "_pubish",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 103,
+											"src" : "1804:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "1793:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 128,
+											"name" : "Membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 14,
+											"src" : "1815:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+												"typeString" : "type(enum AllPubs.Membership)"
+											}
+										},
+										"id" : 129,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"lValueRequested" : false,
+										"memberName" : "ACCEPTED",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1815:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"src" : "1793:41:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_Membership_$14",
+										"typeString" : "enum AllPubs.Membership"
+									}
+								},
+								"id" : 131,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1793:41:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 137,
+											"name" : "registrationBounty",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 4,
+											"src" : "1865:18:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 132,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 254,
+												"src" : "1845:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 135,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "sender",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "1845:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"id" : 136,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "transfer",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1845:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+											"typeString" : "function (uint256)"
+										}
+									},
+									"id" : 138,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1845:39:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 139,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1845:39:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 143,
+											"name" : "_pubish",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 103,
+											"src" : "1905:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 140,
+											"name" : "pubs",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 25,
+											"src" : "1895:4:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_array$_t_address_$dyn_storage",
+												"typeString" : "address[] storage ref"
+											}
+										},
+										"id" : 142,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "push",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "1895:9:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+											"typeString" : "function (address) returns (uint256)"
+										}
+									},
+									"id" : 144,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1895:18:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 145,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1895:18:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 147,
+											"name" : "_pubish",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 103,
+											"src" : "1936:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 146,
+										"name" : "PubAccepted",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 45,
+										"src" : "1924:11:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_address_$returns$__$",
+											"typeString" : "function (address)"
+										}
+									},
+									"id" : 148,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1924:20:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 149,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1924:20:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 151,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "accept",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 104,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 103,
+								"name" : "_pubish",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 151,
+								"src" : "1630:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 102,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1630:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1629:17:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 105,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1661:0:0"
+					},
+					"scope" : 239,
+					"src" : "1614:338:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 197,
+						"nodeType" : "Block",
+						"src" : "2023:271:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_enum$_Membership_$14",
+												"typeString" : "enum AllPubs.Membership"
+											},
+											"id" : 165,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 159,
+													"name" : "membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 18,
+													"src" : "2041:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+														"typeString" : "mapping(address => enum AllPubs.Membership)"
+													}
+												},
+												"id" : 162,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"expression" : 
+													{
+														"argumentTypes" : null,
+														"id" : 160,
+														"name" : "msg",
+														"nodeType" : "Identifier",
+														"overloadedDeclarations" : [],
+														"referencedDeclaration" : 254,
+														"src" : "2052:3:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_magic_message",
+															"typeString" : "msg"
+														}
+													},
+													"id" : 161,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : false,
+													"lValueRequested" : false,
+													"memberName" : "sender",
+													"nodeType" : "MemberAccess",
+													"referencedDeclaration" : null,
+													"src" : "2052:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "2041:22:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : ">=",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 163,
+													"name" : "Membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 14,
+													"src" : "2067:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+														"typeString" : "type(enum AllPubs.Membership)"
+													}
+												},
+												"id" : 164,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"lValueRequested" : false,
+												"memberName" : "BOARD",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "2067:16:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"src" : "2041:42:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 158,
+										"name" : "assert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "2034:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_assert_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 166,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2034:50:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 167,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2034:50:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_enum$_Membership_$14",
+												"typeString" : "enum AllPubs.Membership"
+											},
+											"id" : 174,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 169,
+													"name" : "membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 18,
+													"src" : "2102:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+														"typeString" : "mapping(address => enum AllPubs.Membership)"
+													}
+												},
+												"id" : 171,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 170,
+													"name" : "_pubish",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 153,
+													"src" : "2113:7:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "2102:19:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "==",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 172,
+													"name" : "Membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 14,
+													"src" : "2125:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+														"typeString" : "type(enum AllPubs.Membership)"
+													}
+												},
+												"id" : 173,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"lValueRequested" : false,
+												"memberName" : "APPLIED",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "2125:18:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"src" : "2102:41:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 168,
+										"name" : "assert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "2095:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_assert_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 175,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2095:49:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 176,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2095:49:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 182,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 177,
+											"name" : "membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 18,
+											"src" : "2155:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+												"typeString" : "mapping(address => enum AllPubs.Membership)"
+											}
+										},
+										"id" : 179,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 178,
+											"name" : "_pubish",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 153,
+											"src" : "2166:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "2155:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 180,
+											"name" : "Membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 14,
+											"src" : "2177:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+												"typeString" : "type(enum AllPubs.Membership)"
+											}
+										},
+										"id" : 181,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"lValueRequested" : false,
+										"memberName" : "REJECTED",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "2177:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"src" : "2155:41:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_Membership_$14",
+										"typeString" : "enum AllPubs.Membership"
+									}
+								},
+								"id" : 183,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2155:41:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 189,
+											"name" : "invalidationBounty",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 7,
+											"src" : "2227:18:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 184,
+												"name" : "msg",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 254,
+												"src" : "2207:3:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_magic_message",
+													"typeString" : "msg"
+												}
+											},
+											"id" : 187,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "sender",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "2207:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"id" : 188,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "transfer",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "2207:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+											"typeString" : "function (uint256)"
+										}
+									},
+									"id" : 190,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2207:39:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 191,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2207:39:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 193,
+											"name" : "_pubish",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 153,
+											"src" : "2269:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 194,
+											"name" : "_reason",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 155,
+											"src" : "2278:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_calldata_ptr",
+												"typeString" : "string calldata"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											{
+												"typeIdentifier" : "t_string_calldata_ptr",
+												"typeString" : "string calldata"
+											}
+										],
+										"id" : 192,
+										"name" : "PubRejected",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 51,
+										"src" : "2257:11:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
+											"typeString" : "function (address,string memory)"
+										}
+									},
+									"id" : 195,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2257:29:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 196,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2257:29:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 198,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "reject",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 156,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 153,
+								"name" : "_pubish",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 198,
+								"src" : "1976:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 152,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1976:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 155,
+								"name" : "_reason",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 198,
+								"src" : "1993:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_calldata_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 154,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1993:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1975:33:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 157,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2023:0:0"
+					},
+					"scope" : 239,
+					"src" : "1960:334:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 202,
+					"name" : "NewBoardMember",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 201,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 200,
+								"indexed" : false,
+								"name" : "_boardMember",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 202,
+								"src" : "2323:20:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 199,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2323:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2322:22:0"
+					},
+					"src" : "2302:43:0"
+				},
+				{
+					"body" : 
+					{
+						"id" : 237,
+						"nodeType" : "Block",
+						"src" : "2403:222:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_enum$_Membership_$14",
+												"typeString" : "enum AllPubs.Membership"
+											},
+											"id" : 214,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 208,
+													"name" : "membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 18,
+													"src" : "2421:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+														"typeString" : "mapping(address => enum AllPubs.Membership)"
+													}
+												},
+												"id" : 211,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"expression" : 
+													{
+														"argumentTypes" : null,
+														"id" : 209,
+														"name" : "msg",
+														"nodeType" : "Identifier",
+														"overloadedDeclarations" : [],
+														"referencedDeclaration" : 254,
+														"src" : "2432:3:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_magic_message",
+															"typeString" : "msg"
+														}
+													},
+													"id" : 210,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : false,
+													"lValueRequested" : false,
+													"memberName" : "sender",
+													"nodeType" : "MemberAccess",
+													"referencedDeclaration" : null,
+													"src" : "2432:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "2421:22:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : ">=",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 212,
+													"name" : "Membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 14,
+													"src" : "2447:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+														"typeString" : "type(enum AllPubs.Membership)"
+													}
+												},
+												"id" : 213,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"lValueRequested" : false,
+												"memberName" : "BOARD",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "2447:16:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"src" : "2421:42:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 207,
+										"name" : "assert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "2414:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_assert_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 215,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2414:50:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 216,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2414:50:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_enum$_Membership_$14",
+												"typeString" : "enum AllPubs.Membership"
+											},
+											"id" : 223,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 218,
+													"name" : "membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 18,
+													"src" : "2482:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+														"typeString" : "mapping(address => enum AllPubs.Membership)"
+													}
+												},
+												"id" : 220,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 219,
+													"name" : "_delegate",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 204,
+													"src" : "2493:9:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "2482:21:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "==",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 221,
+													"name" : "Membership",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 14,
+													"src" : "2507:10:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+														"typeString" : "type(enum AllPubs.Membership)"
+													}
+												},
+												"id" : 222,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"lValueRequested" : false,
+												"memberName" : "UNCONTACTED",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "2507:22:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_enum$_Membership_$14",
+													"typeString" : "enum AllPubs.Membership"
+												}
+											},
+											"src" : "2482:47:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 217,
+										"name" : "assert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 243,
+										"src" : "2475:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_assert_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 224,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2475:55:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 225,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2475:55:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 231,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 226,
+											"name" : "membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 18,
+											"src" : "2541:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_address_$_t_enum$_Membership_$14_$",
+												"typeString" : "mapping(address => enum AllPubs.Membership)"
+											}
+										},
+										"id" : 228,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 227,
+											"name" : "_delegate",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 204,
+											"src" : "2552:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "2541:21:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 229,
+											"name" : "Membership",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 14,
+											"src" : "2565:10:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_type$_t_enum$_Membership_$14_$",
+												"typeString" : "type(enum AllPubs.Membership)"
+											}
+										},
+										"id" : 230,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"lValueRequested" : false,
+										"memberName" : "BOARD",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "2565:16:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_enum$_Membership_$14",
+											"typeString" : "enum AllPubs.Membership"
+										}
+									},
+									"src" : "2541:40:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_enum$_Membership_$14",
+										"typeString" : "enum AllPubs.Membership"
+									}
+								},
+								"id" : 232,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2541:40:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 234,
+											"name" : "_delegate",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 204,
+											"src" : "2607:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 233,
+										"name" : "NewBoardMember",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 202,
+										"src" : "2592:14:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_address_$returns$__$",
+											"typeString" : "function (address)"
+										}
+									},
+									"id" : 235,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2592:25:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 236,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2592:25:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 238,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "appoint",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 205,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 204,
+								"name" : "_delegate",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 238,
+								"src" : "2370:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 203,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "2370:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "2369:19:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 206,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2403:0:0"
+					},
+					"scope" : 239,
+					"src" : "2353:272:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				}
+			],
+			"scope" : 240,
+			"src" : "217:2411:0"
+		}
+	],
+	"src" : "0:2628:0"
+}

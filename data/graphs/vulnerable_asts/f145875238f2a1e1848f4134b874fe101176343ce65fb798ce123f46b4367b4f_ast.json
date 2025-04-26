@@ -1,0 +1,6704 @@
+JSON AST (compact format):
+
+
+======= data/raw/vulnerable/f145875238f2a1e1848f4134b874fe101176343ce65fb798ce123f46b4367b4f.sol =======
+{
+	"absolutePath" : "data/raw/vulnerable/f145875238f2a1e1848f4134b874fe101176343ce65fb798ce123f46b4367b4f.sol",
+	"exportedSymbols" : 
+	{
+		"CanReclaimToken" : 
+		[
+			274
+		],
+		"ERC20" : 
+		[
+			188
+		],
+		"ERC20Basic" : 
+		[
+			148
+		],
+		"HasNoEther" : 
+		[
+			118
+		],
+		"HasNoTokens" : 
+		[
+			296
+		],
+		"IPassportLogicRegistry" : 
+		[
+			326
+		],
+		"Ownable" : 
+		[
+			85
+		],
+		"PassportLogicRegistry" : 
+		[
+			480
+		],
+		"SafeERC20" : 
+		[
+			246
+		]
+	},
+	"id" : 481,
+	"nodeType" : "SourceUnit",
+	"nodes" : 
+	[
+		{
+			"id" : 1,
+			"literals" : 
+			[
+				"solidity",
+				"^",
+				"0.4",
+				".24"
+			],
+			"nodeType" : "PragmaDirective",
+			"src" : "0:24:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : "@title Ownable\r\n@dev The Ownable contract has an owner address, and provides basic authorization control\r\nfunctions, this simplifies the implementation of \"user permissions\".\r",
+			"fullyImplemented" : true,
+			"id" : 85,
+			"linearizedBaseContracts" : 
+			[
+				85
+			],
+			"name" : "Ownable",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"constant" : false,
+					"id" : 3,
+					"name" : "owner",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 85,
+					"src" : "311:20:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_address",
+						"typeString" : "address"
+					},
+					"typeName" : 
+					{
+						"id" : 2,
+						"name" : "address",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "311:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_address",
+							"typeString" : "address"
+						}
+					},
+					"value" : null,
+					"visibility" : "public"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 7,
+					"name" : "OwnershipRenounced",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 6,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 5,
+								"indexed" : true,
+								"name" : "previousOwner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 7,
+								"src" : "365:29:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 4,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "365:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "364:31:0"
+					},
+					"src" : "340:56:0"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 13,
+					"name" : "OwnershipTransferred",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 12,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 9,
+								"indexed" : true,
+								"name" : "previousOwner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 13,
+								"src" : "433:29:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 8,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "433:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 11,
+								"indexed" : true,
+								"name" : "newOwner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 13,
+								"src" : "469:24:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 10,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "469:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "426:72:0"
+					},
+					"src" : "400:99:0"
+				},
+				{
+					"body" : 
+					{
+						"id" : 21,
+						"nodeType" : "Block",
+						"src" : "648:31:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 19,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 16,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 3,
+										"src" : "655:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 17,
+											"name" : "msg",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 495,
+											"src" : "663:3:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_magic_message",
+												"typeString" : "msg"
+											}
+										},
+										"id" : 18,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "sender",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "663:10:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "655:18:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 20,
+								"nodeType" : "ExpressionStatement",
+								"src" : "655:18:0"
+							}
+						]
+					},
+					"documentation" : "@dev The Ownable constructor sets the original `owner` of the contract to the sender\r\naccount.\r",
+					"id" : 22,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 14,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "638:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 15,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "648:0:0"
+					},
+					"scope" : 85,
+					"src" : "627:52:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 32,
+						"nodeType" : "Block",
+						"src" : "785:49:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											"id" : 28,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 25,
+													"name" : "msg",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 495,
+													"src" : "800:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_magic_message",
+														"typeString" : "msg"
+													}
+												},
+												"id" : 26,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "sender",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "800:10:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "==",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 27,
+												"name" : "owner",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 3,
+												"src" : "814:5:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"src" : "800:19:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 24,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 498,
+										"src" : "792:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 29,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "792:28:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 30,
+								"nodeType" : "ExpressionStatement",
+								"src" : "792:28:0"
+							},
+							{
+								"id" : 31,
+								"nodeType" : "PlaceholderStatement",
+								"src" : "827:1:0"
+							}
+						]
+					},
+					"documentation" : "@dev Throws if called by any account other than the owner.\r",
+					"id" : 33,
+					"name" : "onlyOwner",
+					"nodeType" : "ModifierDefinition",
+					"parameters" : 
+					{
+						"id" : 23,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "782:2:0"
+					},
+					"src" : "764:70:0",
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 48,
+						"nodeType" : "Block",
+						"src" : "1152:68:0",
+						"statements" : 
+						[
+							{
+								"eventCall" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 39,
+											"name" : "owner",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 3,
+											"src" : "1183:5:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 38,
+										"name" : "OwnershipRenounced",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 7,
+										"src" : "1164:18:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_address_$returns$__$",
+											"typeString" : "function (address)"
+										}
+									},
+									"id" : 40,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1164:25:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 41,
+								"nodeType" : "EmitStatement",
+								"src" : "1159:30:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 46,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 42,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 3,
+										"src" : "1196:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"arguments" : 
+										[
+											{
+												"argumentTypes" : null,
+												"hexValue" : "30",
+												"id" : 44,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"kind" : "number",
+												"lValueRequested" : false,
+												"nodeType" : "Literal",
+												"src" : "1212:1:0",
+												"subdenomination" : null,
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_rational_0_by_1",
+													"typeString" : "int_const 0"
+												},
+												"value" : "0"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : 
+											[
+												{
+													"typeIdentifier" : "t_rational_0_by_1",
+													"typeString" : "int_const 0"
+												}
+											],
+											"id" : 43,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"lValueRequested" : false,
+											"nodeType" : "ElementaryTypeNameExpression",
+											"src" : "1204:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_type$_t_address_$",
+												"typeString" : "type(address)"
+											},
+											"typeName" : "address"
+										},
+										"id" : 45,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : true,
+										"kind" : "typeConversion",
+										"lValueRequested" : false,
+										"names" : [],
+										"nodeType" : "FunctionCall",
+										"src" : "1204:10:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "1196:18:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 47,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1196:18:0"
+							}
+						]
+					},
+					"documentation" : "@dev Allows the current owner to relinquish control of the contract.\r\n@notice Renouncing to ownership will leave the contract without an owner.\r\nIt will not be possible to call the functions with the `onlyOwner`\r\nmodifier anymore.\r",
+					"id" : 49,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 36,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 35,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 33,
+								"src" : "1142:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "1142:9:0"
+						}
+					],
+					"name" : "renounceOwnership",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 34,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1132:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 37,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1152:0:0"
+					},
+					"scope" : 85,
+					"src" : "1106:114:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 60,
+						"nodeType" : "Block",
+						"src" : "1451:42:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 57,
+											"name" : "_newOwner",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 51,
+											"src" : "1477:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 56,
+										"name" : "_transferOwnership",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 84,
+										"src" : "1458:18:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_internal_nonpayable$_t_address_$returns$__$",
+											"typeString" : "function (address)"
+										}
+									},
+									"id" : 58,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1458:29:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 59,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1458:29:0"
+							}
+						]
+					},
+					"documentation" : "@dev Allows the current owner to transfer control of the contract to a newOwner.\r\n@param _newOwner The address to transfer ownership to.\r",
+					"id" : 61,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 54,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 53,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 33,
+								"src" : "1441:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "1441:9:0"
+						}
+					],
+					"name" : "transferOwnership",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 52,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 51,
+								"name" : "_newOwner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 61,
+								"src" : "1415:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 50,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1415:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1414:19:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 55,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1451:0:0"
+					},
+					"scope" : 85,
+					"src" : "1388:105:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 83,
+						"nodeType" : "Block",
+						"src" : "1690:119:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											"id" : 71,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 67,
+												"name" : "_newOwner",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 63,
+												"src" : "1705:9:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "!=",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"arguments" : 
+												[
+													{
+														"argumentTypes" : null,
+														"hexValue" : "30",
+														"id" : 69,
+														"isConstant" : false,
+														"isLValue" : false,
+														"isPure" : true,
+														"kind" : "number",
+														"lValueRequested" : false,
+														"nodeType" : "Literal",
+														"src" : "1726:1:0",
+														"subdenomination" : null,
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_rational_0_by_1",
+															"typeString" : "int_const 0"
+														},
+														"value" : "0"
+													}
+												],
+												"expression" : 
+												{
+													"argumentTypes" : 
+													[
+														{
+															"typeIdentifier" : "t_rational_0_by_1",
+															"typeString" : "int_const 0"
+														}
+													],
+													"id" : 68,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : true,
+													"lValueRequested" : false,
+													"nodeType" : "ElementaryTypeNameExpression",
+													"src" : "1718:7:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_address_$",
+														"typeString" : "type(address)"
+													},
+													"typeName" : "address"
+												},
+												"id" : 70,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"kind" : "typeConversion",
+												"lValueRequested" : false,
+												"names" : [],
+												"nodeType" : "FunctionCall",
+												"src" : "1718:10:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"src" : "1705:23:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 66,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 498,
+										"src" : "1697:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 72,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1697:32:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 73,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1697:32:0"
+							},
+							{
+								"eventCall" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 75,
+											"name" : "owner",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 3,
+											"src" : "1762:5:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 76,
+											"name" : "_newOwner",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 63,
+											"src" : "1769:9:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 74,
+										"name" : "OwnershipTransferred",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 13,
+										"src" : "1741:20:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+											"typeString" : "function (address,address)"
+										}
+									},
+									"id" : 77,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "1741:38:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 78,
+								"nodeType" : "EmitStatement",
+								"src" : "1736:43:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 81,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 79,
+										"name" : "owner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 3,
+										"src" : "1786:5:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 80,
+										"name" : "_newOwner",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 63,
+										"src" : "1794:9:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "1786:17:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 82,
+								"nodeType" : "ExpressionStatement",
+								"src" : "1786:17:0"
+							}
+						]
+					},
+					"documentation" : "@dev Transfers control of the contract to a newOwner.\r\n@param _newOwner The address to transfer ownership to.\r",
+					"id" : 84,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "_transferOwnership",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 64,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 63,
+								"name" : "_newOwner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 84,
+								"src" : "1662:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 62,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "1662:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "1661:19:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 65,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "1690:0:0"
+					},
+					"scope" : 85,
+					"src" : "1634:175:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "internal"
+				}
+			],
+			"scope" : 481,
+			"src" : "289:1523:0"
+		},
+		{
+			"baseContracts" : 
+			[
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 86,
+						"name" : "Ownable",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 85,
+						"src" : "2354:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_Ownable_$85",
+							"typeString" : "contract Ownable"
+						}
+					},
+					"id" : 87,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "2354:7:0"
+				}
+			],
+			"contractDependencies" : 
+			[
+				85
+			],
+			"contractKind" : "contract",
+			"documentation" : "@title Contracts that should not own Ether\r\n@author Remco Bloemen <remco@2\u03c0.com>\r\n@dev This tries to block incoming ether to prevent accidental loss of Ether. Should Ether end up\r\nin the contract, it will allow the owner to reclaim this Ether.\r\n@notice Ether can still be sent to this contract by:\r\ncalling functions labeled `payable`\r\n`selfdestruct(contract_address)`\r\nmining directly to the contract address\r",
+			"fullyImplemented" : true,
+			"id" : 118,
+			"linearizedBaseContracts" : 
+			[
+				118,
+				85
+			],
+			"name" : "HasNoEther",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : 
+					{
+						"id" : 97,
+						"nodeType" : "Block",
+						"src" : "2796:36:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											},
+											"id" : 94,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 91,
+													"name" : "msg",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 495,
+													"src" : "2811:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_magic_message",
+														"typeString" : "msg"
+													}
+												},
+												"id" : 92,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "value",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : null,
+												"src" : "2811:9:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_uint256",
+													"typeString" : "uint256"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "==",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"hexValue" : "30",
+												"id" : 93,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"kind" : "number",
+												"lValueRequested" : false,
+												"nodeType" : "Literal",
+												"src" : "2824:1:0",
+												"subdenomination" : null,
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_rational_0_by_1",
+													"typeString" : "int_const 0"
+												},
+												"value" : "0"
+											},
+											"src" : "2811:14:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 90,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 498,
+										"src" : "2803:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 95,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "2803:23:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 96,
+								"nodeType" : "ExpressionStatement",
+								"src" : "2803:23:0"
+							}
+						]
+					},
+					"documentation" : "@dev Constructor that rejects incoming Ether\r\nThe `payable` flag is added so we can access `msg.value` without compiler warning. If we\r\nleave out payable, then Solidity will allow inheriting contracts to implement a payable\r\nconstructor. By doing it this way we prevent a payable constructor from working. Alternatively\r\nwe could use assembly to access msg.value.\r",
+					"id" : 98,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 88,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2778:2:0"
+					},
+					"payable" : true,
+					"returnParameters" : 
+					{
+						"id" : 89,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2796:0:0"
+					},
+					"scope" : 118,
+					"src" : "2767:65:0",
+					"stateMutability" : "payable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 101,
+						"nodeType" : "Block",
+						"src" : "2963:6:0",
+						"statements" : []
+					},
+					"documentation" : "@dev Disallows direct send by setting a default function without the `payable` flag.\r",
+					"id" : 102,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 99,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2951:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 100,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "2963:0:0"
+					},
+					"scope" : 118,
+					"src" : "2943:26:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 116,
+						"nodeType" : "Block",
+						"src" : "3097:50:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"expression" : 
+											{
+												"argumentTypes" : null,
+												"arguments" : 
+												[
+													{
+														"argumentTypes" : null,
+														"id" : 111,
+														"name" : "this",
+														"nodeType" : "Identifier",
+														"overloadedDeclarations" : [],
+														"referencedDeclaration" : 510,
+														"src" : "3127:4:0",
+														"typeDescriptions" : 
+														{
+															"typeIdentifier" : "t_contract$_HasNoEther_$118",
+															"typeString" : "contract HasNoEther"
+														}
+													}
+												],
+												"expression" : 
+												{
+													"argumentTypes" : 
+													[
+														{
+															"typeIdentifier" : "t_contract$_HasNoEther_$118",
+															"typeString" : "contract HasNoEther"
+														}
+													],
+													"id" : 110,
+													"isConstant" : false,
+													"isLValue" : false,
+													"isPure" : true,
+													"lValueRequested" : false,
+													"nodeType" : "ElementaryTypeNameExpression",
+													"src" : "3119:7:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_type$_t_address_$",
+														"typeString" : "type(address)"
+													},
+													"typeName" : "address"
+												},
+												"id" : 112,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"kind" : "typeConversion",
+												"lValueRequested" : false,
+												"names" : [],
+												"nodeType" : "FunctionCall",
+												"src" : "3119:13:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"id" : 113,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"memberName" : "balance",
+											"nodeType" : "MemberAccess",
+											"referencedDeclaration" : null,
+											"src" : "3119:21:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 107,
+											"name" : "owner",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 3,
+											"src" : "3104:5:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										"id" : 109,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "transfer",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : null,
+										"src" : "3104:14:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+											"typeString" : "function (uint256)"
+										}
+									},
+									"id" : 114,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "3104:37:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 115,
+								"nodeType" : "ExpressionStatement",
+								"src" : "3104:37:0"
+							}
+						]
+					},
+					"documentation" : "@dev Transfer all Ether held by the contract to the owner.\r",
+					"id" : 117,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 105,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 104,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 33,
+								"src" : "3087:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "3087:9:0"
+						}
+					],
+					"name" : "reclaimEther",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 103,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3075:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 106,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3097:0:0"
+					},
+					"scope" : 118,
+					"src" : "3054:93:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				}
+			],
+			"scope" : 481,
+			"src" : "2331:819:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "contract",
+			"documentation" : "@title ERC20Basic\r\n@dev Simpler version of ERC20 interface\r\nSee https://github.com/ethereum/EIPs/issues/179\r",
+			"fullyImplemented" : false,
+			"id" : 148,
+			"linearizedBaseContracts" : 
+			[
+				148
+			],
+			"name" : "ERC20Basic",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : null,
+					"documentation" : null,
+					"id" : 123,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "totalSupply",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 119,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "3398:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 122,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 121,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 123,
+								"src" : "3422:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 120,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3422:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3421:9:0"
+					},
+					"scope" : 148,
+					"src" : "3378:53:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : null,
+					"id" : 130,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "balanceOf",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 126,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 125,
+								"name" : "_who",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 130,
+								"src" : "3454:12:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 124,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3454:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3453:14:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 129,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 128,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 130,
+								"src" : "3489:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 127,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3489:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3488:9:0"
+					},
+					"scope" : 148,
+					"src" : "3435:63:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : null,
+					"id" : 139,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "transfer",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 135,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 132,
+								"name" : "_to",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 139,
+								"src" : "3520:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 131,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3520:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 134,
+								"name" : "_value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 139,
+								"src" : "3533:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 133,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3533:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3519:29:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 138,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 137,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 139,
+								"src" : "3565:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 136,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3565:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3564:6:0"
+					},
+					"scope" : 148,
+					"src" : "3502:69:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 147,
+					"name" : "Transfer",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 146,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 141,
+								"indexed" : true,
+								"name" : "from",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 147,
+								"src" : "3590:20:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 140,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3590:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 143,
+								"indexed" : true,
+								"name" : "to",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 147,
+								"src" : "3612:18:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 142,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3612:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 145,
+								"indexed" : false,
+								"name" : "value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 147,
+								"src" : "3632:13:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 144,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3632:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3589:57:0"
+					},
+					"src" : "3575:72:0"
+				}
+			],
+			"scope" : 481,
+			"src" : "3353:297:0"
+		},
+		{
+			"baseContracts" : 
+			[
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 149,
+						"name" : "ERC20Basic",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 148,
+						"src" : "3831:10:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+							"typeString" : "contract ERC20Basic"
+						}
+					},
+					"id" : 150,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "3831:10:0"
+				}
+			],
+			"contractDependencies" : 
+			[
+				148
+			],
+			"contractKind" : "contract",
+			"documentation" : "@title ERC20 interface\r\n@dev see https://github.com/ethereum/EIPs/issues/20\r",
+			"fullyImplemented" : false,
+			"id" : 188,
+			"linearizedBaseContracts" : 
+			[
+				188,
+				148
+			],
+			"name" : "ERC20",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : null,
+					"documentation" : null,
+					"id" : 159,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "allowance",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 155,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 152,
+								"name" : "_owner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 159,
+								"src" : "3866:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 151,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3866:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 154,
+								"name" : "_spender",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 159,
+								"src" : "3882:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 153,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3882:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3865:34:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 158,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 157,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 159,
+								"src" : "3926:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 156,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3926:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3925:9:0"
+					},
+					"scope" : 188,
+					"src" : "3847:88:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : null,
+					"id" : 170,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "transferFrom",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 166,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 161,
+								"name" : "_from",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 170,
+								"src" : "3963:13:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 160,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3963:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 163,
+								"name" : "_to",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 170,
+								"src" : "3978:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 162,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3978:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 165,
+								"name" : "_value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 170,
+								"src" : "3991:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 164,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "3991:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "3962:44:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 169,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 168,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 170,
+								"src" : "4028:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 167,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4028:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4027:6:0"
+					},
+					"scope" : 188,
+					"src" : "3941:93:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : null,
+					"documentation" : null,
+					"id" : 179,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "approve",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 175,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 172,
+								"name" : "_spender",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 179,
+								"src" : "4057:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 171,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4057:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 174,
+								"name" : "_value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 179,
+								"src" : "4075:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 173,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4075:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4056:34:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 178,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 177,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 179,
+								"src" : "4107:4:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bool",
+									"typeString" : "bool"
+								},
+								"typeName" : 
+								{
+									"id" : 176,
+									"name" : "bool",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4107:4:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bool",
+										"typeString" : "bool"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4106:6:0"
+					},
+					"scope" : 188,
+					"src" : "4040:73:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : null,
+					"id" : 187,
+					"name" : "Approval",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 186,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 181,
+								"indexed" : true,
+								"name" : "owner",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 187,
+								"src" : "4138:21:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 180,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4138:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 183,
+								"indexed" : true,
+								"name" : "spender",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 187,
+								"src" : "4166:23:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 182,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4166:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 185,
+								"indexed" : false,
+								"name" : "value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 187,
+								"src" : "4196:13:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 184,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4196:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4131:83:0"
+					},
+					"src" : "4117:98:0"
+				}
+			],
+			"scope" : 481,
+			"src" : "3813:405:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "library",
+			"documentation" : "@title SafeERC20\r\n@dev Wrappers around ERC20 operations that throw on failure.\r\nTo use this library you can add a `using SafeERC20 for ERC20;` statement to your contract,\r\nwhich allows you to call the safe operations as `token.safeTransfer(...)`, etc.\r",
+			"fullyImplemented" : true,
+			"id" : 246,
+			"linearizedBaseContracts" : 
+			[
+				246
+			],
+			"name" : "SafeERC20",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : 
+					{
+						"id" : 205,
+						"nodeType" : "Block",
+						"src" : "4697:50:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"arguments" : 
+											[
+												{
+													"argumentTypes" : null,
+													"id" : 200,
+													"name" : "_to",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 192,
+													"src" : "4728:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 201,
+													"name" : "_value",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 194,
+													"src" : "4733:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : 
+												[
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													},
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												],
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 198,
+													"name" : "_token",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 190,
+													"src" : "4712:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+														"typeString" : "contract ERC20Basic"
+													}
+												},
+												"id" : 199,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "transfer",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : 139,
+												"src" : "4712:15:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+													"typeString" : "function (address,uint256) external returns (bool)"
+												}
+											},
+											"id" : 202,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "functionCall",
+											"lValueRequested" : false,
+											"names" : [],
+											"nodeType" : "FunctionCall",
+											"src" : "4712:28:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 197,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 498,
+										"src" : "4704:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 203,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "4704:37:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 204,
+								"nodeType" : "ExpressionStatement",
+								"src" : "4704:37:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 206,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "safeTransfer",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 195,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 190,
+								"name" : "_token",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 206,
+								"src" : "4618:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+									"typeString" : "contract ERC20Basic"
+								},
+								"typeName" : 
+								{
+									"contractScope" : null,
+									"id" : 189,
+									"name" : "ERC20Basic",
+									"nodeType" : "UserDefinedTypeName",
+									"referencedDeclaration" : 148,
+									"src" : "4618:10:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+										"typeString" : "contract ERC20Basic"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 192,
+								"name" : "_to",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 206,
+								"src" : "4642:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 191,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4642:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 194,
+								"name" : "_value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 206,
+								"src" : "4660:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 193,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4660:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4611:68:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 196,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "4697:0:0"
+					},
+					"scope" : 246,
+					"src" : "4590:157:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 226,
+						"nodeType" : "Block",
+						"src" : "4879:61:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"arguments" : 
+											[
+												{
+													"argumentTypes" : null,
+													"id" : 220,
+													"name" : "_from",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 210,
+													"src" : "4914:5:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 221,
+													"name" : "_to",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 212,
+													"src" : "4921:3:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 222,
+													"name" : "_value",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 214,
+													"src" : "4926:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : 
+												[
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													},
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													},
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												],
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 218,
+													"name" : "_token",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 208,
+													"src" : "4894:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_ERC20_$188",
+														"typeString" : "contract ERC20"
+													}
+												},
+												"id" : 219,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "transferFrom",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : 170,
+												"src" : "4894:19:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
+													"typeString" : "function (address,address,uint256) external returns (bool)"
+												}
+											},
+											"id" : 223,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "functionCall",
+											"lValueRequested" : false,
+											"names" : [],
+											"nodeType" : "FunctionCall",
+											"src" : "4894:39:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 217,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 498,
+										"src" : "4886:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 224,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "4886:48:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 225,
+								"nodeType" : "ExpressionStatement",
+								"src" : "4886:48:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 227,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "safeTransferFrom",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 215,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 208,
+								"name" : "_token",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 227,
+								"src" : "4785:12:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_contract$_ERC20_$188",
+									"typeString" : "contract ERC20"
+								},
+								"typeName" : 
+								{
+									"contractScope" : null,
+									"id" : 207,
+									"name" : "ERC20",
+									"nodeType" : "UserDefinedTypeName",
+									"referencedDeclaration" : 188,
+									"src" : "4785:5:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_contract$_ERC20_$188",
+										"typeString" : "contract ERC20"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 210,
+								"name" : "_from",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 227,
+								"src" : "4804:13:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 209,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4804:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 212,
+								"name" : "_to",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 227,
+								"src" : "4824:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 211,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4824:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 214,
+								"name" : "_value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 227,
+								"src" : "4842:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 213,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4842:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4778:83:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 216,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "4879:0:0"
+					},
+					"scope" : 246,
+					"src" : "4753:187:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 244,
+						"nodeType" : "Block",
+						"src" : "5052:54:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"arguments" : 
+											[
+												{
+													"argumentTypes" : null,
+													"id" : 239,
+													"name" : "_spender",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 231,
+													"src" : "5082:8:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													}
+												},
+												{
+													"argumentTypes" : null,
+													"id" : 240,
+													"name" : "_value",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 233,
+													"src" : "5092:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												}
+											],
+											"expression" : 
+											{
+												"argumentTypes" : 
+												[
+													{
+														"typeIdentifier" : "t_address",
+														"typeString" : "address"
+													},
+													{
+														"typeIdentifier" : "t_uint256",
+														"typeString" : "uint256"
+													}
+												],
+												"expression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 237,
+													"name" : "_token",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 229,
+													"src" : "5067:6:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_contract$_ERC20_$188",
+														"typeString" : "contract ERC20"
+													}
+												},
+												"id" : 238,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"memberName" : "approve",
+												"nodeType" : "MemberAccess",
+												"referencedDeclaration" : 179,
+												"src" : "5067:14:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+													"typeString" : "function (address,uint256) external returns (bool)"
+												}
+											},
+											"id" : 241,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"kind" : "functionCall",
+											"lValueRequested" : false,
+											"names" : [],
+											"nodeType" : "FunctionCall",
+											"src" : "5067:32:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										],
+										"id" : 236,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 498,
+										"src" : "5059:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$returns$__$",
+											"typeString" : "function (bool) pure"
+										}
+									},
+									"id" : 242,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "5059:41:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 243,
+								"nodeType" : "ExpressionStatement",
+								"src" : "5059:41:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 245,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "safeApprove",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 234,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 229,
+								"name" : "_token",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 245,
+								"src" : "4973:12:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_contract$_ERC20_$188",
+									"typeString" : "contract ERC20"
+								},
+								"typeName" : 
+								{
+									"contractScope" : null,
+									"id" : 228,
+									"name" : "ERC20",
+									"nodeType" : "UserDefinedTypeName",
+									"referencedDeclaration" : 188,
+									"src" : "4973:5:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_contract$_ERC20_$188",
+										"typeString" : "contract ERC20"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 231,
+								"name" : "_spender",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 245,
+								"src" : "4992:16:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 230,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "4992:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 233,
+								"name" : "_value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 245,
+								"src" : "5015:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 232,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "5015:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "4966:68:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 235,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "5052:0:0"
+					},
+					"scope" : 246,
+					"src" : "4946:160:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "internal"
+				}
+			],
+			"scope" : 481,
+			"src" : "4567:542:0"
+		},
+		{
+			"baseContracts" : 
+			[
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 247,
+						"name" : "Ownable",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 85,
+						"src" : "5487:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_Ownable_$85",
+							"typeString" : "contract Ownable"
+						}
+					},
+					"id" : 248,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "5487:7:0"
+				}
+			],
+			"contractDependencies" : 
+			[
+				85
+			],
+			"contractKind" : "contract",
+			"documentation" : "@title Contracts that should be able to recover tokens\r\n@author SylTi\r\n@dev This allow a contract to recover any ERC20 token received in a contract by transferring the balance to the contract owner.\r\nThis will prevent any accidental loss of tokens.\r",
+			"fullyImplemented" : true,
+			"id" : 274,
+			"linearizedBaseContracts" : 
+			[
+				274,
+				85
+			],
+			"name" : "CanReclaimToken",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"id" : 251,
+					"libraryName" : 
+					{
+						"contractScope" : null,
+						"id" : 249,
+						"name" : "SafeERC20",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 246,
+						"src" : "5506:9:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_SafeERC20_$246",
+							"typeString" : "library SafeERC20"
+						}
+					},
+					"nodeType" : "UsingForDirective",
+					"src" : "5500:31:0",
+					"typeName" : 
+					{
+						"contractScope" : null,
+						"id" : 250,
+						"name" : "ERC20Basic",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 148,
+						"src" : "5520:10:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+							"typeString" : "contract ERC20Basic"
+						}
+					}
+				},
+				{
+					"body" : 
+					{
+						"id" : 272,
+						"nodeType" : "Block",
+						"src" : "5728:95:0",
+						"statements" : 
+						[
+							{
+								"assignments" : 
+								[
+									259
+								],
+								"declarations" : 
+								[
+									{
+										"constant" : false,
+										"id" : 259,
+										"name" : "balance",
+										"nodeType" : "VariableDeclaration",
+										"scope" : 273,
+										"src" : "5735:15:0",
+										"stateVariable" : false,
+										"storageLocation" : "default",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_uint256",
+											"typeString" : "uint256"
+										},
+										"typeName" : 
+										{
+											"id" : 258,
+											"name" : "uint256",
+											"nodeType" : "ElementaryTypeName",
+											"src" : "5735:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										},
+										"value" : null,
+										"visibility" : "internal"
+									}
+								],
+								"id" : 264,
+								"initialValue" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 262,
+											"name" : "this",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 518,
+											"src" : "5770:4:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_contract$_CanReclaimToken_$274",
+												"typeString" : "contract CanReclaimToken"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_contract$_CanReclaimToken_$274",
+												"typeString" : "contract CanReclaimToken"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 260,
+											"name" : "_token",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 253,
+											"src" : "5753:6:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+												"typeString" : "contract ERC20Basic"
+											}
+										},
+										"id" : 261,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "balanceOf",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : 130,
+										"src" : "5753:16:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_external_view$_t_address_$returns$_t_uint256_$",
+											"typeString" : "function (address) view external returns (uint256)"
+										}
+									},
+									"id" : 263,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "5753:22:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"nodeType" : "VariableDeclarationStatement",
+								"src" : "5735:40:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 268,
+											"name" : "owner",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 3,
+											"src" : "5802:5:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 269,
+											"name" : "balance",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 259,
+											"src" : "5809:7:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											{
+												"typeIdentifier" : "t_uint256",
+												"typeString" : "uint256"
+											}
+										],
+										"expression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 265,
+											"name" : "_token",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 253,
+											"src" : "5782:6:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+												"typeString" : "contract ERC20Basic"
+											}
+										},
+										"id" : 267,
+										"isConstant" : false,
+										"isLValue" : false,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"memberName" : "safeTransfer",
+										"nodeType" : "MemberAccess",
+										"referencedDeclaration" : 206,
+										"src" : "5782:19:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_internal_nonpayable$_t_contract$_ERC20Basic_$148_$_t_address_$_t_uint256_$returns$__$bound_to$_t_contract$_ERC20Basic_$148_$",
+											"typeString" : "function (contract ERC20Basic,address,uint256)"
+										}
+									},
+									"id" : 270,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "5782:35:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 271,
+								"nodeType" : "ExpressionStatement",
+								"src" : "5782:35:0"
+							}
+						]
+					},
+					"documentation" : "@dev Reclaim all ERC20Basic compatible tokens\r\n@param _token ERC20Basic The address of the token contract\r",
+					"id" : 273,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 256,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 255,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 33,
+								"src" : "5718:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "5718:9:0"
+						}
+					],
+					"name" : "reclaimToken",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 254,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 253,
+								"name" : "_token",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 273,
+								"src" : "5690:17:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+									"typeString" : "contract ERC20Basic"
+								},
+								"typeName" : 
+								{
+									"contractScope" : null,
+									"id" : 252,
+									"name" : "ERC20Basic",
+									"nodeType" : "UserDefinedTypeName",
+									"referencedDeclaration" : 148,
+									"src" : "5690:10:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_contract$_ERC20Basic_$148",
+										"typeString" : "contract ERC20Basic"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "5689:19:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 257,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "5728:0:0"
+					},
+					"scope" : 274,
+					"src" : "5668:155:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "external"
+				}
+			],
+			"scope" : 481,
+			"src" : "5459:369:0"
+		},
+		{
+			"baseContracts" : 
+			[
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 275,
+						"name" : "CanReclaimToken",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 274,
+						"src" : "6225:15:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_CanReclaimToken_$274",
+							"typeString" : "contract CanReclaimToken"
+						}
+					},
+					"id" : 276,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "6225:15:0"
+				}
+			],
+			"contractDependencies" : 
+			[
+				85,
+				274
+			],
+			"contractKind" : "contract",
+			"documentation" : "@title Contracts that should not own Tokens\r\n@author Remco Bloemen <remco@2\u03c0.com>\r\n@dev This blocks incoming ERC223 tokens to prevent accidental loss of tokens.\r\nShould tokens (any ERC20Basic compatible) end up in the contract, it allows the\r\nowner to reclaim the tokens.\r",
+			"fullyImplemented" : true,
+			"id" : 296,
+			"linearizedBaseContracts" : 
+			[
+				296,
+				274,
+				85
+			],
+			"name" : "HasNoTokens",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"body" : 
+					{
+						"id" : 294,
+						"nodeType" : "Block",
+						"src" : "6608:58:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 285,
+									"name" : "_from",
+									"nodeType" : "Identifier",
+									"overloadedDeclarations" : [],
+									"referencedDeclaration" : 278,
+									"src" : "6615:5:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 286,
+								"nodeType" : "ExpressionStatement",
+								"src" : "6615:5:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 287,
+									"name" : "_value",
+									"nodeType" : "Identifier",
+									"overloadedDeclarations" : [],
+									"referencedDeclaration" : 280,
+									"src" : "6627:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"id" : 288,
+								"nodeType" : "ExpressionStatement",
+								"src" : "6627:6:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 289,
+									"name" : "_data",
+									"nodeType" : "Identifier",
+									"overloadedDeclarations" : [],
+									"referencedDeclaration" : 282,
+									"src" : "6640:5:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bytes_calldata_ptr",
+										"typeString" : "bytes calldata"
+									}
+								},
+								"id" : 290,
+								"nodeType" : "ExpressionStatement",
+								"src" : "6640:5:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : [],
+									"expression" : 
+									{
+										"argumentTypes" : [],
+										"id" : 291,
+										"name" : "revert",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											500,
+											501
+										],
+										"referencedDeclaration" : 500,
+										"src" : "6652:6:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_revert_pure$__$returns$__$",
+											"typeString" : "function () pure"
+										}
+									},
+									"id" : 292,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "6652:8:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 293,
+								"nodeType" : "ExpressionStatement",
+								"src" : "6652:8:0"
+							}
+						]
+					},
+					"documentation" : "@dev Reject all ERC223 compatible tokens\r\n@param _from address The address that is transferring the tokens\r\n@param _value uint256 the amount of the specified token\r\n@param _data Bytes The data passed from the caller.\r",
+					"id" : 295,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "tokenFallback",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 283,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 278,
+								"name" : "_from",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 295,
+								"src" : "6523:13:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 277,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "6523:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 280,
+								"name" : "_value",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 295,
+								"src" : "6543:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_uint256",
+									"typeString" : "uint256"
+								},
+								"typeName" : 
+								{
+									"id" : 279,
+									"name" : "uint256",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "6543:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_uint256",
+										"typeString" : "uint256"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 282,
+								"name" : "_data",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 295,
+								"src" : "6564:11:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_bytes_calldata_ptr",
+									"typeString" : "bytes"
+								},
+								"typeName" : 
+								{
+									"id" : 281,
+									"name" : "bytes",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "6564:5:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_bytes_storage_ptr",
+										"typeString" : "bytes"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "6516:64:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 284,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "6608:0:0"
+					},
+					"scope" : 296,
+					"src" : "6494:172:0",
+					"stateMutability" : "pure",
+					"superFunction" : null,
+					"visibility" : "external"
+				}
+			],
+			"scope" : 481,
+			"src" : "6201:470:0"
+		},
+		{
+			"baseContracts" : [],
+			"contractDependencies" : [],
+			"contractKind" : "interface",
+			"documentation" : null,
+			"fullyImplemented" : false,
+			"id" : 326,
+			"linearizedBaseContracts" : 
+			[
+				326
+			],
+			"name" : "IPassportLogicRegistry",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"anonymous" : false,
+					"documentation" : "@dev This event will be emitted every time a new passport logic implementation is registered\r\n@param version representing the version name of the registered passport logic implementation\r\n@param implementation representing the address of the registered passport logic implementation\r",
+					"id" : 302,
+					"name" : "PassportLogicAdded",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 301,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 298,
+								"indexed" : false,
+								"name" : "version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 302,
+								"src" : "7112:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 297,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "7112:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 300,
+								"indexed" : false,
+								"name" : "implementation",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 302,
+								"src" : "7128:22:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 299,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "7128:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "7111:40:0"
+					},
+					"src" : "7087:65:0"
+				},
+				{
+					"anonymous" : false,
+					"documentation" : "@dev This event will be emitted every time a new passport logic implementation is set as current one\r\n@param version representing the version name of the current passport logic implementation\r\n@param implementation representing the address of the current passport logic implementation\r",
+					"id" : 308,
+					"name" : "CurrentPassportLogicSet",
+					"nodeType" : "EventDefinition",
+					"parameters" : 
+					{
+						"id" : 307,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 304,
+								"indexed" : false,
+								"name" : "version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 308,
+								"src" : "7515:14:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 303,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "7515:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 306,
+								"indexed" : false,
+								"name" : "implementation",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 308,
+								"src" : "7531:22:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 305,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "7531:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "7514:40:0"
+					},
+					"src" : "7485:70:0"
+				},
+				{
+					"body" : null,
+					"documentation" : "@dev Tells the address of the passport logic implementation for a given version\r\n@param _version to query the implementation of\r\n@return address of the passport logic implementation registered for the given version\r",
+					"id" : 315,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getPassportLogic",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 311,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 310,
+								"name" : "_version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 315,
+								"src" : "7844:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_calldata_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 309,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "7844:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "7843:17:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 314,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 313,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 315,
+								"src" : "7884:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 312,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "7884:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "7883:9:0"
+					},
+					"scope" : 326,
+					"src" : "7818:75:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : null,
+					"documentation" : "@dev Tells the version of the current passport logic implementation\r\n@return version of the current passport logic implementation\r",
+					"id" : 320,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getCurrentPassportLogicVersion",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 316,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "8103:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 319,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 318,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 320,
+								"src" : "8129:6:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 317,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "8129:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "8128:8:0"
+					},
+					"scope" : 326,
+					"src" : "8064:73:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "external"
+				},
+				{
+					"body" : null,
+					"documentation" : "@dev Tells the address of the current passport logic implementation\r\n@return address of the current passport logic implementation\r",
+					"id" : 325,
+					"implemented" : false,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getCurrentPassportLogic",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 321,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "8340:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 324,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 323,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 325,
+								"src" : "8366:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 322,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "8366:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "8365:9:0"
+					},
+					"scope" : 326,
+					"src" : "8308:67:0",
+					"stateMutability" : "view",
+					"superFunction" : null,
+					"visibility" : "external"
+				}
+			],
+			"scope" : 481,
+			"src" : "6724:1654:0"
+		},
+		{
+			"baseContracts" : 
+			[
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 327,
+						"name" : "IPassportLogicRegistry",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 326,
+						"src" : "8636:22:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_IPassportLogicRegistry_$326",
+							"typeString" : "contract IPassportLogicRegistry"
+						}
+					},
+					"id" : 328,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "8636:22:0"
+				},
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 329,
+						"name" : "Ownable",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 85,
+						"src" : "8660:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_Ownable_$85",
+							"typeString" : "contract Ownable"
+						}
+					},
+					"id" : 330,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "8660:7:0"
+				},
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 331,
+						"name" : "HasNoEther",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 118,
+						"src" : "8669:10:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_HasNoEther_$118",
+							"typeString" : "contract HasNoEther"
+						}
+					},
+					"id" : 332,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "8669:10:0"
+				},
+				{
+					"arguments" : null,
+					"baseName" : 
+					{
+						"contractScope" : null,
+						"id" : 333,
+						"name" : "HasNoTokens",
+						"nodeType" : "UserDefinedTypeName",
+						"referencedDeclaration" : 296,
+						"src" : "8681:11:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_contract$_HasNoTokens_$296",
+							"typeString" : "contract HasNoTokens"
+						}
+					},
+					"id" : 334,
+					"nodeType" : "InheritanceSpecifier",
+					"src" : "8681:11:0"
+				}
+			],
+			"contractDependencies" : 
+			[
+				85,
+				118,
+				274,
+				296,
+				326
+			],
+			"contractKind" : "contract",
+			"documentation" : "@title PassportImplRegistry\r\n@dev This contract works as a registry of passport implementations, it holds the implementations for the registered versions.\r",
+			"fullyImplemented" : true,
+			"id" : 480,
+			"linearizedBaseContracts" : 
+			[
+				480,
+				296,
+				274,
+				118,
+				85,
+				326
+			],
+			"name" : "PassportLogicRegistry",
+			"nodeType" : "ContractDefinition",
+			"nodes" : 
+			[
+				{
+					"constant" : false,
+					"id" : 336,
+					"name" : "currentPassportLogicVersion",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 480,
+					"src" : "8748:43:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_string_storage",
+						"typeString" : "string"
+					},
+					"typeName" : 
+					{
+						"id" : 335,
+						"name" : "string",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "8748:6:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_string_storage_ptr",
+							"typeString" : "string"
+						}
+					},
+					"value" : null,
+					"visibility" : "internal"
+				},
+				{
+					"constant" : false,
+					"id" : 338,
+					"name" : "currentPassportLogic",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 480,
+					"src" : "8798:37:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_address",
+						"typeString" : "address"
+					},
+					"typeName" : 
+					{
+						"id" : 337,
+						"name" : "address",
+						"nodeType" : "ElementaryTypeName",
+						"src" : "8798:7:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_address",
+							"typeString" : "address"
+						}
+					},
+					"value" : null,
+					"visibility" : "internal"
+				},
+				{
+					"constant" : false,
+					"id" : 342,
+					"name" : "passportLogicImplementations",
+					"nodeType" : "VariableDeclaration",
+					"scope" : 480,
+					"src" : "8900:64:0",
+					"stateVariable" : true,
+					"storageLocation" : "default",
+					"typeDescriptions" : 
+					{
+						"typeIdentifier" : "t_mapping$_t_string_memory_$_t_address_$",
+						"typeString" : "mapping(string => address)"
+					},
+					"typeName" : 
+					{
+						"id" : 341,
+						"keyType" : 
+						{
+							"id" : 339,
+							"name" : "string",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "8908:6:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_string_storage_ptr",
+								"typeString" : "string"
+							}
+						},
+						"nodeType" : "Mapping",
+						"src" : "8900:26:0",
+						"typeDescriptions" : 
+						{
+							"typeIdentifier" : "t_mapping$_t_string_memory_$_t_address_$",
+							"typeString" : "mapping(string => address)"
+						},
+						"valueType" : 
+						{
+							"id" : 340,
+							"name" : "address",
+							"nodeType" : "ElementaryTypeName",
+							"src" : "8918:7:0",
+							"typeDescriptions" : 
+							{
+								"typeIdentifier" : "t_address",
+								"typeString" : "address"
+							}
+						}
+					},
+					"value" : null,
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 358,
+						"nodeType" : "Block",
+						"src" : "9157:108:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 350,
+											"name" : "_version",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 344,
+											"src" : "9186:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 351,
+											"name" : "_implementation",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 346,
+											"src" : "9196:15:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											},
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 349,
+										"name" : "_addPassportLogic",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 449,
+										"src" : "9168:17:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_address_$returns$__$",
+											"typeString" : "function (string memory,address)"
+										}
+									},
+									"id" : 352,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "9168:44:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 353,
+								"nodeType" : "ExpressionStatement",
+								"src" : "9168:44:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 355,
+											"name" : "_version",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 344,
+											"src" : "9248:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										],
+										"id" : 354,
+										"name" : "_setCurrentPassportLogic",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 479,
+										"src" : "9223:24:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
+											"typeString" : "function (string memory)"
+										}
+									},
+									"id" : 356,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "9223:34:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 357,
+								"nodeType" : "ExpressionStatement",
+								"src" : "9223:34:0"
+							}
+						]
+					},
+					"documentation" : "@dev The PassportImplRegistry constructor sets the current passport version and implementation.\r",
+					"id" : 359,
+					"implemented" : true,
+					"isConstructor" : true,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 347,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 344,
+								"name" : "_version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 359,
+								"src" : "9108:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 343,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "9108:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 346,
+								"name" : "_implementation",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 359,
+								"src" : "9125:23:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 345,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "9125:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "9107:42:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 348,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "9157:0:0"
+					},
+					"scope" : 480,
+					"src" : "9095:170:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 373,
+						"nodeType" : "Block",
+						"src" : "9686:63:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 369,
+											"name" : "_version",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 361,
+											"src" : "9715:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 370,
+											"name" : "_implementation",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 363,
+											"src" : "9725:15:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											},
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 368,
+										"name" : "_addPassportLogic",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 449,
+										"src" : "9697:17:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_address_$returns$__$",
+											"typeString" : "function (string memory,address)"
+										}
+									},
+									"id" : 371,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "9697:44:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 372,
+								"nodeType" : "ExpressionStatement",
+								"src" : "9697:44:0"
+							}
+						]
+					},
+					"documentation" : "@dev Registers a new passport version with its logic implementation address\r\n@param _version representing the version name of the new passport logic implementation to be registered\r\n@param _implementation representing the address of the new passport logic implementation to be registered\r",
+					"id" : 374,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 366,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 365,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 33,
+								"src" : "9676:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "9676:9:0"
+						}
+					],
+					"name" : "addPassportLogic",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 364,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 361,
+								"name" : "_version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 374,
+								"src" : "9627:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 360,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "9627:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 363,
+								"name" : "_implementation",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 374,
+								"src" : "9644:23:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 362,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "9644:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "9626:42:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 367,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "9686:0:0"
+					},
+					"scope" : 480,
+					"src" : "9601:148:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 385,
+						"nodeType" : "Block",
+						"src" : "10087:64:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"baseExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 381,
+										"name" : "passportLogicImplementations",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 342,
+										"src" : "10105:28:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_mapping$_t_string_memory_$_t_address_$",
+											"typeString" : "mapping(string memory => address)"
+										}
+									},
+									"id" : 383,
+									"indexExpression" : 
+									{
+										"argumentTypes" : null,
+										"id" : 382,
+										"name" : "_version",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 376,
+										"src" : "10134:8:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_calldata_ptr",
+											"typeString" : "string calldata"
+										}
+									},
+									"isConstant" : false,
+									"isLValue" : true,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"nodeType" : "IndexAccess",
+									"src" : "10105:38:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"functionReturnParameters" : 380,
+								"id" : 384,
+								"nodeType" : "Return",
+								"src" : "10098:45:0"
+							}
+						]
+					},
+					"documentation" : "@dev Tells the address of the passport logic implementation for a given version\r\n@param _version to query the implementation of\r\n@return address of the passport logic implementation registered for the given version\r",
+					"id" : 386,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getPassportLogic",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 377,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 376,
+								"name" : "_version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 386,
+								"src" : "10038:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_calldata_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 375,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "10038:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "10037:17:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 380,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 379,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 386,
+								"src" : "10078:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 378,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "10078:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "10077:9:0"
+					},
+					"scope" : 480,
+					"src" : "10012:139:0",
+					"stateMutability" : "view",
+					"superFunction" : 315,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 397,
+						"nodeType" : "Block",
+						"src" : "10429:53:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 394,
+											"name" : "_version",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 388,
+											"src" : "10465:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										],
+										"id" : 393,
+										"name" : "_setCurrentPassportLogic",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 479,
+										"src" : "10440:24:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
+											"typeString" : "function (string memory)"
+										}
+									},
+									"id" : 395,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "10440:34:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 396,
+								"nodeType" : "ExpressionStatement",
+								"src" : "10440:34:0"
+							}
+						]
+					},
+					"documentation" : "@dev Sets a new passport logic implementation as current one\r\n@param _version representing the version name of the passport logic implementation to be set as current one\r",
+					"id" : 398,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : 
+					[
+						{
+							"arguments" : null,
+							"id" : 391,
+							"modifierName" : 
+							{
+								"argumentTypes" : null,
+								"id" : 390,
+								"name" : "onlyOwner",
+								"nodeType" : "Identifier",
+								"overloadedDeclarations" : [],
+								"referencedDeclaration" : 33,
+								"src" : "10419:9:0",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_modifier$__$",
+									"typeString" : "modifier ()"
+								}
+							},
+							"nodeType" : "ModifierInvocation",
+							"src" : "10419:9:0"
+						}
+					],
+					"name" : "setCurrentPassportLogic",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 389,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 388,
+								"name" : "_version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 398,
+								"src" : "10395:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 387,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "10395:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "10394:17:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 392,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "10429:0:0"
+					},
+					"scope" : 480,
+					"src" : "10362:120:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "public"
+				},
+				{
+					"body" : 
+					{
+						"id" : 405,
+						"nodeType" : "Block",
+						"src" : "10726:53:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 403,
+									"name" : "currentPassportLogicVersion",
+									"nodeType" : "Identifier",
+									"overloadedDeclarations" : [],
+									"referencedDeclaration" : 336,
+									"src" : "10744:27:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage",
+										"typeString" : "string storage ref"
+									}
+								},
+								"functionReturnParameters" : 402,
+								"id" : 404,
+								"nodeType" : "Return",
+								"src" : "10737:34:0"
+							}
+						]
+					},
+					"documentation" : "@dev Tells the version of the current passport logic implementation\r\n@return version of the current passport logic implementation\r",
+					"id" : 406,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getCurrentPassportLogicVersion",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 399,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "10692:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 402,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 401,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 406,
+								"src" : "10718:6:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 400,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "10718:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "10717:8:0"
+					},
+					"scope" : 480,
+					"src" : "10653:126:0",
+					"stateMutability" : "view",
+					"superFunction" : 320,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 413,
+						"nodeType" : "Block",
+						"src" : "11017:46:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 411,
+									"name" : "currentPassportLogic",
+									"nodeType" : "Identifier",
+									"overloadedDeclarations" : [],
+									"referencedDeclaration" : 338,
+									"src" : "11035:20:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"functionReturnParameters" : 410,
+								"id" : 412,
+								"nodeType" : "Return",
+								"src" : "11028:27:0"
+							}
+						]
+					},
+					"documentation" : "@dev Tells the address of the current passport logic implementation\r\n@return address of the current passport logic implementation\r",
+					"id" : 414,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : true,
+					"modifiers" : [],
+					"name" : "getCurrentPassportLogic",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 407,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "10982:2:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 410,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 409,
+								"name" : "",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 414,
+								"src" : "11008:7:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 408,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "11008:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "11007:9:0"
+					},
+					"scope" : 480,
+					"src" : "10950:113:0",
+					"stateMutability" : "view",
+					"superFunction" : 325,
+					"visibility" : "external"
+				},
+				{
+					"body" : 
+					{
+						"id" : 448,
+						"nodeType" : "Block",
+						"src" : "11149:342:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											"id" : 424,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"id" : 422,
+												"name" : "_implementation",
+												"nodeType" : "Identifier",
+												"overloadedDeclarations" : [],
+												"referencedDeclaration" : 418,
+												"src" : "11168:15:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "!=",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"hexValue" : "307830",
+												"id" : 423,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"kind" : "number",
+												"lValueRequested" : false,
+												"nodeType" : "Literal",
+												"src" : "11187:3:0",
+												"subdenomination" : null,
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_rational_0_by_1",
+													"typeString" : "int_const 0"
+												},
+												"value" : "0x0"
+											},
+											"src" : "11168:22:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"hexValue" : "43616e6e6f742073657420696d706c656d656e746174696f6e20746f2061207a65726f2061646472657373",
+											"id" : 425,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"kind" : "string",
+											"lValueRequested" : false,
+											"nodeType" : "Literal",
+											"src" : "11192:45:0",
+											"subdenomination" : null,
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_stringliteral_356460c46169e972292834afd344bfe63c9c97fdd2975f1cb44c048aa1952c5b",
+												"typeString" : "literal_string \"Cannot set implementation to a zero address\""
+											},
+											"value" : "Cannot set implementation to a zero address"
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											},
+											{
+												"typeIdentifier" : "t_stringliteral_356460c46169e972292834afd344bfe63c9c97fdd2975f1cb44c048aa1952c5b",
+												"typeString" : "literal_string \"Cannot set implementation to a zero address\""
+											}
+										],
+										"id" : 421,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 499,
+										"src" : "11160:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+											"typeString" : "function (bool,string memory) pure"
+										}
+									},
+									"id" : 426,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "11160:78:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 427,
+								"nodeType" : "ExpressionStatement",
+								"src" : "11160:78:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											"id" : 433,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 429,
+													"name" : "passportLogicImplementations",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 342,
+													"src" : "11257:28:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_string_memory_$_t_address_$",
+														"typeString" : "mapping(string memory => address)"
+													}
+												},
+												"id" : 431,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 430,
+													"name" : "_version",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 416,
+													"src" : "11286:8:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_string_memory_ptr",
+														"typeString" : "string memory"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "11257:38:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "==",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"hexValue" : "307830",
+												"id" : 432,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"kind" : "number",
+												"lValueRequested" : false,
+												"nodeType" : "Literal",
+												"src" : "11299:3:0",
+												"subdenomination" : null,
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_rational_0_by_1",
+													"typeString" : "int_const 0"
+												},
+												"value" : "0x0"
+											},
+											"src" : "11257:45:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"hexValue" : "43616e6e6f74207265706c616365206578697374696e672076657273696f6e20696d706c656d656e746174696f6e",
+											"id" : 434,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"kind" : "string",
+											"lValueRequested" : false,
+											"nodeType" : "Literal",
+											"src" : "11304:48:0",
+											"subdenomination" : null,
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_stringliteral_eeb95865b4aaf43cb9dc69ffdfb5cbf3c4eb718e38a07ab93fe8cfa572623a4b",
+												"typeString" : "literal_string \"Cannot replace existing version implementation\""
+											},
+											"value" : "Cannot replace existing version implementation"
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											},
+											{
+												"typeIdentifier" : "t_stringliteral_eeb95865b4aaf43cb9dc69ffdfb5cbf3c4eb718e38a07ab93fe8cfa572623a4b",
+												"typeString" : "literal_string \"Cannot replace existing version implementation\""
+											}
+										],
+										"id" : 428,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 499,
+										"src" : "11249:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+											"typeString" : "function (bool,string memory) pure"
+										}
+									},
+									"id" : 435,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "11249:104:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 436,
+								"nodeType" : "ExpressionStatement",
+								"src" : "11249:104:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 441,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 437,
+											"name" : "passportLogicImplementations",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 342,
+											"src" : "11366:28:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_string_memory_$_t_address_$",
+												"typeString" : "mapping(string memory => address)"
+											}
+										},
+										"id" : 439,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 438,
+											"name" : "_version",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 416,
+											"src" : "11395:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : true,
+										"nodeType" : "IndexAccess",
+										"src" : "11366:38:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 440,
+										"name" : "_implementation",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 418,
+										"src" : "11407:15:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "11366:56:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 442,
+								"nodeType" : "ExpressionStatement",
+								"src" : "11366:56:0"
+							},
+							{
+								"eventCall" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 444,
+											"name" : "_version",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 416,
+											"src" : "11457:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 445,
+											"name" : "_implementation",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 418,
+											"src" : "11467:15:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											},
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 443,
+										"name" : "PassportLogicAdded",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 302,
+										"src" : "11438:18:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_string_memory_ptr_$_t_address_$returns$__$",
+											"typeString" : "function (string memory,address)"
+										}
+									},
+									"id" : 446,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "11438:45:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 447,
+								"nodeType" : "EmitStatement",
+								"src" : "11433:50:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 449,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "_addPassportLogic",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 419,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 416,
+								"name" : "_version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 449,
+								"src" : "11098:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 415,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "11098:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							},
+							{
+								"constant" : false,
+								"id" : 418,
+								"name" : "_implementation",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 449,
+								"src" : "11115:23:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_address",
+									"typeString" : "address"
+								},
+								"typeName" : 
+								{
+									"id" : 417,
+									"name" : "address",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "11115:7:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "11097:42:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 420,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "11149:0:0"
+					},
+					"scope" : 480,
+					"src" : "11071:420:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "internal"
+				},
+				{
+					"body" : 
+					{
+						"id" : 478,
+						"nodeType" : "Block",
+						"src" : "11559:354:0",
+						"statements" : 
+						[
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"commonType" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											},
+											"id" : 459,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : false,
+											"lValueRequested" : false,
+											"leftExpression" : 
+											{
+												"argumentTypes" : null,
+												"baseExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 455,
+													"name" : "passportLogicImplementations",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 342,
+													"src" : "11578:28:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_mapping$_t_string_memory_$_t_address_$",
+														"typeString" : "mapping(string memory => address)"
+													}
+												},
+												"id" : 457,
+												"indexExpression" : 
+												{
+													"argumentTypes" : null,
+													"id" : 456,
+													"name" : "_version",
+													"nodeType" : "Identifier",
+													"overloadedDeclarations" : [],
+													"referencedDeclaration" : 451,
+													"src" : "11607:8:0",
+													"typeDescriptions" : 
+													{
+														"typeIdentifier" : "t_string_memory_ptr",
+														"typeString" : "string memory"
+													}
+												},
+												"isConstant" : false,
+												"isLValue" : true,
+												"isPure" : false,
+												"lValueRequested" : false,
+												"nodeType" : "IndexAccess",
+												"src" : "11578:38:0",
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_address",
+													"typeString" : "address"
+												}
+											},
+											"nodeType" : "BinaryOperation",
+											"operator" : "!=",
+											"rightExpression" : 
+											{
+												"argumentTypes" : null,
+												"hexValue" : "307830",
+												"id" : 458,
+												"isConstant" : false,
+												"isLValue" : false,
+												"isPure" : true,
+												"kind" : "number",
+												"lValueRequested" : false,
+												"nodeType" : "Literal",
+												"src" : "11620:3:0",
+												"subdenomination" : null,
+												"typeDescriptions" : 
+												{
+													"typeIdentifier" : "t_rational_0_by_1",
+													"typeString" : "int_const 0"
+												},
+												"value" : "0x0"
+											},
+											"src" : "11578:45:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"hexValue" : "43616e6e6f7420736574206e6f6e2d6578697374696e672070617373706f7274206c6f6769632061732063757272656e7420696d706c656d656e746174696f6e",
+											"id" : 460,
+											"isConstant" : false,
+											"isLValue" : false,
+											"isPure" : true,
+											"kind" : "string",
+											"lValueRequested" : false,
+											"nodeType" : "Literal",
+											"src" : "11625:66:0",
+											"subdenomination" : null,
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_stringliteral_81e9539902a5c2d31514745ce2b0c6ee881a8069d22131d7dc605866bb118e2b",
+												"typeString" : "literal_string \"Cannot set non-existing passport logic as current implementation\""
+											},
+											"value" : "Cannot set non-existing passport logic as current implementation"
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_bool",
+												"typeString" : "bool"
+											},
+											{
+												"typeIdentifier" : "t_stringliteral_81e9539902a5c2d31514745ce2b0c6ee881a8069d22131d7dc605866bb118e2b",
+												"typeString" : "literal_string \"Cannot set non-existing passport logic as current implementation\""
+											}
+										],
+										"id" : 454,
+										"name" : "require",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : 
+										[
+											498,
+											499
+										],
+										"referencedDeclaration" : 499,
+										"src" : "11570:7:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+											"typeString" : "function (bool,string memory) pure"
+										}
+									},
+									"id" : 461,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "11570:122:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 462,
+								"nodeType" : "ExpressionStatement",
+								"src" : "11570:122:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 465,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 463,
+										"name" : "currentPassportLogicVersion",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 336,
+										"src" : "11705:27:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_storage",
+											"typeString" : "string storage ref"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 464,
+										"name" : "_version",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 451,
+										"src" : "11735:8:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_string_memory_ptr",
+											"typeString" : "string memory"
+										}
+									},
+									"src" : "11705:38:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage",
+										"typeString" : "string storage ref"
+									}
+								},
+								"id" : 466,
+								"nodeType" : "ExpressionStatement",
+								"src" : "11705:38:0"
+							},
+							{
+								"expression" : 
+								{
+									"argumentTypes" : null,
+									"id" : 471,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"lValueRequested" : false,
+									"leftHandSide" : 
+									{
+										"argumentTypes" : null,
+										"id" : 467,
+										"name" : "currentPassportLogic",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 338,
+										"src" : "11754:20:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"nodeType" : "Assignment",
+									"operator" : "=",
+									"rightHandSide" : 
+									{
+										"argumentTypes" : null,
+										"baseExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 468,
+											"name" : "passportLogicImplementations",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 342,
+											"src" : "11777:28:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_mapping$_t_string_memory_$_t_address_$",
+												"typeString" : "mapping(string memory => address)"
+											}
+										},
+										"id" : 470,
+										"indexExpression" : 
+										{
+											"argumentTypes" : null,
+											"id" : 469,
+											"name" : "_version",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 451,
+											"src" : "11806:8:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_memory_ptr",
+												"typeString" : "string memory"
+											}
+										},
+										"isConstant" : false,
+										"isLValue" : true,
+										"isPure" : false,
+										"lValueRequested" : false,
+										"nodeType" : "IndexAccess",
+										"src" : "11777:38:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_address",
+											"typeString" : "address"
+										}
+									},
+									"src" : "11754:61:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_address",
+										"typeString" : "address"
+									}
+								},
+								"id" : 472,
+								"nodeType" : "ExpressionStatement",
+								"src" : "11754:61:0"
+							},
+							{
+								"eventCall" : 
+								{
+									"argumentTypes" : null,
+									"arguments" : 
+									[
+										{
+											"argumentTypes" : null,
+											"id" : 474,
+											"name" : "currentPassportLogicVersion",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 336,
+											"src" : "11855:27:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_string_storage",
+												"typeString" : "string storage ref"
+											}
+										},
+										{
+											"argumentTypes" : null,
+											"id" : 475,
+											"name" : "currentPassportLogic",
+											"nodeType" : "Identifier",
+											"overloadedDeclarations" : [],
+											"referencedDeclaration" : 338,
+											"src" : "11884:20:0",
+											"typeDescriptions" : 
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										}
+									],
+									"expression" : 
+									{
+										"argumentTypes" : 
+										[
+											{
+												"typeIdentifier" : "t_string_storage",
+												"typeString" : "string storage ref"
+											},
+											{
+												"typeIdentifier" : "t_address",
+												"typeString" : "address"
+											}
+										],
+										"id" : 473,
+										"name" : "CurrentPassportLogicSet",
+										"nodeType" : "Identifier",
+										"overloadedDeclarations" : [],
+										"referencedDeclaration" : 308,
+										"src" : "11831:23:0",
+										"typeDescriptions" : 
+										{
+											"typeIdentifier" : "t_function_event_nonpayable$_t_string_memory_ptr_$_t_address_$returns$__$",
+											"typeString" : "function (string memory,address)"
+										}
+									},
+									"id" : 476,
+									"isConstant" : false,
+									"isLValue" : false,
+									"isPure" : false,
+									"kind" : "functionCall",
+									"lValueRequested" : false,
+									"names" : [],
+									"nodeType" : "FunctionCall",
+									"src" : "11831:74:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_tuple$__$",
+										"typeString" : "tuple()"
+									}
+								},
+								"id" : 477,
+								"nodeType" : "EmitStatement",
+								"src" : "11826:79:0"
+							}
+						]
+					},
+					"documentation" : null,
+					"id" : 479,
+					"implemented" : true,
+					"isConstructor" : false,
+					"isDeclaredConst" : false,
+					"modifiers" : [],
+					"name" : "_setCurrentPassportLogic",
+					"nodeType" : "FunctionDefinition",
+					"parameters" : 
+					{
+						"id" : 452,
+						"nodeType" : "ParameterList",
+						"parameters" : 
+						[
+							{
+								"constant" : false,
+								"id" : 451,
+								"name" : "_version",
+								"nodeType" : "VariableDeclaration",
+								"scope" : 479,
+								"src" : "11533:15:0",
+								"stateVariable" : false,
+								"storageLocation" : "default",
+								"typeDescriptions" : 
+								{
+									"typeIdentifier" : "t_string_memory_ptr",
+									"typeString" : "string"
+								},
+								"typeName" : 
+								{
+									"id" : 450,
+									"name" : "string",
+									"nodeType" : "ElementaryTypeName",
+									"src" : "11533:6:0",
+									"typeDescriptions" : 
+									{
+										"typeIdentifier" : "t_string_storage_ptr",
+										"typeString" : "string"
+									}
+								},
+								"value" : null,
+								"visibility" : "internal"
+							}
+						],
+						"src" : "11532:17:0"
+					},
+					"payable" : false,
+					"returnParameters" : 
+					{
+						"id" : 453,
+						"nodeType" : "ParameterList",
+						"parameters" : [],
+						"src" : "11559:0:0"
+					},
+					"scope" : 480,
+					"src" : "11499:414:0",
+					"stateMutability" : "nonpayable",
+					"superFunction" : null,
+					"visibility" : "internal"
+				}
+			],
+			"scope" : 481,
+			"src" : "8602:3314:0"
+		}
+	],
+	"src" : "0:11916:0"
+}
