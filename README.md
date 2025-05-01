@@ -103,6 +103,16 @@ Replace `<contract_name>` with the specific smart contract filename.
 
 ### Train/Test Results
 `Base_Model_Results.ipynb` - consist of baseline vulnerability detector results
+### Final Model (TMP Network)
+
+The final version of our model is implemented in the Jupyter notebook: [`temporalmessagenetwork.ipynb`](temporalmessagenetwork.ipynb).
+
+This notebook contains:
+- Our most refined implementation of the Temporal Message Propagation (TMP) Network.
+- Full training pipeline for detecting smart contract vulnerabilities.
+- Evaluation with metrics including Accuracy, Precision, Recall, F1-score, and Loss curves.
+- The best-performing model across our experiments.
+
 
 ## References
 
