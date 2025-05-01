@@ -36,7 +36,7 @@ analysis.
 
 ---
 ## Paper
-
+COMP_560_Project_Paper.pdf
 
 ## Project Structure
 
