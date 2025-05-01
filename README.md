@@ -1,6 +1,38 @@
 # SmartContract Detector
 
-SmartSec Auditor is an automated vulnerability detection system for Ethereum smart contracts, leveraging advanced Graph Neural Networks (GNNs) to accurately detect potential vulnerabilities. The system integrates blockchain logging for transparent, immutable auditing of detection results.
+Smart contracts are pivotal in blockchain applications,
+yet their security vulnerabilities have led
+to significant financial losses. Traditional manual
+audits and rule-based systems are resourceintensive
+and error-prone, motivating the use of
+advanced machine learning techniques for vulnerability
+detection. Initially, we investigated a broad
+approach using Graph Neural Networks (GNNs)
+to classify smart contracts as secure or vulnerable,
+representing code structures through abstract syntax
+tree (AST)-based graphs and applying Graph
+Convolutional Networks (GCN), Graph Isomorphism
+Networks (GIN), and Temporal Message
+Passing Networks (TMP). GIN models demonstrated
+superior accuracy in binary classification,
+showcasing effectiveness in capturing structural
+patterns of vulnerabilities. To refine our analysis
+further, we concentrated specifically on reentrancy
+vulnerabilities—one of the most notorious
+attack vectors in smart contracts, exemplified by
+the DAO exploit. We utilized a Temporal Message
+Passing Network (TMPNetwork), explicitly modeling
+both control and data flow as graph edges
+with temporal and semantic attributes. The TMPNetwork
+iteratively updated node representations
+using temporal edge sequences and employed a
+gated readout mechanism for accurate classification.
+Our targeted model achieved a remarkable
+accuracy of 95% and an F1-score of 0.93, significantly
+outperforming baseline methods. This
+integrated approach demonstrates a powerful advancement
+in automated smart contract security
+analysis.
 
 ---
 
