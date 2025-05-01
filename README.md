@@ -104,29 +104,27 @@ Replace `<contract_name>` with the specific smart contract filename.
 
 
 ## Citation
-
-1] Y. Zhuang et al., “Smart Contract Vulnerability Detection
-Using Graph Neural Networks,” IJCAI-20.
-[2] K. Xu, W. Hu, J. Leskovec, S. Jegelka, “How Powerful
-are Graph Neural Networks?,” ICLR 2019.
-[3] “Multilayer perceptron,” https://en.
-wikipedia.org/wiki/Multilayer_
-perceptron.
-[4] J. Brownlee, “A Gentle Introduction to
-Generative Adversarial Networks,” Machine
-Learning Mastery, Jun. 2018, https:
-//machinelearningmastery.com/
-gentle-introduction-to-generative-adversarial-networks/
-[5] “Graph Convolutional Networks: Introduction
-to GNNs,” Medium (Oct. 2018), https:
-//medium.com/towards-data-science/
-graph-convolutional-networks-introduction-to-gnns-
-[6] “How to Design the Most Powerful Graph Neural
-Network,” Medium (Feb. 2020), https:
-//medium.com/towards-data-science/
-how-to-design-the-most-powerful-graph-neural-network-3d18b07a6e66
+  
+  1] Y. Zhuang et al., “Smart Contract Vulnerability Detection
+  Using Graph Neural Networks,” IJCAI-20.
+  [2] K. Xu, W. Hu, J. Leskovec, S. Jegelka, “How Powerful
+  are Graph Neural Networks?,” ICLR 2019.
+  [3] “Multilayer perceptron,” https://en.
+  wikipedia.org/wiki/Multilayer_
+  perceptron.
+  [4] J. Brownlee, “A Gentle Introduction to
+  Generative Adversarial Networks,” Machine
+  Learning Mastery, Jun. 2018, https:
+  //machinelearningmastery.com/
+  gentle-introduction-to-generative-adversarial-networks/
+  [5] “Graph Convolutional Networks: Introduction
+  to GNNs,” Medium (Oct. 2018), https:
+  //medium.com/towards-data-science/
+  graph-convolutional-networks-introduction-to-gnns-
+  [6] “How to Design the Most Powerful Graph Neural
+  Network,” Medium (Feb. 2020), https:
+  //medium.com/towards-data-science/
+  how-to-design-the-most-powerful-graph-neural-network-3d18b07a6e66
 ---
 
-## License
 
-MIT License.
