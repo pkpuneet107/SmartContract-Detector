@@ -1,4 +1,4 @@
-# SmartSec Auditor
+# SmartContract Detector
 
 SmartSec Auditor is an automated vulnerability detection system for Ethereum smart contracts, leveraging advanced Graph Neural Networks (GNNs) to accurately detect potential vulnerabilities. The system integrates blockchain logging for transparent, immutable auditing of detection results.
 
